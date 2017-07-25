@@ -14,5 +14,4 @@ The second time was also failed , and there is the image bellow:
 
 what is the hell！
 
-5.2.1虚·
-帮帮发
+5.2.1
