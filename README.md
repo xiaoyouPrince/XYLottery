@@ -24,6 +24,9 @@ The second time was also failed , and there is the image bellow:
 
 what is the hell！
 
+## Next
+
+tomorrow i will do this again。really。。
 
 
 However so many times I have been rejected by Apple, I know my app realy has some questions, I am not angry with it.  I
