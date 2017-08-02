@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		992A164621273D294380FAB1 /* libPods-XYLottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */; };
 		B4207EEF1F30260300829C69 /* tabbar_curSurvey.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED11F30260300829C69 /* tabbar_curSurvey.png */; };
 		B4207EF01F30260300829C69 /* tabbar_curSurvey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED21F30260300829C69 /* tabbar_curSurvey@2x.png */; };
 		B4207EF11F30260300829C69 /* tabbar_curSurvey@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED31F30260300829C69 /* tabbar_curSurvey@3x.png */; };
@@ -49,6 +50,21 @@
 		B4207F391F31630700829C69 /* XYPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F381F31630700829C69 /* XYPopoverViewController.m */; };
 		B4207F3C1F31638900829C69 /* XYPopoverAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F3B1F31638900829C69 /* XYPopoverAnimator.m */; };
 		B4207F3F1F316AF900829C69 /* XYPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F3E1F316AF900829C69 /* XYPresentationController.m */; };
+		B4207F421F31B74B00829C69 /* XYPreSurveyTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F411F31B74B00829C69 /* XYPreSurveyTopView.m */; };
+		B4207F441F31B7AC00829C69 /* XYPreSurveyTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4207F431F31B7AC00829C69 /* XYPreSurveyTopView.xib */; };
+		B4207F471F31BC2B00829C69 /* XYPreSurveyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F461F31BC2B00829C69 /* XYPreSurveyModel.m */; };
+		B4207F491F31C84500829C69 /* kj_issue.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207F481F31C84500829C69 /* kj_issue.png */; };
+		B4207F501F31D38F00829C69 /* XYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F4D1F31D38F00829C69 /* XYHttpTool.m */; };
+		B4207F511F31D38F00829C69 /* XYRequestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F4F1F31D38F00829C69 /* XYRequestParam.m */; };
+		B4207F661F31D3A100829C69 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F541F31D3A100829C69 /* MJArgument.m */; };
+		B4207F671F31D3A100829C69 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F571F31D3A100829C69 /* MJIvar.m */; };
+		B4207F681F31D3A100829C69 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F591F31D3A100829C69 /* MJMember.m */; };
+		B4207F691F31D3A100829C69 /* MJMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F5B1F31D3A100829C69 /* MJMethod.m */; };
+		B4207F6A1F31D3A100829C69 /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F5D1F31D3A100829C69 /* MJType.m */; };
+		B4207F6B1F31D3A100829C69 /* MJTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F5F1F31D3A100829C69 /* MJTypeEncoding.m */; };
+		B4207F6C1F31D3A100829C69 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F611F31D3A100829C69 /* NSObject+MJCoding.m */; };
+		B4207F6D1F31D3A100829C69 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F631F31D3A100829C69 /* NSObject+MJKeyValue.m */; };
+		B4207F6E1F31D3A100829C69 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F651F31D3A100829C69 /* NSObject+MJMember.m */; };
 		B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319D81F2F2ABA00E0C688 /* MainNavController.m */; };
 		B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319DB1F2F2AFF00E0C688 /* MainTabController.m */; };
 		B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319FC1F3015C200E0C688 /* PreSurveyController.m */; };
@@ -98,6 +114,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8373A13594BD1E3B900EDE3C /* Pods-XYLottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLottery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYLottery/Pods-XYLottery.debug.xcconfig"; sourceTree = "<group>"; };
+		B3A3DE33AC756E45BAA21AEB /* Pods-XYLottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-XYLottery/Pods-XYLottery.release.xcconfig"; sourceTree = "<group>"; };
 		B4207ED11F30260300829C69 /* tabbar_curSurvey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_curSurvey.png; sourceTree = "<group>"; };
 		B4207ED21F30260300829C69 /* tabbar_curSurvey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_curSurvey@2x.png"; sourceTree = "<group>"; };
 		B4207ED31F30260300829C69 /* tabbar_curSurvey@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_curSurvey@3x.png"; sourceTree = "<group>"; };
@@ -149,6 +167,35 @@
 		B4207F3B1F31638900829C69 /* XYPopoverAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPopoverAnimator.m; sourceTree = "<group>"; };
 		B4207F3D1F316AF900829C69 /* XYPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPresentationController.h; sourceTree = "<group>"; };
 		B4207F3E1F316AF900829C69 /* XYPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPresentationController.m; sourceTree = "<group>"; };
+		B4207F401F31B74B00829C69 /* XYPreSurveyTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPreSurveyTopView.h; sourceTree = "<group>"; };
+		B4207F411F31B74B00829C69 /* XYPreSurveyTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPreSurveyTopView.m; sourceTree = "<group>"; };
+		B4207F431F31B7AC00829C69 /* XYPreSurveyTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYPreSurveyTopView.xib; sourceTree = "<group>"; };
+		B4207F451F31BC2B00829C69 /* XYPreSurveyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPreSurveyModel.h; sourceTree = "<group>"; };
+		B4207F461F31BC2B00829C69 /* XYPreSurveyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPreSurveyModel.m; sourceTree = "<group>"; };
+		B4207F481F31C84500829C69 /* kj_issue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kj_issue.png; sourceTree = "<group>"; };
+		B4207F4C1F31D38F00829C69 /* XYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYHttpTool.h; sourceTree = "<group>"; };
+		B4207F4D1F31D38F00829C69 /* XYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYHttpTool.m; sourceTree = "<group>"; };
+		B4207F4E1F31D38F00829C69 /* XYRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRequestParam.h; sourceTree = "<group>"; };
+		B4207F4F1F31D38F00829C69 /* XYRequestParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRequestParam.m; sourceTree = "<group>"; };
+		B4207F531F31D3A100829C69 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
+		B4207F541F31D3A100829C69 /* MJArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJArgument.m; sourceTree = "<group>"; };
+		B4207F551F31D3A100829C69 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		B4207F561F31D3A100829C69 /* MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJIvar.h; sourceTree = "<group>"; };
+		B4207F571F31D3A100829C69 /* MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJIvar.m; sourceTree = "<group>"; };
+		B4207F581F31D3A100829C69 /* MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMember.h; sourceTree = "<group>"; };
+		B4207F591F31D3A100829C69 /* MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMember.m; sourceTree = "<group>"; };
+		B4207F5A1F31D3A100829C69 /* MJMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMethod.h; sourceTree = "<group>"; };
+		B4207F5B1F31D3A100829C69 /* MJMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMethod.m; sourceTree = "<group>"; };
+		B4207F5C1F31D3A100829C69 /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
+		B4207F5D1F31D3A100829C69 /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
+		B4207F5E1F31D3A100829C69 /* MJTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTypeEncoding.h; sourceTree = "<group>"; };
+		B4207F5F1F31D3A100829C69 /* MJTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTypeEncoding.m; sourceTree = "<group>"; };
+		B4207F601F31D3A100829C69 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		B4207F611F31D3A100829C69 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		B4207F621F31D3A100829C69 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		B4207F631F31D3A100829C69 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		B4207F641F31D3A100829C69 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
+		B4207F651F31D3A100829C69 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		B47319D71F2F2ABA00E0C688 /* MainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavController.h; sourceTree = "<group>"; };
 		B47319D81F2F2ABA00E0C688 /* MainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavController.m; sourceTree = "<group>"; };
 		B47319DA1F2F2AFF00E0C688 /* MainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabController.h; sourceTree = "<group>"; };
@@ -195,6 +242,7 @@
 		B48ED43C1F2B088300F26BC3 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B48ED43E1F2B088D00F26BC3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		B48ED4401F2B089A00F26BC3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XYLottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +264,7 @@
 				B48ED42B1F2B081700F26BC3 /* CFNetwork.framework in Frameworks */,
 				B48ED4281F2AEF7300F26BC3 /* jpush-ios-3.0.6.a in Frameworks */,
 				B48ED4271F2AEF7300F26BC3 /* jcore-ios-1.1.5.a in Frameworks */,
+				992A164621273D294380FAB1 /* libPods-XYLottery.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +336,7 @@
 			children = (
 				B4207F1C1F3060E700829C69 /* XYKit.h */,
 				B4207F221F3067E100829C69 /* Base */,
+				B4207F4A1F31D38F00829C69 /* XYTools */,
 			);
 			path = XYKit;
 			sourceTree = "<group>";
@@ -320,6 +370,7 @@
 		B4207F291F30731900829C69 /* navBar */ = {
 			isa = PBXGroup;
 			children = (
+				B4207F481F31C84500829C69 /* kj_issue.png */,
 				B4207F341F30817D00829C69 /* titleBtnBg.png */,
 				B4207F2E1F307EF200829C69 /* grrow_down.png */,
 				B4207F2F1F307EF200829C69 /* grrow_down@2x.png */,
@@ -341,6 +392,51 @@
 				B4207F3E1F316AF900829C69 /* XYPresentationController.m */,
 			);
 			path = UIPopover;
+			sourceTree = "<group>";
+		};
+		B4207F4A1F31D38F00829C69 /* XYTools */ = {
+			isa = PBXGroup;
+			children = (
+				B4207F4B1F31D38F00829C69 /* HttpTool */,
+			);
+			path = XYTools;
+			sourceTree = "<group>";
+		};
+		B4207F4B1F31D38F00829C69 /* HttpTool */ = {
+			isa = PBXGroup;
+			children = (
+				B4207F4C1F31D38F00829C69 /* XYHttpTool.h */,
+				B4207F4D1F31D38F00829C69 /* XYHttpTool.m */,
+				B4207F4E1F31D38F00829C69 /* XYRequestParam.h */,
+				B4207F4F1F31D38F00829C69 /* XYRequestParam.m */,
+			);
+			path = HttpTool;
+			sourceTree = "<group>";
+		};
+		B4207F521F31D3A100829C69 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B4207F531F31D3A100829C69 /* MJArgument.h */,
+				B4207F541F31D3A100829C69 /* MJArgument.m */,
+				B4207F551F31D3A100829C69 /* MJExtension.h */,
+				B4207F561F31D3A100829C69 /* MJIvar.h */,
+				B4207F571F31D3A100829C69 /* MJIvar.m */,
+				B4207F581F31D3A100829C69 /* MJMember.h */,
+				B4207F591F31D3A100829C69 /* MJMember.m */,
+				B4207F5A1F31D3A100829C69 /* MJMethod.h */,
+				B4207F5B1F31D3A100829C69 /* MJMethod.m */,
+				B4207F5C1F31D3A100829C69 /* MJType.h */,
+				B4207F5D1F31D3A100829C69 /* MJType.m */,
+				B4207F5E1F31D3A100829C69 /* MJTypeEncoding.h */,
+				B4207F5F1F31D3A100829C69 /* MJTypeEncoding.m */,
+				B4207F601F31D3A100829C69 /* NSObject+MJCoding.h */,
+				B4207F611F31D3A100829C69 /* NSObject+MJCoding.m */,
+				B4207F621F31D3A100829C69 /* NSObject+MJKeyValue.h */,
+				B4207F631F31D3A100829C69 /* NSObject+MJKeyValue.m */,
+				B4207F641F31D3A100829C69 /* NSObject+MJMember.h */,
+				B4207F651F31D3A100829C69 /* NSObject+MJMember.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 		B47319DD1F3014FA00E0C688 /* CurSurvey */ = {
@@ -464,6 +560,8 @@
 		B47319F31F3014FA00E0C688 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4207F451F31BC2B00829C69 /* XYPreSurveyModel.h */,
+				B4207F461F31BC2B00829C69 /* XYPreSurveyModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,6 +569,9 @@
 		B47319F41F3014FA00E0C688 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4207F401F31B74B00829C69 /* XYPreSurveyTopView.h */,
+				B4207F411F31B74B00829C69 /* XYPreSurveyTopView.m */,
+				B4207F431F31B7AC00829C69 /* XYPreSurveyTopView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -516,6 +617,7 @@
 				B48ED3F81F2ADFC700F26BC3 /* XYLotteryUITests */,
 				B48ED3D21F2ADFC700F26BC3 /* Products */,
 				B48ED4291F2B081700F26BC3 /* Frameworks */,
+				CC6C88311AA0EE68D03436B3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -601,6 +703,7 @@
 		B48ED4191F2AE26600F26BC3 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				B4207F521F31D3A100829C69 /* MJExtension */,
 				B48ED4231F2AEF7300F26BC3 /* JPush */,
 			);
 			path = ThirdLib;
@@ -631,6 +734,7 @@
 				B48ED42E1F2B083B00F26BC3 /* CoreTelephony.framework */,
 				B48ED42C1F2B082600F26BC3 /* CoreFoundation.framework */,
 				B48ED42A1F2B081700F26BC3 /* CFNetwork.framework */,
+				DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -675,6 +779,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CC6C88311AA0EE68D03436B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8373A13594BD1E3B900EDE3C /* Pods-XYLottery.debug.xcconfig */,
+				B3A3DE33AC756E45BAA21AEB /* Pods-XYLottery.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -682,9 +795,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B48ED3FE1F2ADFC700F26BC3 /* Build configuration list for PBXNativeTarget "XYLottery" */;
 			buildPhases = (
+				659A4A892594FD085854CB90 /* [CP] Check Pods Manifest.lock */,
 				B48ED3CD1F2ADFC700F26BC3 /* Sources */,
 				B48ED3CE1F2ADFC700F26BC3 /* Frameworks */,
 				B48ED3CF1F2ADFC700F26BC3 /* Resources */,
+				ECB2B9215F7CAF3A266EF38C /* [CP] Embed Pods Frameworks */,
+				277018C6BFC50222BDC7C504 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -812,6 +928,7 @@
 				B4207F0A1F30260300829C69 /* tabbar_profile_sel.png in Resources */,
 				B4207F311F307EF200829C69 /* grrow_down.png in Resources */,
 				B4207EF21F30260300829C69 /* tabbar_curSurvey_sel.png in Resources */,
+				B4207F441F31B7AC00829C69 /* XYPreSurveyTopView.xib in Resources */,
 				B4207F331F307EF200829C69 /* grrow_down@3x.png in Resources */,
 				B4207EF91F30260300829C69 /* tabbar_lucky_sel@2x.png in Resources */,
 				B4207F031F30260300829C69 /* tabbar_preSurvey@3x.png in Resources */,
@@ -821,6 +938,7 @@
 				B4207F321F307EF200829C69 /* grrow_down@2x.png in Resources */,
 				B4207F351F30817D00829C69 /* titleBtnBg.png in Resources */,
 				B4207F061F30260300829C69 /* tabbar_preSurvey_sel@3x.png in Resources */,
+				B4207F491F31C84500829C69 /* kj_issue.png in Resources */,
 				B4207EFE1F30260300829C69 /* tabbar_news_sel.png in Resources */,
 				B4207F021F30260300829C69 /* tabbar_preSurvey@2x.png in Resources */,
 				B4207EF71F30260300829C69 /* tabbar_lucky@3x.png in Resources */,
@@ -851,24 +969,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		277018C6BFC50222BDC7C504 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XYLottery/Pods-XYLottery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		659A4A892594FD085854CB90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECB2B9215F7CAF3A266EF38C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XYLottery/Pods-XYLottery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B48ED3CD1F2ADFC700F26BC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */,
+				B4207F6B1F31D3A100829C69 /* MJTypeEncoding.m in Sources */,
+				B4207F6E1F31D3A100829C69 /* NSObject+MJMember.m in Sources */,
 				B4207F161F304E6000829C69 /* XYTitleButton.m in Sources */,
+				B4207F511F31D38F00829C69 /* XYRequestParam.m in Sources */,
 				B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */,
+				B4207F661F31D3A100829C69 /* MJArgument.m in Sources */,
+				B4207F691F31D3A100829C69 /* MJMethod.m in Sources */,
 				B4207F131F30300500829C69 /* BaseViewController.m in Sources */,
+				B4207F471F31BC2B00829C69 /* XYPreSurveyModel.m in Sources */,
+				B4207F501F31D38F00829C69 /* XYHttpTool.m in Sources */,
 				B48ED4181F2AE1D800F26BC3 /* ViewController.m in Sources */,
 				B4731A061F30160000E0C688 /* NewsViewController.m in Sources */,
 				B4207F3F1F316AF900829C69 /* XYPresentationController.m in Sources */,
 				B4207F3C1F31638900829C69 /* XYPopoverAnimator.m in Sources */,
+				B4207F671F31D3A100829C69 /* MJIvar.m in Sources */,
+				B4207F681F31D3A100829C69 /* MJMember.m in Sources */,
 				B4731A0C1F30162700E0C688 /* ProfileViewController.m in Sources */,
+				B4207F6A1F31D3A100829C69 /* MJType.m in Sources */,
 				B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */,
 				B48ED4171F2AE1D800F26BC3 /* AppDelegate.m in Sources */,
 				B4731A091F30161900E0C688 /* LuckYViewController.m in Sources */,
 				B48ED3D61F2ADFC700F26BC3 /* main.m in Sources */,
+				B4207F421F31B74B00829C69 /* XYPreSurveyTopView.m in Sources */,
+				B4207F6C1F31D3A100829C69 /* NSObject+MJCoding.m in Sources */,
+				B4207F6D1F31D3A100829C69 /* NSObject+MJKeyValue.m in Sources */,
 				B4207F391F31630700829C69 /* XYPopoverViewController.m in Sources */,
 				B4207F271F3067E100829C69 /* UIImage+XY.m in Sources */,
 				B4731A031F3015F000E0C688 /* CurSurveyController.m in Sources */,
@@ -1020,6 +1199,7 @@
 		};
 		B48ED3FF1F2ADFC700F26BC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8373A13594BD1E3B900EDE3C /* Pods-XYLottery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1046,6 +1226,7 @@
 		};
 		B48ED4001F2ADFC700F26BC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A3DE33AC756E45BAA21AEB /* Pods-XYLottery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

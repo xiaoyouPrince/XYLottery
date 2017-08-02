@@ -6,6 +6,9 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
+
+#define topViewH 100
+
 #import "PreSurveyController.h"
 
 @interface PreSurveyController ()
@@ -14,8 +17,19 @@
 
 @implementation PreSurveyController
 
+
+
+- (void)loadView
+{
+    [super loadView];
+    
+    self.view.frame = CGRectMake(0, topViewH, ScreenW, ScreenH - 108 - topViewH);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     
     
 }

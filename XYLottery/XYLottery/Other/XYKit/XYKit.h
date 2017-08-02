@@ -13,4 +13,12 @@
 #import "UIImage+XY.h"
 
 
+
+/// 三方
+
+#import "MJExtension.h"
+#import "XYHttpTool.h"
+#import "XYRequestParam.h"
+#import "SVProgressHUD.h"
+
 #endif /* XYKit_h */

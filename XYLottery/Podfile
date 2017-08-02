@@ -1,0 +1,11 @@
+platform :ios, ‘8.0’
+
+target 'XYLottery' do
+
+pod 'AFNetworking', '~> 3.0'
+pod 'MJRefresh'
+pod 'SDWebImage', '~> 3.7.6'
+pod 'SVProgressHUD', '~> 2.1.2'
+
+
+end

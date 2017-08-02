@@ -34,6 +34,14 @@
     return _animator;
 }
 
+- (void)loadView
+{
+    [super loadView];
+    
+    self.view.frame = CGRectMake(0, 0, ScreenW, ScreenH - 108);
+    self.view.backgroundColor = kGlobalBg;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -78,13 +86,27 @@
     presentVC.transitioningDelegate = self.animator;
     [self presentViewController:presentVC animated:YES completion:nil];
     presentVC.callback = ^(NSString * chooseResult){
-        
+                
         [self.titleButton setTitle:chooseResult forState:UIControlStateNormal];
         
         // 保存用户选择
         [kUserDefaults setObject:chooseResult forKey:k_CurrentLotteryType];
         
         // 用户选择之后进行对应的类型请求数据
+        XYRequestParam *params = [XYRequestParam new];
+        params.playtype = @"1038";
+        params.lottype = @"1005";
+        params.issuenum = @"7";
+        [XYHttpTool getWithURL:k_base_url params:params.keyValues success:^(id json) {
+            
+            NSLog(@"%@",json);
+            
+        } failure:^(NSError *error) {
+
+            
+            NSLog(@"%@",error);
+            
+        }];
         
     };
     

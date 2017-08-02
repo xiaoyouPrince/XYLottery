@@ -13,6 +13,7 @@
 #import "BaseViewController.h"
 #import "XYKit.h"
 
+#define k_base_url @"http://115.29.175.83/cpyc/getprecalc.php"
 
 
 #endif /* PrefixHeader_pch */
