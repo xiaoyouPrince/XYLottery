@@ -94,6 +94,8 @@
 		B48ED43D1F2B088300F26BC3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ED43C1F2B088300F26BC3 /* AdSupport.framework */; };
 		B48ED43F1F2B088D00F26BC3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ED43E1F2B088D00F26BC3 /* UserNotifications.framework */; };
 		B48ED4411F2B089A00F26BC3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ED4401F2B089A00F26BC3 /* libresolv.tbd */; };
+		B4CB4D901F320F0200640D43 /* XYSurveyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */; };
+		B4CB4D931F3213BF00640D43 /* XYSurveyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +244,10 @@
 		B48ED43C1F2B088300F26BC3 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B48ED43E1F2B088D00F26BC3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		B48ED4401F2B089A00F26BC3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		B4CB4D8E1F320F0200640D43 /* XYSurveyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSurveyModel.h; sourceTree = "<group>"; };
+		B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSurveyModel.m; sourceTree = "<group>"; };
+		B4CB4D911F3213BF00640D43 /* XYSurveyListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSurveyListModel.h; sourceTree = "<group>"; };
+		B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSurveyListModel.m; sourceTree = "<group>"; };
 		DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XYLottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -766,6 +772,10 @@
 		B48ED4441F2B3B9000F26BC3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4CB4D8E1F320F0200640D43 /* XYSurveyModel.h */,
+				B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */,
+				B4CB4D911F3213BF00640D43 /* XYSurveyListModel.h */,
+				B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1037,11 +1047,13 @@
 				B4731A061F30160000E0C688 /* NewsViewController.m in Sources */,
 				B4207F3F1F316AF900829C69 /* XYPresentationController.m in Sources */,
 				B4207F3C1F31638900829C69 /* XYPopoverAnimator.m in Sources */,
+				B4CB4D931F3213BF00640D43 /* XYSurveyListModel.m in Sources */,
 				B4207F671F31D3A100829C69 /* MJIvar.m in Sources */,
 				B4207F681F31D3A100829C69 /* MJMember.m in Sources */,
 				B4731A0C1F30162700E0C688 /* ProfileViewController.m in Sources */,
 				B4207F6A1F31D3A100829C69 /* MJType.m in Sources */,
 				B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */,
+				B4CB4D901F320F0200640D43 /* XYSurveyModel.m in Sources */,
 				B48ED4171F2AE1D800F26BC3 /* AppDelegate.m in Sources */,
 				B4731A091F30161900E0C688 /* LuckYViewController.m in Sources */,
 				B48ED3D61F2ADFC700F26BC3 /* main.m in Sources */,

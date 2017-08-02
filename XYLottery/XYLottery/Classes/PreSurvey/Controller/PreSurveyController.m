@@ -10,41 +10,59 @@
 #define topViewH 100
 
 #import "PreSurveyController.h"
+#import "XYPreSurveyTopView.h"
 
 @interface PreSurveyController ()
+
+@property (nonatomic , weak) XYPreSurveyTopView *top;
 
 @end
 
 @implementation PreSurveyController
 
 
-
-- (void)loadView
-{
-    [super loadView];
-    
-    self.view.frame = CGRectMake(0, topViewH, ScreenW, ScreenH - 108 - topViewH);
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 添加topView
     
+    XYPreSurveyTopView *top = [[NSBundle mainBundle] loadNibNamed:@"XYPreSurveyTopView" owner:nil options:nil].lastObject;
+    self.top = top;
+    top.frame = CGRectMake(0, 64, ScreenW, 100);
+    [self.view addSubview:top];
     
+    self.tableView.frame = CGRectMake(0, 100, ScreenW, ScreenH - 100);
     
+}
+
+-(void)reloadPageData
+{
+    [super reloadPageData];
+    
+    self.top.model = self.model;
+    [self.tableView reloadData];
 }
 
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.list.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellID = @"cellID";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"---%zd----",indexPath.row];
+    
+    return cell;
 }
 
 

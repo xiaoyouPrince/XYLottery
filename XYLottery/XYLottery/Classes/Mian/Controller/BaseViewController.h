@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XYSurveyModel.h"
+#import "XYSurveyListModel.h"
 
-@interface BaseViewController : UITableViewController
+@interface BaseViewController : UIViewController
+
+@property(nonatomic , strong) XYSurveyModel  *model;
+@property(nonatomic , strong) NSArray  *list;
+@property(nonatomic , weak) UITableView  *tableView;
+
+
+- (void)reloadPageData;
 
 @end

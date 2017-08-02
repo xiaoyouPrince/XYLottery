@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XYPreSurveyModel.h"
+#import "XYSurveyModel.h"
 
 @interface XYPreSurveyTopView : UIView
 
-@property(nonatomic , strong) XYPreSurveyModel * model;
+@property(nonatomic , strong) XYSurveyModel * model;
 
 @end
