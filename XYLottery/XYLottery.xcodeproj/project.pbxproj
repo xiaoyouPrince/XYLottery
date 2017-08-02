@@ -46,6 +46,9 @@
 		B4207F321F307EF200829C69 /* grrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207F2F1F307EF200829C69 /* grrow_down@2x.png */; };
 		B4207F331F307EF200829C69 /* grrow_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207F301F307EF200829C69 /* grrow_down@3x.png */; };
 		B4207F351F30817D00829C69 /* titleBtnBg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207F341F30817D00829C69 /* titleBtnBg.png */; };
+		B4207F391F31630700829C69 /* XYPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F381F31630700829C69 /* XYPopoverViewController.m */; };
+		B4207F3C1F31638900829C69 /* XYPopoverAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F3B1F31638900829C69 /* XYPopoverAnimator.m */; };
+		B4207F3F1F316AF900829C69 /* XYPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F3E1F316AF900829C69 /* XYPresentationController.m */; };
 		B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319D81F2F2ABA00E0C688 /* MainNavController.m */; };
 		B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319DB1F2F2AFF00E0C688 /* MainTabController.m */; };
 		B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319FC1F3015C200E0C688 /* PreSurveyController.m */; };
@@ -140,6 +143,12 @@
 		B4207F2F1F307EF200829C69 /* grrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grrow_down@2x.png"; sourceTree = "<group>"; };
 		B4207F301F307EF200829C69 /* grrow_down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grrow_down@3x.png"; sourceTree = "<group>"; };
 		B4207F341F30817D00829C69 /* titleBtnBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleBtnBg.png; sourceTree = "<group>"; };
+		B4207F371F31630700829C69 /* XYPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPopoverViewController.h; sourceTree = "<group>"; };
+		B4207F381F31630700829C69 /* XYPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPopoverViewController.m; sourceTree = "<group>"; };
+		B4207F3A1F31638900829C69 /* XYPopoverAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPopoverAnimator.h; sourceTree = "<group>"; };
+		B4207F3B1F31638900829C69 /* XYPopoverAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPopoverAnimator.m; sourceTree = "<group>"; };
+		B4207F3D1F316AF900829C69 /* XYPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPresentationController.h; sourceTree = "<group>"; };
+		B4207F3E1F316AF900829C69 /* XYPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPresentationController.m; sourceTree = "<group>"; };
 		B47319D71F2F2ABA00E0C688 /* MainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavController.h; sourceTree = "<group>"; };
 		B47319D81F2F2ABA00E0C688 /* MainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavController.m; sourceTree = "<group>"; };
 		B47319DA1F2F2AFF00E0C688 /* MainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabController.h; sourceTree = "<group>"; };
@@ -319,6 +328,19 @@
 				B4207F2B1F30731900829C69 /* navigationbar_arrow_up.png */,
 			);
 			path = navBar;
+			sourceTree = "<group>";
+		};
+		B4207F361F3162DE00829C69 /* UIPopover */ = {
+			isa = PBXGroup;
+			children = (
+				B4207F371F31630700829C69 /* XYPopoverViewController.h */,
+				B4207F381F31630700829C69 /* XYPopoverViewController.m */,
+				B4207F3A1F31638900829C69 /* XYPopoverAnimator.h */,
+				B4207F3B1F31638900829C69 /* XYPopoverAnimator.m */,
+				B4207F3D1F316AF900829C69 /* XYPresentationController.h */,
+				B4207F3E1F316AF900829C69 /* XYPresentationController.m */,
+			);
+			path = UIPopover;
 			sourceTree = "<group>";
 		};
 		B47319DD1F3014FA00E0C688 /* CurSurvey */ = {
@@ -616,6 +638,7 @@
 		B48ED4421F2B3B9000F26BC3 /* Mian */ = {
 			isa = PBXGroup;
 			children = (
+				B4207F361F3162DE00829C69 /* UIPopover */,
 				B48ED4431F2B3B9000F26BC3 /* Controller */,
 				B48ED4441F2B3B9000F26BC3 /* Model */,
 				B48ED4451F2B3B9000F26BC3 /* View */,
@@ -839,11 +862,14 @@
 				B4207F131F30300500829C69 /* BaseViewController.m in Sources */,
 				B48ED4181F2AE1D800F26BC3 /* ViewController.m in Sources */,
 				B4731A061F30160000E0C688 /* NewsViewController.m in Sources */,
+				B4207F3F1F316AF900829C69 /* XYPresentationController.m in Sources */,
+				B4207F3C1F31638900829C69 /* XYPopoverAnimator.m in Sources */,
 				B4731A0C1F30162700E0C688 /* ProfileViewController.m in Sources */,
 				B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */,
 				B48ED4171F2AE1D800F26BC3 /* AppDelegate.m in Sources */,
 				B4731A091F30161900E0C688 /* LuckYViewController.m in Sources */,
 				B48ED3D61F2ADFC700F26BC3 /* main.m in Sources */,
+				B4207F391F31630700829C69 /* XYPopoverViewController.m in Sources */,
 				B4207F271F3067E100829C69 /* UIImage+XY.m in Sources */,
 				B4731A031F3015F000E0C688 /* CurSurveyController.m in Sources */,
 			);

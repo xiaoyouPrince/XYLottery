@@ -6,18 +6,33 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
+#define k_CurrentLotteryType @"currentLotteryType"
+
 #import "BaseViewController.h"
 #import "XYTitleButton.h"
+#import "XYPopoverViewController.h"
+#import "XYPopoverAnimator.h"
 
 @interface BaseViewController ()
 
 @property(nonatomic , weak)       XYTitleButton *titleButton; ///< title按钮
-//@property(nonatomic , strong)     NSArray  *dataArray;
+@property(nonatomic , strong)     XYPopoverAnimator *animator;
 //@property(nonatomic , copy)       NSString *title;
 
 @end
 
 @implementation BaseViewController
+
+- (XYPopoverAnimator *)animator
+{
+    if (_animator == nil) {
+       
+        _animator = [[XYPopoverAnimator alloc] initWithCallBack:^(BOOL dismisFinished) {
+            [self titleButtonClick:self.titleButton];
+        }];
+    }
+    return _animator;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,13 +53,13 @@
     
     
     // 这里就是记住当前的彩种
-    
-    //    if ([XYAccountTool account].name) {
-    //        [button setTitle:[XYAccountTool account].name forState:UIControlStateNormal];
-    //    }else
-    //    {
-    [self.titleButton setTitle:@"双色球" forState:UIControlStateNormal];
-    //    }
+    NSString *lotType = [kUserDefaults objectForKey:k_CurrentLotteryType];
+    if (lotType) {
+        [self.titleButton setTitle:lotType forState:UIControlStateNormal];
+    }else
+    {
+        [self.titleButton setTitle:@"双色球" forState:UIControlStateNormal];
+    }
 }
 
 - (void)titleButtonClick:(XYTitleButton *)titleBtn
@@ -57,11 +72,23 @@
         titleBtn.imageView.transform = CGAffineTransformIdentity;
     }
     
-    
     // 创建蒙版
+    XYPopoverViewController *presentVC = [XYPopoverViewController new];
+    presentVC.modalPresentationStyle = UIModalPresentationCustom;
+    presentVC.transitioningDelegate = self.animator;
+    [self presentViewController:presentVC animated:YES completion:nil];
+    presentVC.callback = ^(NSString * chooseResult){
+        
+        [self.titleButton setTitle:chooseResult forState:UIControlStateNormal];
+        
+        // 保存用户选择
+        [kUserDefaults setObject:chooseResult forKey:k_CurrentLotteryType];
+        
+        // 用户选择之后进行对应的类型请求数据
+        
+    };
     
     
-    // 蒙版点击之后进行对应的类型请求数据
 }
 
 
