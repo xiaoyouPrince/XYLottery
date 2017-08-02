@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  XYLottery
+//
+//  Created by 渠晓友 on 2017/8/1.
+//  Copyright © 2017年 渠晓友. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "BaseViewController.h"
+#import "XYKit.h"
+
+
+
+#endif /* PrefixHeader_pch */

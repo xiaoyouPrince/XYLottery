@@ -8,41 +8,68 @@
 
 #import "MainNavController.h"
 
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+
 @interface MainNavController ()
 
 @end
 
 @implementation MainNavController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+// 一个类只有在第一次调用的时候会调用一次。
++ (void)initialize
+{
+    // 1.设置导航栏主题
+    [self setupNavBarTheme];
+    
+    // 2.设置导航栏按钮主题
+    [self setupBarButtonItemTheme];
+    
 }
 
-- (UINavigationBar *)navigationBar
+/**
+ *  设置导航栏按钮主题
+ */
++ (void)setupBarButtonItemTheme
 {
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+
+    // 设置文字属性
+    NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionary];
+    disableTextAttrs[NSForegroundColorAttributeName] =  [UIColor lightGrayColor];
+    [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
+    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    textAttrs[NSForegroundColorAttributeName] = iOS7 ? [UIColor orangeColor] : [UIColor grayColor];
+    textAttrs[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetZero];
+    textAttrs[UITextAttributeFont] = [UIFont systemFontOfSize:iOS7 ? 15 : 12];
+    [item setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
+    [item setTitleTextAttributes:textAttrs forState:UIControlStateHighlighted];
     
-    return [super navigationBar];
-    if (self.childViewControllers.count == 1) {
-        
-        UIView *bar = [UIView new];
-        bar.backgroundColor = [UIColor grayColor];
-        UINavigationBar *navBar = [[UINavigationBar alloc] init];
-        navBar.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44);
-        navBar.tintColor = [UIColor redColor];
-        return navBar;
-        
-    }else{
-        
-        return [super navigationBar];
-    }
 }
+/**
+ *  设置导航栏主题
+ */
++ (void)setupNavBarTheme
+{
+    // 取出apperence对象
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    
+    // 2.设置文字属性
+    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    textAttrs[UITextAttributeFont] = [UIFont systemFontOfSize:19];
+    textAttrs[UITextAttributeTextColor] = [UIColor blackColor];
+    textAttrs[UITextAttributeTextShadowColor] = [UIColor redColor];
+    textAttrs[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetZero ];
+    navBar.titleTextAttributes = textAttrs;
+}
+
 
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.childViewControllers.count > 0) {
         
-//        [self setHidesBottomBarWhenPushed:YES];
         viewController.hidesBottomBarWhenPushed = YES;
     }
     

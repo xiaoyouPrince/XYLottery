@@ -7,6 +7,13 @@
 //
 
 #import "MainTabController.h"
+#import "MainNavController.h"
+#import "PreSurveyController.h"
+#import "CurSurveyController.h"
+#import "NewsViewController.h"
+#import "LuckyViewController.h"
+#import "ProfileViewController.h"
+
 
 @interface MainTabController ()
 
@@ -16,15 +23,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
- 
+    self.tabBar.tintColor = [UIColor redColor];
+
+
+    PreSurveyController *pre = [PreSurveyController new];
+    [self addChildViewController:pre withTitle:@"上期测中" imageName:@"tabbar_preSurvey"];
+    
+    CurSurveyController *cur = [CurSurveyController new];
+    [self addChildViewController:cur withTitle:@"本期测中" imageName:@"tabbar_curSurvey"];
+    
+    NewsViewController *news = [NewsViewController new];
+    [self addChildViewController:news withTitle:@"彩讯" imageName:@"tabbar_news"];
+    
+    LuckYViewController *lucky = [LuckYViewController new];
+    [self addChildViewController:lucky withTitle:@"幸运得奖" imageName:@"tabbar_lucky"];
+    
+    ProfileViewController *profile = [ProfileViewController new];
+    [self addChildViewController:profile withTitle:@"我" imageName:@"tabbar_profile"];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+- (void)addChildViewController:(UIViewController *)childVC withTitle:(NSString *)title imageName:(NSString *)imageName{
+    
+    childVC.title = title;
+    childVC.tabBarItem.image = [UIImage imageNamed:imageName];
+    childVC.tabBarItem.selectedImage = [UIImage imageNamed:[imageName stringByAppendingString:@"_sel"]];
+    // nav
+    MainNavController *nav = [[MainNavController alloc] initWithRootViewController:childVC];
+    [self addChildViewController:nav];
+    
+}
 
 @end

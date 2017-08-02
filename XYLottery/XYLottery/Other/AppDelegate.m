@@ -15,6 +15,8 @@
 #import <UserNotifications/UserNotifications.h>
 #endif
 
+#import "MainTabController.h"
+
 
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
@@ -25,11 +27,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    // 注册通知
     [self registerAPNSWithOptions:launchOptions];
+    
+    // 显示主UI
+    [self chooseRootViewController];
     
     return YES;
 }
 
+
+- (void)chooseRootViewController{
+    
+    MainTabController *tab = [MainTabController new];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = tab;
+    [self.window makeKeyAndVisible];
+}
 
 
 
