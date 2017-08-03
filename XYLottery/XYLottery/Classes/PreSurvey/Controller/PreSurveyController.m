@@ -25,6 +25,12 @@
     [super viewDidLoad];
     
     // 添加topView
+
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
     
     XYPreSurveyTopView *top = [[NSBundle mainBundle] loadNibNamed:@"XYPreSurveyTopView" owner:nil options:nil].lastObject;
     self.top = top;
@@ -33,6 +39,7 @@
     
     self.tableView.frame = CGRectMake(0, 100, ScreenW, ScreenH - 100);
     
+    [super viewWillAppear:animated];
 }
 
 -(void)reloadPageData

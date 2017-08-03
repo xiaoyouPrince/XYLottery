@@ -32,6 +32,7 @@
     
     // 显示主UI
     [self chooseRootViewController];
+
     
     return YES;
 }
@@ -46,6 +47,13 @@
 }
 
 
+- (XYLotteryData *)lotteryData
+{
+    if (_lotteryData == nil) {
+        _lotteryData = [XYLotteryData objectWithFilename:@"lotteryData.plist"];
+    }
+    return _lotteryData;
+}
 
 
 #pragma mark -- JPush

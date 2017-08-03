@@ -12,6 +12,7 @@
 #import "XYKitMacro.h"
 #import "UIImage+XY.h"
 
+#import "XYTools.h"
 
 
 /// 三方

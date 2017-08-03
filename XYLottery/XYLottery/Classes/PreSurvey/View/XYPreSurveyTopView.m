@@ -32,6 +32,10 @@
  */
 - (IBAction)sortTypeBtnClick:(XYTitleButton *)sender {
     
+    // 自己的箭头
+    [self.sortTypeBtn setImage:[UIImage imageNamed:@"expand_up"] forState:UIControlStateNormal];
+
+    
     // 出现一个透明蒙版
     UIView *coverView = [UIView new];
     coverView.frame = [UIScreen mainScreen].bounds;
@@ -39,7 +43,7 @@
     [coverView addGestureRecognizer:tap];
     [self.superview addSubview:coverView];
     
-    // 选择类型
+    // 选择类型背景板 h = 150
     UIView *typeView = [UIView new];
     typeView.backgroundColor = [UIColor greenColor];
     [coverView addSubview:typeView];
@@ -50,37 +54,47 @@
         make.height.equalTo(@150);
     }];
     
-    UIButton *btn = [UIButton new];
-    [typeView addSubview:btn];
-    btn.tag = 1038; // 这是根据类型类决定的
-    btn.backgroundColor = [UIColor blackColor];
-    btn.titleLabel.font = [UIFont systemFontOfSize:13];
-    [btn setTitle:@"按最近7期排列" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-       
-        make.left.mas_equalTo(typeView.mas_left);
-        make.right.mas_equalTo(typeView.mas_right);
-        make.top.mas_equalTo(typeView.mas_top);
-        make.height.mas_equalTo(40);
-    }];
+    // 添加按钮
+    for (int i = 0; i < 5; i++) {
+        
+        UIButton *btn = [UIButton new];
+        [typeView addSubview:btn];
+        btn.tag = 1038; // 这是根据类型类决定的
+        btn.backgroundColor = [UIColor blackColor];
+        btn.titleLabel.font = [UIFont systemFontOfSize:12];
+        [btn setTitle:@"最近7期排序" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.left.mas_equalTo(typeView.mas_left);
+            make.right.mas_equalTo(typeView.mas_right);
+            make.top.mas_equalTo(typeView.mas_top).offset(i * 30);
+            make.height.mas_equalTo(30);
+        }];
+        
+    }
+
   
 }
 
 - (void)coverClick:(UITapGestureRecognizer *)tap
 {
     [tap.view removeFromSuperview];
-
+    // 自己的箭头
+    [self.sortTypeBtn setImage:[UIImage imageNamed:@"expand_down"] forState:UIControlStateNormal];
 }
 
 - (void)btnClick:(UIButton *)btn
 {
     // 修改原Btn的默认值
     [self.sortTypeBtn setTitle:btn.currentTitle forState:UIControlStateNormal];
+    [self.sortTypeBtn setImage:[UIImage imageNamed:@"expand_down"] forState:UIControlStateNormal];
+    [btn.superview.superview removeFromSuperview]; // 蒙版移除
+    
+#warning 处理对应的几期分类。是什么样的类型  7期 -- 1038 ，，， 回调去外面实现请求
     
     // 请求对应分期排列
     // 通过回调来实现。更好
-    
     DLog(@"type == %zd",btn.tag);
 }
 
@@ -88,8 +102,14 @@
 {
     [super awakeFromNib];
     
-    // 添加 第 多少期
-    
+    // 每次进来默认更新sortScrollViewContent
+    [self updateSortScrollViewContent];
+}
+
+- (void)playTypeBtnClick:(UIButton *)btn
+{
+    DLog(@"你点击的 name 是 ： %@ ",btn.currentTitle);
+    DLog(@"你点击的 type 是 ： %zd ",btn.tag);
 }
 
 - (void)setModel:(XYSurveyModel *)model
@@ -161,7 +181,62 @@
     }
     
     
+    // 更新scrollview上的内容（每种类型都不一样）
+    [self updateSortScrollViewContent];
+    
 }
+
+- (void)updateSortScrollViewContent
+{
+    // 同样也要先移除旧的控件
+    if (self.sortScrollView.subviews.count) {
+        [self.sortScrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj removeFromSuperview];
+        }];
+    }
+    
+    
+#define btn_width 100
+    // 添加对应的一些玩法按钮，到scrollview上
+    XYLottery *lot = [XYTools lotteryWithName:[kUserDefaults objectForKey:k_CurrentLotteryType]];
+    
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, lot.coinplays.count * btn_width, 35)];
+    [self.sortScrollView addSubview:containerView];
+    
+    for (int i = 0 ; i < lot.coinplays.count; i ++) {
+        
+        // 创建btns
+        UIButton *btn = [UIButton new];
+        NSString *title = lot.coinplays[i].playname;
+        btn.titleLabel.font = [UIFont systemFontOfSize:11];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn setTitle:title forState:UIControlStateNormal];
+        //        [btn sizeToFit];
+        btn.tag = lot.coinplays[i].playtype.integerValue;
+        [btn addTarget:self action:@selector(playTypeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [containerView addSubview:btn];
+        
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+//            make.left.mas_equalTo(self.sortScrollView.mas_left).offset(i * btn_width);
+//            make.top.mas_equalTo(self.sortScrollView);
+//            make.bottom.mas_equalTo(self.sortScrollView);
+//            make.width.mas_equalTo(btn_width);
+            make.left.mas_equalTo(containerView.mas_left).offset(i * btn_width);
+            make.top.mas_equalTo(containerView);
+            make.bottom.mas_equalTo(containerView);
+            make.width.mas_equalTo(btn_width);
+        }];
+    }
+    
+    // 设置contentSize
+//    self.sortScrollView.scrollEnabled = YES;
+//    self.sortScrollView.userInteractionEnabled = YES;
+    self.sortScrollView.contentSize = CGSizeMake(lot.coinplays.count * btn_width, 0);
+    DLog(@"%@",NSStringFromCGSize(self.sortScrollView.contentSize));
+}
+
+
 
 - (NSMutableArray *)ballArrays
 {

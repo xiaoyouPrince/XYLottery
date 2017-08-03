@@ -91,6 +91,17 @@
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if ( self = [super initWithCoder:aDecoder]) {
+        
+        self.adjustsImageWhenHighlighted = NO; // 不要自动调整高亮时候图片
+        self.imageView.contentMode = UIViewContentModeCenter;
+        
+    }
+    return self;
+}
+
 /**
  *  重写按钮内部组件的frame
  */

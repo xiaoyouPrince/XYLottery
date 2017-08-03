@@ -51,19 +51,23 @@
                         <constraint firstAttribute="height" constant="35" id="rxH-ty-lSV"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGZ-6d-ECb" customClass="XYTitleButton">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGZ-6d-ECb" customClass="XYTitleButton">
                     <rect key="frame" x="0.0" y="64.5" width="100" height="35"/>
-                    <state key="normal" title="Button"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="最近7期排序" image="expand_up">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="sortTypeBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="g4s-ER-lbu"/>
                     </connections>
                 </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qG-t3-ecH">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qG-t3-ecH">
                     <rect key="frame" x="100.5" y="64.5" width="274.5" height="35"/>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="5qG-t3-ecH" secondAttribute="trailing" id="3cs-Y5-Y3I"/>
                 <constraint firstItem="K4R-VE-wK5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="9M6-YA-lWG"/>
                 <constraint firstItem="owH-8Q-N1j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Agu-tw-Njs"/>
                 <constraint firstItem="He1-7h-Aon" firstAttribute="leading" secondItem="K4R-VE-wK5" secondAttribute="trailing" constant="10" id="FM8-3c-5Vr"/>
@@ -71,7 +75,6 @@
                 <constraint firstAttribute="trailing" secondItem="C0I-ZJ-Fhj" secondAttribute="trailing" id="bUY-2q-D1m"/>
                 <constraint firstItem="C0I-ZJ-Fhj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cA2-9s-DNM"/>
                 <constraint firstItem="VGZ-6d-ECb" firstAttribute="top" secondItem="owH-8Q-N1j" secondAttribute="bottom" id="dt3-Cj-0sC"/>
-                <constraint firstAttribute="trailing" secondItem="5qG-t3-ecH" secondAttribute="trailing" id="hGz-Gj-BF6"/>
                 <constraint firstItem="dlB-B9-YE4" firstAttribute="leading" secondItem="VGZ-6d-ECb" secondAttribute="trailing" id="hqr-9T-bS4"/>
                 <constraint firstAttribute="trailing" secondItem="owH-8Q-N1j" secondAttribute="trailing" id="jxo-NR-l6C"/>
                 <constraint firstItem="C0I-ZJ-Fhj" firstAttribute="top" secondItem="VGZ-6d-ECb" secondAttribute="bottom" id="kRv-bO-Qpu"/>
@@ -95,6 +98,7 @@
         </view>
     </objects>
     <resources>
+        <image name="expand_up" width="16" height="16"/>
         <image name="kj_issue.png" width="26" height="32"/>
     </resources>
 </document>

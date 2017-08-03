@@ -94,6 +94,12 @@
 		B48ED43D1F2B088300F26BC3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ED43C1F2B088300F26BC3 /* AdSupport.framework */; };
 		B48ED43F1F2B088D00F26BC3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ED43E1F2B088D00F26BC3 /* UserNotifications.framework */; };
 		B48ED4411F2B089A00F26BC3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ED4401F2B089A00F26BC3 /* libresolv.tbd */; };
+		B49497AF1F32CC3000EF3252 /* expand_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49497AE1F32CC3000EF3252 /* expand_down@2x.png */; };
+		B49497B11F32CD4F00EF3252 /* expand_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49497B01F32CD4F00EF3252 /* expand_up@2x.png */; };
+		B49497B31F32D56900EF3252 /* lotteryData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49497B21F32D56900EF3252 /* lotteryData.plist */; };
+		B49497B61F32F2D900EF3252 /* XYLotteryData.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497B51F32F2D900EF3252 /* XYLotteryData.m */; };
+		B49497B91F32F34A00EF3252 /* XYLottery.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497B81F32F34A00EF3252 /* XYLottery.m */; };
+		B49497BC1F32FC1D00EF3252 /* XYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497BB1F32FC1D00EF3252 /* XYTools.m */; };
 		B4CB4D901F320F0200640D43 /* XYSurveyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */; };
 		B4CB4D931F3213BF00640D43 /* XYSurveyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */; };
 /* End PBXBuildFile section */
@@ -244,6 +250,15 @@
 		B48ED43C1F2B088300F26BC3 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B48ED43E1F2B088D00F26BC3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		B48ED4401F2B089A00F26BC3 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		B49497AE1F32CC3000EF3252 /* expand_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expand_down@2x.png"; sourceTree = "<group>"; };
+		B49497B01F32CD4F00EF3252 /* expand_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expand_up@2x.png"; sourceTree = "<group>"; };
+		B49497B21F32D56900EF3252 /* lotteryData.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = lotteryData.plist; sourceTree = "<group>"; };
+		B49497B41F32F2D900EF3252 /* XYLotteryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLotteryData.h; sourceTree = "<group>"; };
+		B49497B51F32F2D900EF3252 /* XYLotteryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLotteryData.m; sourceTree = "<group>"; };
+		B49497B71F32F34A00EF3252 /* XYLottery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLottery.h; sourceTree = "<group>"; };
+		B49497B81F32F34A00EF3252 /* XYLottery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLottery.m; sourceTree = "<group>"; };
+		B49497BA1F32FC1D00EF3252 /* XYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTools.h; sourceTree = "<group>"; };
+		B49497BB1F32FC1D00EF3252 /* XYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTools.m; sourceTree = "<group>"; };
 		B4CB4D8E1F320F0200640D43 /* XYSurveyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSurveyModel.h; sourceTree = "<group>"; };
 		B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSurveyModel.m; sourceTree = "<group>"; };
 		B4CB4D911F3213BF00640D43 /* XYSurveyListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSurveyListModel.h; sourceTree = "<group>"; };
@@ -294,6 +309,8 @@
 		B4207ECF1F30260300829C69 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B49497B01F32CD4F00EF3252 /* expand_up@2x.png */,
+				B49497AE1F32CC3000EF3252 /* expand_down@2x.png */,
 				B4207F291F30731900829C69 /* navBar */,
 				B4207ED01F30260300829C69 /* TabBar */,
 			);
@@ -404,6 +421,8 @@
 			isa = PBXGroup;
 			children = (
 				B4207F4B1F31D38F00829C69 /* HttpTool */,
+				B49497BA1F32FC1D00EF3252 /* XYTools.h */,
+				B49497BB1F32FC1D00EF3252 /* XYTools.m */,
 			);
 			path = XYTools;
 			sourceTree = "<group>";
@@ -656,6 +675,7 @@
 				B48ED3DD1F2ADFC700F26BC3 /* Main.storyboard */,
 				B48ED3E21F2ADFC700F26BC3 /* LaunchScreen.storyboard */,
 				B48ED3E51F2ADFC700F26BC3 /* Info.plist */,
+				B49497B21F32D56900EF3252 /* lotteryData.plist */,
 				B48ED4131F2AE1D800F26BC3 /* AppDelegate.h */,
 				B48ED4141F2AE1D800F26BC3 /* AppDelegate.m */,
 				B48ED3D51F2ADFC700F26BC3 /* main.m */,
@@ -776,6 +796,10 @@
 				B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */,
 				B4CB4D911F3213BF00640D43 /* XYSurveyListModel.h */,
 				B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */,
+				B49497B41F32F2D900EF3252 /* XYLotteryData.h */,
+				B49497B51F32F2D900EF3252 /* XYLotteryData.m */,
+				B49497B71F32F34A00EF3252 /* XYLottery.h */,
+				B49497B81F32F34A00EF3252 /* XYLottery.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -931,6 +955,7 @@
 				B4207F2C1F30731900829C69 /* navigationbar_arrow_down.png in Resources */,
 				B4207EF51F30260300829C69 /* tabbar_lucky.png in Resources */,
 				B4207EFF1F30260300829C69 /* tabbar_news_sel@2x.png in Resources */,
+				B49497B31F32D56900EF3252 /* lotteryData.plist in Resources */,
 				B4207EFC1F30260300829C69 /* tabbar_news@2x.png in Resources */,
 				B4207EEF1F30260300829C69 /* tabbar_curSurvey.png in Resources */,
 				B4207F051F30260300829C69 /* tabbar_preSurvey_sel@2x.png in Resources */,
@@ -948,9 +973,11 @@
 				B4207F321F307EF200829C69 /* grrow_down@2x.png in Resources */,
 				B4207F351F30817D00829C69 /* titleBtnBg.png in Resources */,
 				B4207F061F30260300829C69 /* tabbar_preSurvey_sel@3x.png in Resources */,
+				B49497AF1F32CC3000EF3252 /* expand_down@2x.png in Resources */,
 				B4207F491F31C84500829C69 /* kj_issue.png in Resources */,
 				B4207EFE1F30260300829C69 /* tabbar_news_sel.png in Resources */,
 				B4207F021F30260300829C69 /* tabbar_preSurvey@2x.png in Resources */,
+				B49497B11F32CD4F00EF3252 /* expand_up@2x.png in Resources */,
 				B4207EF71F30260300829C69 /* tabbar_lucky@3x.png in Resources */,
 				B4207EFD1F30260300829C69 /* tabbar_news@3x.png in Resources */,
 				B4207EF01F30260300829C69 /* tabbar_curSurvey@2x.png in Resources */,
@@ -1040,7 +1067,9 @@
 				B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */,
 				B4207F661F31D3A100829C69 /* MJArgument.m in Sources */,
 				B4207F691F31D3A100829C69 /* MJMethod.m in Sources */,
+				B49497B61F32F2D900EF3252 /* XYLotteryData.m in Sources */,
 				B4207F131F30300500829C69 /* BaseViewController.m in Sources */,
+				B49497B91F32F34A00EF3252 /* XYLottery.m in Sources */,
 				B4207F471F31BC2B00829C69 /* XYPreSurveyModel.m in Sources */,
 				B4207F501F31D38F00829C69 /* XYHttpTool.m in Sources */,
 				B48ED4181F2AE1D800F26BC3 /* ViewController.m in Sources */,
@@ -1052,6 +1081,7 @@
 				B4207F681F31D3A100829C69 /* MJMember.m in Sources */,
 				B4731A0C1F30162700E0C688 /* ProfileViewController.m in Sources */,
 				B4207F6A1F31D3A100829C69 /* MJType.m in Sources */,
+				B49497BC1F32FC1D00EF3252 /* XYTools.m in Sources */,
 				B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */,
 				B4CB4D901F320F0200640D43 /* XYSurveyModel.m in Sources */,
 				B48ED4171F2AE1D800F26BC3 /* AppDelegate.m in Sources */,

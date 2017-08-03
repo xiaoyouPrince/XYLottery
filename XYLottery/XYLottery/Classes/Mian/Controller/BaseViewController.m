@@ -6,7 +6,6 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
-#define k_CurrentLotteryType @"currentLotteryType"
 
 #import "BaseViewController.h"
 #import "XYTitleButton.h"
