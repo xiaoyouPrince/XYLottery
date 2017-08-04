@@ -142,11 +142,6 @@
         
     }];
     
-//    // 当前 btn 下面添加一个指示线
-//    UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, HEIGHT(btn) - 1, WIDTH(btn), 1 )];
-//    line.backgroundColor = [UIColor redColor];
-//    [btn addSubview:line];
-    
     // 保存当前的类型 playtype 对应的 index
     UIView *containerView = self.sortScrollView.subviews.firstObject;
     self.model.playType_index = [containerView.subviews indexOfObject:btn];

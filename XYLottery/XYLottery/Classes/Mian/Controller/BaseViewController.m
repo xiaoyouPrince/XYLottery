@@ -104,16 +104,33 @@
                 
         [self.titleButton setTitle:chooseResult forState:UIControlStateNormal];
         
-        // 保存用户选择
-//        [kUserDefaults setObject:chooseResult forKey:k_CurrentLotteryName];
-        [XYTools setCurrentLotName:chooseResult];
-        
-        // 用户选择之后进行对应的类型请求数据
-//        [self loadDataWithPlayType:@"1038" lotName:chooseResult issuenum:@"7"];
-        [self loadDataWithPlayType:[XYTools currentPlayType] lotName:[XYTools currentLotName] issuenum:[XYTools currentIssuenum]];
-        
+        // 判断是不是修改了类型，修改了就调用方法，通知子类、重新保存lotName、并请求
+        if (! [chooseResult isEqualToString:[XYTools currentLotName]]) {
+            
+            // 通知子类
+            [self hasChangeNavTitleLotType];
+            
+            // 保存用户选择
+            //        [kUserDefaults setObject:chooseResult forKey:k_CurrentLotteryName];
+            [XYTools setCurrentLotName:chooseResult];
+            
+            // 用户选择之后进行对应的类型请求数据
+            //        [self loadDataWithPlayType:@"1038" lotName:chooseResult issuenum:@"7"];
+            [self loadDataWithPlayType:[XYTools currentPlayType] lotName:[XYTools currentLotName] issuenum:[XYTools currentIssuenum]];
+            
+        }
+            // 没有修改就不动
+            
     };
- 
+}
+
+
+/**
+ 这个是修改彩票类型的时候，自己调用的方法，子类重写之后可以得到--彩票类型已经修改的通知
+ */
+- (void)hasChangeNavTitleLotType
+{
+    // 这里只需要子类重写就行
 }
 
 - (void)loadDataWithPlayType:(NSString *)playTpye lotName:(NSString *)lotName issuenum:(NSString *)issuenum

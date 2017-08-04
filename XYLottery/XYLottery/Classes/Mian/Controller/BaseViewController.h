@@ -18,5 +18,6 @@
 
 
 - (void)reloadPageData;
+- (void)hasChangeNavTitleLotType;
 
 @end
