@@ -61,14 +61,18 @@
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     self.tableView = tableView;
+    
+    // 默认请求一次最新数据
+    [self loadDataWithPlayType:@"1039" lotName:button.currentTitle issuenum:@"7"];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    // 这里就是记住当前的彩种
-    NSString *lotType = [kUserDefaults objectForKey:k_CurrentLotteryType];
+    // 这里就是记住当前的彩种名称
+    NSString *lotType = [kUserDefaults objectForKey:k_CurrentLotteryName];
     if (lotType) {
         [self.titleButton setTitle:lotType forState:UIControlStateNormal];
     }else
@@ -76,8 +80,8 @@
         [self.titleButton setTitle:@"双色球" forState:UIControlStateNormal];
     }
     
-    // 每次展示根据当前类型进行请求最新数据
-    [self loadDataWithPlayType:@"1038" lotName:lotType issuenum:@"7"];
+//    // 每次展示根据当前类型进行请求最新数据
+//    [self loadDataWithPlayType:@"1038" lotName:lotType issuenum:@"7"];
     
 }
 
@@ -101,10 +105,12 @@
         [self.titleButton setTitle:chooseResult forState:UIControlStateNormal];
         
         // 保存用户选择
-        [kUserDefaults setObject:chooseResult forKey:k_CurrentLotteryType];
+//        [kUserDefaults setObject:chooseResult forKey:k_CurrentLotteryName];
+        [XYTools setCurrentLotName:chooseResult];
         
         // 用户选择之后进行对应的类型请求数据
-        [self loadDataWithPlayType:@"1038" lotName:chooseResult issuenum:@"7"];
+//        [self loadDataWithPlayType:@"1038" lotName:chooseResult issuenum:@"7"];
+        [self loadDataWithPlayType:[XYTools currentPlayType] lotName:[XYTools currentLotName] issuenum:[XYTools currentIssuenum]];
         
     };
  
@@ -129,6 +135,7 @@
     }else if ([lotName isEqualToString:@"大乐透"]) {
         lotType = @"1007";
     }
+    
     
     
     XYRequestParam *params = [XYRequestParam new];
@@ -157,7 +164,7 @@
 
 - (void)reloadPageData
 {
-//    [self.tableView reloadData];
+    [self.tableView reloadData];
 }
 
 

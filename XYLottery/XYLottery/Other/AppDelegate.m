@@ -44,6 +44,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];
+    
+    
+    // 数据
+    [kUserDefaults setObject:@"1039" forKey:k_CurrentPlayType]; // 杀三码
+    [kUserDefaults setObject:@"双色球" forKey:k_CurrentLotteryName]; // 双色球
+    [kUserDefaults setObject:@"1001" forKey:k_CurrentLotteryType]; // 双色球
+    [kUserDefaults setObject:@"7" forKey:k_CurrentIssuenum];    // 7期
 }
 
 

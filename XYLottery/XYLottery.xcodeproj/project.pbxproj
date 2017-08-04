@@ -100,8 +100,13 @@
 		B49497B61F32F2D900EF3252 /* XYLotteryData.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497B51F32F2D900EF3252 /* XYLotteryData.m */; };
 		B49497B91F32F34A00EF3252 /* XYLottery.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497B81F32F34A00EF3252 /* XYLottery.m */; };
 		B49497BC1F32FC1D00EF3252 /* XYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497BB1F32FC1D00EF3252 /* XYTools.m */; };
+		B4B071B91F336512006DD2A2 /* XYPreSurveyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B071B71F336512006DD2A2 /* XYPreSurveyCell.m */; };
+		B4B071BA1F336512006DD2A2 /* XYPreSurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B071B81F336512006DD2A2 /* XYPreSurveyCell.xib */; };
+		B4B071BE1F337753006DD2A2 /* icon_see@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B071BD1F337753006DD2A2 /* icon_see@2x.png */; };
 		B4CB4D901F320F0200640D43 /* XYSurveyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */; };
 		B4CB4D931F3213BF00640D43 /* XYSurveyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */; };
+		B4FC97A51F331C2E00E83E03 /* issuenum.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4FC97A41F331C2E00E83E03 /* issuenum.plist */; };
+		B4FC97A81F331D6800E83E03 /* XYIssueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FC97A71F331D6800E83E03 /* XYIssueModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,10 +264,17 @@
 		B49497B81F32F34A00EF3252 /* XYLottery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLottery.m; sourceTree = "<group>"; };
 		B49497BA1F32FC1D00EF3252 /* XYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTools.h; sourceTree = "<group>"; };
 		B49497BB1F32FC1D00EF3252 /* XYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTools.m; sourceTree = "<group>"; };
+		B4B071B61F336512006DD2A2 /* XYPreSurveyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPreSurveyCell.h; sourceTree = "<group>"; };
+		B4B071B71F336512006DD2A2 /* XYPreSurveyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPreSurveyCell.m; sourceTree = "<group>"; };
+		B4B071B81F336512006DD2A2 /* XYPreSurveyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYPreSurveyCell.xib; sourceTree = "<group>"; };
+		B4B071BD1F337753006DD2A2 /* icon_see@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_see@2x.png"; sourceTree = "<group>"; };
 		B4CB4D8E1F320F0200640D43 /* XYSurveyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSurveyModel.h; sourceTree = "<group>"; };
 		B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSurveyModel.m; sourceTree = "<group>"; };
 		B4CB4D911F3213BF00640D43 /* XYSurveyListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSurveyListModel.h; sourceTree = "<group>"; };
 		B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSurveyListModel.m; sourceTree = "<group>"; };
+		B4FC97A41F331C2E00E83E03 /* issuenum.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = issuenum.plist; sourceTree = "<group>"; };
+		B4FC97A61F331D6800E83E03 /* XYIssueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYIssueModel.h; sourceTree = "<group>"; };
+		B4FC97A71F331D6800E83E03 /* XYIssueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYIssueModel.m; sourceTree = "<group>"; };
 		DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XYLottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -309,6 +321,7 @@
 		B4207ECF1F30260300829C69 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B4B071BD1F337753006DD2A2 /* icon_see@2x.png */,
 				B49497B01F32CD4F00EF3252 /* expand_up@2x.png */,
 				B49497AE1F32CC3000EF3252 /* expand_down@2x.png */,
 				B4207F291F30731900829C69 /* navBar */,
@@ -597,6 +610,9 @@
 				B4207F401F31B74B00829C69 /* XYPreSurveyTopView.h */,
 				B4207F411F31B74B00829C69 /* XYPreSurveyTopView.m */,
 				B4207F431F31B7AC00829C69 /* XYPreSurveyTopView.xib */,
+				B4B071B61F336512006DD2A2 /* XYPreSurveyCell.h */,
+				B4B071B71F336512006DD2A2 /* XYPreSurveyCell.m */,
+				B4B071B81F336512006DD2A2 /* XYPreSurveyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -676,6 +692,7 @@
 				B48ED3E21F2ADFC700F26BC3 /* LaunchScreen.storyboard */,
 				B48ED3E51F2ADFC700F26BC3 /* Info.plist */,
 				B49497B21F32D56900EF3252 /* lotteryData.plist */,
+				B4FC97A41F331C2E00E83E03 /* issuenum.plist */,
 				B48ED4131F2AE1D800F26BC3 /* AppDelegate.h */,
 				B48ED4141F2AE1D800F26BC3 /* AppDelegate.m */,
 				B48ED3D51F2ADFC700F26BC3 /* main.m */,
@@ -800,6 +817,8 @@
 				B49497B51F32F2D900EF3252 /* XYLotteryData.m */,
 				B49497B71F32F34A00EF3252 /* XYLottery.h */,
 				B49497B81F32F34A00EF3252 /* XYLottery.m */,
+				B4FC97A61F331D6800E83E03 /* XYIssueModel.h */,
+				B4FC97A71F331D6800E83E03 /* XYIssueModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -966,6 +985,8 @@
 				B4207F441F31B7AC00829C69 /* XYPreSurveyTopView.xib in Resources */,
 				B4207F331F307EF200829C69 /* grrow_down@3x.png in Resources */,
 				B4207EF91F30260300829C69 /* tabbar_lucky_sel@2x.png in Resources */,
+				B4B071BE1F337753006DD2A2 /* icon_see@2x.png in Resources */,
+				B4FC97A51F331C2E00E83E03 /* issuenum.plist in Resources */,
 				B4207F031F30260300829C69 /* tabbar_preSurvey@3x.png in Resources */,
 				B4207EFB1F30260300829C69 /* tabbar_news.png in Resources */,
 				B4207EF61F30260300829C69 /* tabbar_lucky@2x.png in Resources */,
@@ -984,6 +1005,7 @@
 				B4207EF31F30260300829C69 /* tabbar_curSurvey_sel@2x.png in Resources */,
 				B4207F001F30260300829C69 /* tabbar_news_sel@3x.png in Resources */,
 				B4207F2D1F30731900829C69 /* navigationbar_arrow_up.png in Resources */,
+				B4B071BA1F336512006DD2A2 /* XYPreSurveyCell.xib in Resources */,
 				B4207F0C1F30260300829C69 /* tabbar_profile_sel@3x.png in Resources */,
 				B48ED3DF1F2ADFC700F26BC3 /* Main.storyboard in Resources */,
 				B4207F081F30260300829C69 /* tabbar_profile@2x.png in Resources */,
@@ -1061,6 +1083,7 @@
 			files = (
 				B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */,
 				B4207F6B1F31D3A100829C69 /* MJTypeEncoding.m in Sources */,
+				B4B071B91F336512006DD2A2 /* XYPreSurveyCell.m in Sources */,
 				B4207F6E1F31D3A100829C69 /* NSObject+MJMember.m in Sources */,
 				B4207F161F304E6000829C69 /* XYTitleButton.m in Sources */,
 				B4207F511F31D38F00829C69 /* XYRequestParam.m in Sources */,
@@ -1080,6 +1103,7 @@
 				B4207F671F31D3A100829C69 /* MJIvar.m in Sources */,
 				B4207F681F31D3A100829C69 /* MJMember.m in Sources */,
 				B4731A0C1F30162700E0C688 /* ProfileViewController.m in Sources */,
+				B4FC97A81F331D6800E83E03 /* XYIssueModel.m in Sources */,
 				B4207F6A1F31D3A100829C69 /* MJType.m in Sources */,
 				B49497BC1F32FC1D00EF3252 /* XYTools.m in Sources */,
 				B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */,

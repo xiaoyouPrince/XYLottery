@@ -35,12 +35,12 @@
 @property(nonatomic , copy) NSString *isexpert;
 @property(nonatomic , copy) NSString *hitnum;
 @property(nonatomic , copy) NSString *priceleve;
-@property(nonatomic , copy) NSString *status; // 可能是int
+@property(nonatomic , strong) NSNumber *status; // 可能是int
 @property(nonatomic , copy) NSString *userid;
 @property(nonatomic , copy) NSString *playname;
 @property(nonatomic , copy) NSString *award;
 @property(nonatomic , copy) NSString *calc;
-@property(nonatomic , copy) NSString *viewnum;
+@property(nonatomic , strong) NSNumber *viewnum;
 @property(nonatomic , copy) NSString *nextsid;
 @property(nonatomic , copy) NSString *nextplayname;
 @property(nonatomic , copy) NSString *nextplaytype;

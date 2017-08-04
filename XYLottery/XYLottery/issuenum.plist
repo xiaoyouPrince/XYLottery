@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>issues</key>
+	<array>
+		<dict>
+			<key>issuenum</key>
+			<string>3</string>
+			<key>issuestr</key>
+			<string>最近3期排序</string>
+		</dict>
+		<dict>
+			<key>issuenum</key>
+			<string>5</string>
+			<key>issuestr</key>
+			<string>最近5期排序</string>
+		</dict>
+		<dict>
+			<key>issuenum</key>
+			<string>7</string>
+			<key>issuestr</key>
+			<string>最近7期排序</string>
+		</dict>
+		<dict>
+			<key>issuenum</key>
+			<string>10</string>
+			<key>issuestr</key>
+			<string>最近10期排序</string>
+		</dict>
+		<dict>
+			<key>issuenum</key>
+			<string>15</string>
+			<key>issuestr</key>
+			<string>最近15期排序</string>
+		</dict>
+		<dict>
+			<key>issuenum</key>
+			<string>30</string>
+			<key>issuestr</key>
+			<string>最近30期排序</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -13,7 +13,7 @@
 @interface BaseViewController : UIViewController
 
 @property(nonatomic , strong) XYSurveyModel  *model;
-@property(nonatomic , strong) NSArray  *list;
+@property(nonatomic , strong) NSArray<XYSurveyListModel *>  *list;
 @property(nonatomic , weak) UITableView  *tableView;
 
 

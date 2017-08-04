@@ -10,4 +10,17 @@
 
 @implementation XYSurveyModel
 
+- (NSDictionary *)objectClassInArray
+{
+    return @{@"list" : [XYSurveyListModel class]};
+}
+
+- (NSInteger)playType_index
+{
+    if (_playType_index == 0) {
+        
+        return _playType_index;
+    }
+    return _playType_index;
+}
 @end

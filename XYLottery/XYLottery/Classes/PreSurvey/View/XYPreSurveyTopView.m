@@ -20,6 +20,8 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *sortScrollView;
 
+@property (assign, nonatomic) NSInteger playtypeIndex; // 保存当前选择折后 playtype 的位置信息
+
 @end
 
 @implementation XYPreSurveyTopView
@@ -51,18 +53,20 @@
         make.left.mas_equalTo(sender.mas_left).offset(5);
         make.top.mas_equalTo(sender.mas_bottom).offset(5);
         make.width.mas_equalTo(sender.mas_width);
-        make.height.equalTo(@150);
+        make.height.equalTo(@180);
     }];
     
     // 添加按钮
-    for (int i = 0; i < 5; i++) {
+    NSArray<XYIssue*> *issues = [XYTools issueModel].issues;
+    for (int i = 0; i < issues.count; i++) {
         
         UIButton *btn = [UIButton new];
         [typeView addSubview:btn];
-        btn.tag = 1038; // 这是根据类型类决定的
+        btn.tag = issues[i].issuenum.integerValue; // 这是根据类型类决定的
         btn.backgroundColor = [UIColor blackColor];
         btn.titleLabel.font = [UIFont systemFontOfSize:12];
-        [btn setTitle:@"最近7期排序" forState:UIControlStateNormal];
+//        [btn setTitle:@"最近7期排序" forState:UIControlStateNormal];
+        [btn setTitle:issues[i].issuestr forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             
@@ -84,6 +88,10 @@
     [self.sortTypeBtn setImage:[UIImage imageNamed:@"expand_down"] forState:UIControlStateNormal];
 }
 
+
+/**
+  按多少期排序的按钮点击
+ */
 - (void)btnClick:(UIButton *)btn
 {
     // 修改原Btn的默认值
@@ -92,6 +100,11 @@
     [btn.superview.superview removeFromSuperview]; // 蒙版移除
     
 #warning 处理对应的几期分类。是什么样的类型  7期 -- 1038 ，，， 回调去外面实现请求
+    [XYTools setCurrentIssuenum:[NSString stringWithFormat:@"%zd",btn.tag]];
+    
+    if (self.issueCallBack) {
+        self.issueCallBack([NSString stringWithFormat:@"%zd",btn.tag]);
+    }
     
     // 请求对应分期排列
     // 通过回调来实现。更好
@@ -106,10 +119,44 @@
     [self updateSortScrollViewContent];
 }
 
+
+/**
+    选择玩法的按钮的点击
+ */
 - (void)playTypeBtnClick:(UIButton *)btn
 {
     DLog(@"你点击的 name 是 ： %@ ",btn.currentTitle);
     DLog(@"你点击的 type 是 ： %zd ",btn.tag);
+    
+    [XYTools setCurrentPlayType:[NSString stringWithFormat:@"%zd",btn.tag]];
+    
+    // 移除前边的线
+    [btn.superview.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        [obj.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+           
+            if ([obj isKindOfClass:[UIImageView class]]) {
+                [obj removeFromSuperview];
+            }
+        }];
+        
+    }];
+    
+//    // 当前 btn 下面添加一个指示线
+//    UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, HEIGHT(btn) - 1, WIDTH(btn), 1 )];
+//    line.backgroundColor = [UIColor redColor];
+//    [btn addSubview:line];
+    
+    // 保存当前的类型 playtype 对应的 index
+    UIView *containerView = self.sortScrollView.subviews.firstObject;
+    self.model.playType_index = [containerView.subviews indexOfObject:btn];
+    _playtypeIndex = [containerView.subviews indexOfObject:btn];
+    
+#warning 回调，然后去外面去重新请求数据
+    if (self.playtypeCallBack) {
+        self.playtypeCallBack([NSString stringWithFormat:@"%zd",btn.tag] , _playtypeIndex);
+    }
+    
 }
 
 - (void)setModel:(XYSurveyModel *)model
@@ -180,7 +227,6 @@
 //        
     }
     
-    
     // 更新scrollview上的内容（每种类型都不一样）
     [self updateSortScrollViewContent];
     
@@ -196,9 +242,9 @@
     }
     
     
-#define btn_width 100
+#define btn_width 70
     // 添加对应的一些玩法按钮，到scrollview上
-    XYLottery *lot = [XYTools lotteryWithName:[kUserDefaults objectForKey:k_CurrentLotteryType]];
+    XYLottery *lot = [XYTools lotteryWithName:[kUserDefaults objectForKey:k_CurrentLotteryName]];
     
     UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, lot.coinplays.count * btn_width, 35)];
     [self.sortScrollView addSubview:containerView];
@@ -229,9 +275,24 @@
         }];
     }
     
+    // 给对应的btn下面加一根线
+    UIButton *btn = containerView.subviews[self.model.playType_index];
+//    UIImageView *line = [[UIImageView alloc] initWithFrame:CGRectMake(0, HEIGHT(btn) - 1, WIDTH(btn), 1 )];
+    UIImageView *line = [[UIImageView alloc] init];
+    line.backgroundColor = [UIColor redColor];
+    [btn addSubview:line];
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {// 这块说明，要用AutoLayout就全用AutoLayout。
+        // 上面父控件用了AutoLayout 现在想用frame 是不行的。
+        make.bottom.mas_equalTo(btn);
+        make.left.mas_equalTo(btn.mas_left).offset(10);
+        make.right.mas_equalTo(btn.mas_right).offset(-10);
+        make.height.mas_equalTo(2);
+    }];
+    
+    
+//    btn.backgroundColor = [UIColor yellowColor];
+    
     // 设置contentSize
-//    self.sortScrollView.scrollEnabled = YES;
-//    self.sortScrollView.userInteractionEnabled = YES;
     self.sortScrollView.contentSize = CGSizeMake(lot.coinplays.count * btn_width, 0);
     DLog(@"%@",NSStringFromCGSize(self.sortScrollView.contentSize));
 }

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XYSurveyListModel.h"
 
 @interface XYSurveyModel : NSObject
 
@@ -28,7 +29,11 @@
 @property(nonatomic , copy) NSString *kjnum;   ///< 开奖号码
 @property(nonatomic , copy) NSString *lastid;  ///< 上次id
 
-@property(nonatomic , strong) NSArray  *list;
+@property(nonatomic , strong) NSArray<XYSurveyListModel*>  *list;
+
+
+/// 保存对应的 playtype_index
+@property(nonatomic , assign) NSInteger playType_index;
 
 
 @end

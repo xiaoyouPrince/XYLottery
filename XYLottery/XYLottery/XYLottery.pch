@@ -16,6 +16,8 @@
 #define k_base_url @"http://115.29.175.83/cpyc/getprecalc.php"
 
 #define k_CurrentLotteryType @"currentLotteryType"
-
+#define k_CurrentLotteryName @"currentLotteryName"
+#define k_CurrentPlayType @"currentPlayType"
+#define k_CurrentIssuenum @"CurrentIssuenum"
 
 #endif /* PrefixHeader_pch */
