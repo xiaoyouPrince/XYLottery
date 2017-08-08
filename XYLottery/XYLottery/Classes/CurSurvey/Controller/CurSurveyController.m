@@ -7,92 +7,174 @@
 //
 
 #import "CurSurveyController.h"
+#import "XYCurSurveyTopView.h"
+
+#define k_cur_topViewH 80
+
 
 @interface CurSurveyController ()
+
+@property (nonatomic , weak) XYCurSurveyTopView *top;
+
+@property(nonatomic,assign) NSInteger self_playtypeIndex;
 
 @end
 
 @implementation CurSurveyController
 
+
+// 这里是重写父类的方法，用于得到修改彩票类型的通知
+- (void)hasChangeNavTitleLotType
+{
+    [super hasChangeNavTitleLotType];
+    
+    self.self_playtypeIndex = 0;
+}
+
+- (void)loadDataWithPlayType:(NSString *)playTpye lotName:(NSString *)lotName issuenum:(NSString *)issuenum
+{   // 纯粹是为了重写父类的方法，能够直接调用子类方法，拉取本页面数据（紧修改url）
+    
+    NSString *lotType = [XYTools lotteryWithName:lotName].lottype;
+    
+    XYRequestParam *params = [XYRequestParam new];
+    params.playtype = playTpye;
+    params.lottype = lotType;
+    params.issuenum = issuenum;
+    [XYHttpTool getWithURL:k_getcur_url params:params.keyValues success:^(NSDictionary* json) {
+        
+        NSLog(@"%@",json);
+        
+        self.model = [XYSurveyModel objectWithKeyValues:json];
+        self.list = [XYSurveyListModel objectArrayWithKeyValuesArray:json[@"list"]];
+
+        [self reloadPageData];
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // 添加topView
+    XYCurSurveyTopView *top = [[NSBundle mainBundle] loadNibNamed:@"XYCurSurveyTopView" owner:nil options:nil].lastObject;
+    self.top = top;
+    top.frame = CGRectMake(0, 64, ScreenW, k_cur_topViewH);
+    [self.view addSubview:top];
+    top.issueCallBack = ^(NSString *issuenum) {
+        // 直接下拉一下
+        [self.tableView.mj_header beginRefreshing];
+    };
+    top.playtypeCallBack = ^(NSString *playtype , NSInteger playtype_index) {
+        
+        // 保存自己内部的 playtype_index
+        self.self_playtypeIndex = playtype_index;
+        
+        // 直接下拉一下
+        [self.tableView.mj_header beginRefreshing];
+    };
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // 设置自己tableView
+    self.tableView.frame = CGRectMake(0, k_cur_topViewH, ScreenW, ScreenH - k_cur_topViewH);
+//    [self.tableView registerNib:[UINib nibWithNibName:@"XYPreSurveyCell" bundle:nil] forCellReuseIdentifier:k_PreSurveyCelID];
+    
+    
+    // 添加刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        // 根据这个请求并刷新数据
+        [self loadDataWithPlayType:[XYTools currentPlayType] lotType:[XYTools currentLotType] issuenum:[XYTools currentIssuenum] playTypeIndex:self.self_playtypeIndex];
+        
+        [self.tableView.mj_header endRefreshing];
+    }];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    // 上拉刷新
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        
+        // 根据这个请求并刷新数据
+        [self loadDataWithPlayType:[XYTools currentPlayType] lotType:[XYTools currentLotType] issuenum:[XYTools currentIssuenum] playTypeIndex:self.self_playtypeIndex];
+        
+        [self.tableView.mj_footer endRefreshing];
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)loadDataWithPlayType:(NSString *)playTpye lotType:(NSString *)lotType issuenum:(NSString *)issuenum playTypeIndex:(NSInteger)playType_index
+{
+    
+    // 展示HUD
+    [SVProgressHUD showWithStatus:@"loading..."];
+    
+    XYRequestParam *params = [XYRequestParam new];
+    params.playtype = playTpye;
+    params.lottype = lotType;
+    params.issuenum = issuenum;
+    [XYHttpTool getWithURL:k_getcur_url params:params.keyValues success:^(NSDictionary* json) {
+        
+        NSLog(@"%@",json);
+        
+        self.model = [XYSurveyModel objectWithKeyValues:json];
+        self.model.playType_index = playType_index;  // 这里保存一下对应的playTypeIndex，能刷新之后保留在原来位置
+        self.list = [XYSurveyListModel objectArrayWithKeyValuesArray:json[@"list"]];
+        
+        [self reloadPageData];
+        
+        [SVProgressHUD dismiss];
+        
+    } failure:^(NSError *error) {
+        
+        
+        NSLog(@"%@",error);
+        
+    }];
+}
+
+
+
+-(void)reloadPageData
+{
+    [super reloadPageData];
+    
+    self.top.model = self.model;
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.list.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    XYPreSurveyCell *cell = [tableView dequeueReusableCellWithIdentifier:k_PreSurveyCelID];
+//    
+//    cell.model = self.list[indexPath.row];
+//    
+//    return cell;
+//}
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *cellID = @"cellID";
+//
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+//    }
+//
+//    cell.textLabel.text = [NSString stringWithFormat:@"---%zd----",indexPath.row];
+//    
+//    return cell;
+//}
 
 @end

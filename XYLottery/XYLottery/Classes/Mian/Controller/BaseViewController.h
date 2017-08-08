@@ -10,7 +10,7 @@
 #import "XYSurveyModel.h"
 #import "XYSurveyListModel.h"
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic , strong) XYSurveyModel  *model;
 @property(nonatomic , strong) NSArray<XYSurveyListModel *>  *list;

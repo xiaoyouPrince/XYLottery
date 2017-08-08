@@ -28,6 +28,8 @@
 @property(nonatomic , copy) NSString *lottype; ///< 彩票类型
 @property(nonatomic , copy) NSString *kjnum;   ///< 开奖号码
 @property(nonatomic , copy) NSString *lastid;  ///< 上次id
+@property(nonatomic , copy) NSString *nextissue; ///< 下期开奖期数
+
 
 @property(nonatomic , strong) NSArray<XYSurveyListModel*>  *list;
 

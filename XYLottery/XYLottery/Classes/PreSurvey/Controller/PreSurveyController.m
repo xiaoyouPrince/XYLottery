@@ -97,7 +97,7 @@
     params.playtype = playTpye;
     params.lottype = lotType;
     params.issuenum = issuenum;
-    [XYHttpTool getWithURL:k_base_url params:params.keyValues success:^(NSDictionary* json) {
+    [XYHttpTool getWithURL:k_getpre_url params:params.keyValues success:^(NSDictionary* json) {
         
         NSLog(@"%@",json);
         

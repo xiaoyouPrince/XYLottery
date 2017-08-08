@@ -11,11 +11,6 @@
 
 @interface XYPreSurveyTopView ()
 
-@property(nonatomic , strong) NSMutableArray  *ballArrays;
-
-
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
 @property (weak, nonatomic) IBOutlet XYTitleButton *sortTypeBtn;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *sortScrollView;

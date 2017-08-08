@@ -12,11 +12,10 @@
 #import "XYPopoverViewController.h"
 #import "XYPopoverAnimator.h"
 
-@interface BaseViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BaseViewController ()
 
 @property(nonatomic , weak)       XYTitleButton *titleButton; ///< title按钮
 @property(nonatomic , strong)     XYPopoverAnimator *animator;
-//@property(nonatomic , copy)       NSString *title;
 
 @end
 
@@ -159,7 +158,7 @@
     params.playtype = playTpye;
     params.lottype = lotType;
     params.issuenum = issuenum;
-    [XYHttpTool getWithURL:k_base_url params:params.keyValues success:^(NSDictionary* json) {
+    [XYHttpTool getWithURL:k_getpre_url params:params.keyValues success:^(NSDictionary* json) {
         
         NSLog(@"%@",json);
         

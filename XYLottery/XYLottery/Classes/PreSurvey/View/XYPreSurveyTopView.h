@@ -14,6 +14,10 @@ typedef void(^PlayTypeCallBack)(NSString * , NSInteger);
 
 @interface XYPreSurveyTopView : UIView
 
+// 给子类使用的一些内容
+@property(nonatomic , strong) NSMutableArray  *ballArrays;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
 @property(nonatomic , copy) IssueunmCallBack issueCallBack;
 @property(nonatomic , copy) PlayTypeCallBack playtypeCallBack;
 

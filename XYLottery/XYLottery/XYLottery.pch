@@ -13,7 +13,9 @@
 #import "BaseViewController.h"
 #import "XYKit.h"
 
-#define k_base_url @"http://115.29.175.83/cpyc/getprecalc.php"
+#define k_getpre_url @"http://115.29.175.83/cpyc/getprecalc.php"
+#define k_getcur_url @"http://115.29.175.83/cpyc/getcurcalc.php"
+
 
 #define k_CurrentLotteryType @"currentLotteryType"
 #define k_CurrentLotteryName @"currentLotteryName"
