@@ -8,6 +8,7 @@
 
 #import "CurSurveyController.h"
 #import "XYCurSurveyTopView.h"
+#import "XYCurSurveyCell.h"
 
 #define k_cur_topViewH 80
 
@@ -79,7 +80,7 @@
     
     // 设置自己tableView
     self.tableView.frame = CGRectMake(0, k_cur_topViewH, ScreenW, ScreenH - k_cur_topViewH);
-//    [self.tableView registerNib:[UINib nibWithNibName:@"XYPreSurveyCell" bundle:nil] forCellReuseIdentifier:k_PreSurveyCelID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"XYCurSurveyCell" bundle:nil] forCellReuseIdentifier:k_XYCurSurveyCellID];
     
     
     // 添加刷新
@@ -127,7 +128,6 @@
         
     } failure:^(NSError *error) {
         
-        
         NSLog(@"%@",error);
         
     }];
@@ -144,23 +144,29 @@
 
 #pragma mark - Table view data source
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    XYSurveyListModel *model = self.list[indexPath.row];
+    return model.cell_height;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.list.count;
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    XYPreSurveyCell *cell = [tableView dequeueReusableCellWithIdentifier:k_PreSurveyCelID];
-//    
-//    cell.model = self.list[indexPath.row];
-//    
-//    return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    XYCurSurveyCell *cell = [tableView dequeueReusableCellWithIdentifier:k_XYCurSurveyCellID];
+    
+    cell.cur_model = self.list[indexPath.row];
+    
+    return cell;
+}
 
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
@@ -172,7 +178,7 @@
 //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
 //    }
 //
-//    cell.textLabel.text = [NSString stringWithFormat:@"---%zd----",indexPath.row];
+//    cell.textLabel.text = [NSString stringWithFormat:@"---%zd--hahh--",indexPath.row];
 //    
 //    return cell;
 //}

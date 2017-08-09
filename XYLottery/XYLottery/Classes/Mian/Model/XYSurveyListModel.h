@@ -49,4 +49,6 @@
 @property(nonatomic , copy) NSString *nextstatus;
 @property(nonatomic , copy) NSString *nextplaydes;
 
+@property(nonatomic , assign) CGFloat cell_height;
+
 @end

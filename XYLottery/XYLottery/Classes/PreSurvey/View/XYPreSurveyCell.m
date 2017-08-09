@@ -61,7 +61,7 @@
 
 
 
-- (void)setModel:(XYPreSurveyModel *)model
+- (void)setModel:(XYSurveyListModel *)model
 {
     _model = model;
     

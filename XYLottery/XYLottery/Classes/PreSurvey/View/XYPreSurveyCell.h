@@ -13,7 +13,7 @@
 
 @interface XYPreSurveyCell : UITableViewCell
 
-@property(nonatomic , strong) XYPreSurveyModel  *model;
+@property(nonatomic , strong) XYSurveyListModel  *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 

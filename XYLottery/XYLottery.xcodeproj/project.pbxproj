@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		992A164621273D294380FAB1 /* libPods-XYLottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */; };
+		B405D4421F3B005E005E2482 /* XYScrollHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B405D4411F3B005E005E2482 /* XYScrollHeaderView.m */; };
 		B4207EEF1F30260300829C69 /* tabbar_curSurvey.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED11F30260300829C69 /* tabbar_curSurvey.png */; };
 		B4207EF01F30260300829C69 /* tabbar_curSurvey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED21F30260300829C69 /* tabbar_curSurvey@2x.png */; };
 		B4207EF11F30260300829C69 /* tabbar_curSurvey@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED31F30260300829C69 /* tabbar_curSurvey@3x.png */; };
@@ -105,6 +106,8 @@
 		B4B071BE1F337753006DD2A2 /* icon_see@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B071BD1F337753006DD2A2 /* icon_see@2x.png */; };
 		B4CB4D901F320F0200640D43 /* XYSurveyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */; };
 		B4CB4D931F3213BF00640D43 /* XYSurveyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */; };
+		B4D5DB2D1F3A110900F401E7 /* XYCurSurveyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D5DB2B1F3A110900F401E7 /* XYCurSurveyCell.m */; };
+		B4D5DB2E1F3A110900F401E7 /* XYCurSurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D5DB2C1F3A110900F401E7 /* XYCurSurveyCell.xib */; };
 		B4E06CDE1F37F8E000B73542 /* XYCurSurveyTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E06CDD1F37F8E000B73542 /* XYCurSurveyTopView.m */; };
 		B4E06CE21F3877C900B73542 /* XYCurSurveyTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E06CE11F3877C900B73542 /* XYCurSurveyTopView.xib */; };
 		B4FC97A51F331C2E00E83E03 /* issuenum.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4FC97A41F331C2E00E83E03 /* issuenum.plist */; };
@@ -131,6 +134,8 @@
 /* Begin PBXFileReference section */
 		8373A13594BD1E3B900EDE3C /* Pods-XYLottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLottery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYLottery/Pods-XYLottery.debug.xcconfig"; sourceTree = "<group>"; };
 		B3A3DE33AC756E45BAA21AEB /* Pods-XYLottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-XYLottery/Pods-XYLottery.release.xcconfig"; sourceTree = "<group>"; };
+		B405D4401F3B005E005E2482 /* XYScrollHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYScrollHeaderView.h; sourceTree = "<group>"; };
+		B405D4411F3B005E005E2482 /* XYScrollHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYScrollHeaderView.m; sourceTree = "<group>"; };
 		B4207ED11F30260300829C69 /* tabbar_curSurvey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_curSurvey.png; sourceTree = "<group>"; };
 		B4207ED21F30260300829C69 /* tabbar_curSurvey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_curSurvey@2x.png"; sourceTree = "<group>"; };
 		B4207ED31F30260300829C69 /* tabbar_curSurvey@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_curSurvey@3x.png"; sourceTree = "<group>"; };
@@ -274,6 +279,9 @@
 		B4CB4D8F1F320F0200640D43 /* XYSurveyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSurveyModel.m; sourceTree = "<group>"; };
 		B4CB4D911F3213BF00640D43 /* XYSurveyListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSurveyListModel.h; sourceTree = "<group>"; };
 		B4CB4D921F3213BF00640D43 /* XYSurveyListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSurveyListModel.m; sourceTree = "<group>"; };
+		B4D5DB2A1F3A110900F401E7 /* XYCurSurveyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCurSurveyCell.h; sourceTree = "<group>"; };
+		B4D5DB2B1F3A110900F401E7 /* XYCurSurveyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCurSurveyCell.m; sourceTree = "<group>"; };
+		B4D5DB2C1F3A110900F401E7 /* XYCurSurveyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYCurSurveyCell.xib; sourceTree = "<group>"; };
 		B4E06CDC1F37F8E000B73542 /* XYCurSurveyTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCurSurveyTopView.h; sourceTree = "<group>"; };
 		B4E06CDD1F37F8E000B73542 /* XYCurSurveyTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCurSurveyTopView.m; sourceTree = "<group>"; };
 		B4E06CE11F3877C900B73542 /* XYCurSurveyTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYCurSurveyTopView.xib; sourceTree = "<group>"; };
@@ -514,6 +522,9 @@
 				B4E06CDC1F37F8E000B73542 /* XYCurSurveyTopView.h */,
 				B4E06CDD1F37F8E000B73542 /* XYCurSurveyTopView.m */,
 				B4E06CE11F3877C900B73542 /* XYCurSurveyTopView.xib */,
+				B4D5DB2A1F3A110900F401E7 /* XYCurSurveyCell.h */,
+				B4D5DB2B1F3A110900F401E7 /* XYCurSurveyCell.m */,
+				B4D5DB2C1F3A110900F401E7 /* XYCurSurveyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -580,6 +591,8 @@
 		B47319F01F3014FA00E0C688 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B405D4401F3B005E005E2482 /* XYScrollHeaderView.h */,
+				B405D4411F3B005E005E2482 /* XYScrollHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -994,6 +1007,7 @@
 				B4207F331F307EF200829C69 /* grrow_down@3x.png in Resources */,
 				B4207EF91F30260300829C69 /* tabbar_lucky_sel@2x.png in Resources */,
 				B4B071BE1F337753006DD2A2 /* icon_see@2x.png in Resources */,
+				B4D5DB2E1F3A110900F401E7 /* XYCurSurveyCell.xib in Resources */,
 				B4FC97A51F331C2E00E83E03 /* issuenum.plist in Resources */,
 				B4207F031F30260300829C69 /* tabbar_preSurvey@3x.png in Resources */,
 				B4207EFB1F30260300829C69 /* tabbar_news.png in Resources */,
@@ -1113,6 +1127,7 @@
 				B4207F681F31D3A100829C69 /* MJMember.m in Sources */,
 				B4731A0C1F30162700E0C688 /* ProfileViewController.m in Sources */,
 				B4FC97A81F331D6800E83E03 /* XYIssueModel.m in Sources */,
+				B4D5DB2D1F3A110900F401E7 /* XYCurSurveyCell.m in Sources */,
 				B4207F6A1F31D3A100829C69 /* MJType.m in Sources */,
 				B49497BC1F32FC1D00EF3252 /* XYTools.m in Sources */,
 				B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */,
@@ -1122,6 +1137,7 @@
 				B4731A091F30161900E0C688 /* LuckYViewController.m in Sources */,
 				B48ED3D61F2ADFC700F26BC3 /* main.m in Sources */,
 				B4207F421F31B74B00829C69 /* XYPreSurveyTopView.m in Sources */,
+				B405D4421F3B005E005E2482 /* XYScrollHeaderView.m in Sources */,
 				B4207F6C1F31D3A100829C69 /* NSObject+MJCoding.m in Sources */,
 				B4207F6D1F31D3A100829C69 /* NSObject+MJKeyValue.m in Sources */,
 				B4207F391F31630700829C69 /* XYPopoverViewController.m in Sources */,
