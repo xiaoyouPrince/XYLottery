@@ -60,6 +60,8 @@
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     self.tableView = tableView;
+    tableView.tableFooterView = [UIView new];
+    tableView.backgroundColor = [UIColor lightTextColor];
     
     // 默认请求一次最新数据
     [self loadDataWithPlayType:@"1039" lotName:button.currentTitle issuenum:@"7"];
@@ -206,5 +208,11 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 
 @end

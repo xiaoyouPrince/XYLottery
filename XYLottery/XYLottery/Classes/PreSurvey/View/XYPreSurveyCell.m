@@ -37,7 +37,14 @@
     ViewRadius(self.rate_downBtn, k_radius);
     ViewRadius(self.coinBtn, k_radius);
     self.seeBtn.imageView.contentMode = UIViewContentModeCenter;
-    
+
+}
+
+- (void)setHidIconBtn:(BOOL)hidIconBtn
+{
+    if (hidIconBtn) {
+        self.coinBtn.hidden = YES;
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

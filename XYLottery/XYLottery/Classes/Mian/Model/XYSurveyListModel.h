@@ -49,6 +49,32 @@
 @property(nonatomic , copy) NSString *nextstatus;
 @property(nonatomic , copy) NSString *nextplaydes;
 
+// 开奖历史里面的几个内容
+@property(nonatomic , copy) NSString *kjissue;
+@property(nonatomic , copy) NSString *kjdate;
+@property(nonatomic , copy) NSString *kjnum;
+@property(nonatomic , copy) NSString *kjxqurl;
+
+// 中奖资讯里面几个内容
+@property(nonatomic , copy) NSString *title;
+@property(nonatomic , copy) NSString *pubdate;
+@property(nonatomic , copy) NSString *pubaddr;
+@property(nonatomic , copy) NSString *url;
+
+// 走势图里面两个内容
+@property(nonatomic , copy) NSString *trendname;
+@property(nonatomic , copy) NSString *trendurl;
+
+
+
+
+
+
+
+
+
+
+
 @property(nonatomic , assign) CGFloat cell_height;
 
 @end

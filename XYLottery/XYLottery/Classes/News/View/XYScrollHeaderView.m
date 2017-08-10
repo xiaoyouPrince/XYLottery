@@ -59,6 +59,7 @@
     }];
     self.contentView.frame = CGRectMake(0, 0, _currentWith, self.bounds.size.height);
     self.contentSize = CGSizeMake(_currentWith, 0);
+    
 }
 
 - (void)setTitleColor:(UIColor *)titleColor
@@ -70,14 +71,17 @@
 
 - (void)setHeaderBGColor:(UIColor *)headerBGColor
 {
+    self.backgroundColor = headerBGColor;
     self.contentView.backgroundColor = headerBGColor;
 }
 
 - (void)titleClick:(UIButton *)btn
 {
+    
+#define lineHeight 2
     [btn.superview.subviews enumerateObjectsUsingBlock:^(__kindof UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (obj.frame.size.height == 1) {
+            if (obj.frame.size.height == lineHeight) {
                 [obj removeFromSuperview];
             }
         }];
@@ -86,7 +90,7 @@
     CGFloat lineInsetMargin = 15;
     UIView *line = [UIView new];
     line.backgroundColor = _sliderColor ? _sliderColor : [UIColor redColor];
-    line.frame = CGRectMake(lineInsetMargin, btn.frame.size.height - 1, btn.frame.size.width - 2*lineInsetMargin, 1);
+    line.frame = CGRectMake(lineInsetMargin, btn.frame.size.height - lineHeight, btn.frame.size.width - 2*lineInsetMargin,lineHeight);
     [btn addSubview:line];
     
     if (self.titleClickCallback) {
@@ -99,6 +103,12 @@
     [super layoutSubviews];
 
     // scrollView 在滚动的时候会多次调用这里去实现新的布局，所以不能在这里设置 contentSize
+    
+    // 展示之前点击默认第一个按钮点击
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self titleClick:self.contentView.subviews.firstObject];
+    });
 }
 
 

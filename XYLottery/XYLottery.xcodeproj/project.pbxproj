@@ -110,6 +110,13 @@
 		B4D5DB2E1F3A110900F401E7 /* XYCurSurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D5DB2C1F3A110900F401E7 /* XYCurSurveyCell.xib */; };
 		B4E06CDE1F37F8E000B73542 /* XYCurSurveyTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E06CDD1F37F8E000B73542 /* XYCurSurveyTopView.m */; };
 		B4E06CE21F3877C900B73542 /* XYCurSurveyTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E06CE11F3877C900B73542 /* XYCurSurveyTopView.xib */; };
+		B4F53DA61F3C054F002C7F4F /* XYNewsZuheFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F53DA41F3C054F002C7F4F /* XYNewsZuheFirstCell.m */; };
+		B4F53DA71F3C054F002C7F4F /* XYNewsZuheFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F53DA51F3C054F002C7F4F /* XYNewsZuheFirstCell.xib */; };
+		B4F53DAB1F3C366F002C7F4F /* XYNewsHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F53DA91F3C366F002C7F4F /* XYNewsHistoryCell.m */; };
+		B4F53DAC1F3C366F002C7F4F /* XYNewsHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F53DAA1F3C366F002C7F4F /* XYNewsHistoryCell.xib */; };
+		B4F53DAE1F3C37C7002C7F4F /* 钟图标@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F53DAD1F3C37C7002C7F4F /* 钟图标@2x.png */; };
+		B4F53DB11F3C4F29002C7F4F /* XYProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F53DB01F3C4F29002C7F4F /* XYProfileHeaderView.m */; };
+		B4F53DB31F3C4F33002C7F4F /* XYProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F53DB21F3C4F33002C7F4F /* XYProfileHeaderView.xib */; };
 		B4FC97A51F331C2E00E83E03 /* issuenum.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4FC97A41F331C2E00E83E03 /* issuenum.plist */; };
 		B4FC97A81F331D6800E83E03 /* XYIssueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FC97A71F331D6800E83E03 /* XYIssueModel.m */; };
 /* End PBXBuildFile section */
@@ -285,6 +292,16 @@
 		B4E06CDC1F37F8E000B73542 /* XYCurSurveyTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCurSurveyTopView.h; sourceTree = "<group>"; };
 		B4E06CDD1F37F8E000B73542 /* XYCurSurveyTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCurSurveyTopView.m; sourceTree = "<group>"; };
 		B4E06CE11F3877C900B73542 /* XYCurSurveyTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYCurSurveyTopView.xib; sourceTree = "<group>"; };
+		B4F53DA31F3C054F002C7F4F /* XYNewsZuheFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNewsZuheFirstCell.h; sourceTree = "<group>"; };
+		B4F53DA41F3C054F002C7F4F /* XYNewsZuheFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNewsZuheFirstCell.m; sourceTree = "<group>"; };
+		B4F53DA51F3C054F002C7F4F /* XYNewsZuheFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYNewsZuheFirstCell.xib; sourceTree = "<group>"; };
+		B4F53DA81F3C366F002C7F4F /* XYNewsHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNewsHistoryCell.h; sourceTree = "<group>"; };
+		B4F53DA91F3C366F002C7F4F /* XYNewsHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNewsHistoryCell.m; sourceTree = "<group>"; };
+		B4F53DAA1F3C366F002C7F4F /* XYNewsHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYNewsHistoryCell.xib; sourceTree = "<group>"; };
+		B4F53DAD1F3C37C7002C7F4F /* 钟图标@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "钟图标@2x.png"; sourceTree = "<group>"; };
+		B4F53DAF1F3C4F29002C7F4F /* XYProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYProfileHeaderView.h; sourceTree = "<group>"; };
+		B4F53DB01F3C4F29002C7F4F /* XYProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYProfileHeaderView.m; sourceTree = "<group>"; };
+		B4F53DB21F3C4F33002C7F4F /* XYProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYProfileHeaderView.xib; sourceTree = "<group>"; };
 		B4FC97A41F331C2E00E83E03 /* issuenum.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = issuenum.plist; sourceTree = "<group>"; };
 		B4FC97A61F331D6800E83E03 /* XYIssueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYIssueModel.h; sourceTree = "<group>"; };
 		B4FC97A71F331D6800E83E03 /* XYIssueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYIssueModel.m; sourceTree = "<group>"; };
@@ -334,6 +351,7 @@
 		B4207ECF1F30260300829C69 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B4F53DAD1F3C37C7002C7F4F /* 钟图标@2x.png */,
 				B4B071BD1F337753006DD2A2 /* icon_see@2x.png */,
 				B49497B01F32CD4F00EF3252 /* expand_up@2x.png */,
 				B49497AE1F32CC3000EF3252 /* expand_down@2x.png */,
@@ -593,6 +611,12 @@
 			children = (
 				B405D4401F3B005E005E2482 /* XYScrollHeaderView.h */,
 				B405D4411F3B005E005E2482 /* XYScrollHeaderView.m */,
+				B4F53DA31F3C054F002C7F4F /* XYNewsZuheFirstCell.h */,
+				B4F53DA41F3C054F002C7F4F /* XYNewsZuheFirstCell.m */,
+				B4F53DA51F3C054F002C7F4F /* XYNewsZuheFirstCell.xib */,
+				B4F53DA81F3C366F002C7F4F /* XYNewsHistoryCell.h */,
+				B4F53DA91F3C366F002C7F4F /* XYNewsHistoryCell.m */,
+				B4F53DAA1F3C366F002C7F4F /* XYNewsHistoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -667,6 +691,9 @@
 		B47319F81F3014FA00E0C688 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4F53DAF1F3C4F29002C7F4F /* XYProfileHeaderView.h */,
+				B4F53DB01F3C4F29002C7F4F /* XYProfileHeaderView.m */,
+				B4F53DB21F3C4F33002C7F4F /* XYProfileHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -999,6 +1026,7 @@
 				B4207EFC1F30260300829C69 /* tabbar_news@2x.png in Resources */,
 				B4207EEF1F30260300829C69 /* tabbar_curSurvey.png in Resources */,
 				B4207F051F30260300829C69 /* tabbar_preSurvey_sel@2x.png in Resources */,
+				B4F53DB31F3C4F33002C7F4F /* XYProfileHeaderView.xib in Resources */,
 				B4207EFA1F30260300829C69 /* tabbar_lucky_sel@3x.png in Resources */,
 				B4207F0A1F30260300829C69 /* tabbar_profile_sel.png in Resources */,
 				B4207F311F307EF200829C69 /* grrow_down.png in Resources */,
@@ -1018,15 +1046,18 @@
 				B4207F351F30817D00829C69 /* titleBtnBg.png in Resources */,
 				B4207F061F30260300829C69 /* tabbar_preSurvey_sel@3x.png in Resources */,
 				B49497AF1F32CC3000EF3252 /* expand_down@2x.png in Resources */,
+				B4F53DAE1F3C37C7002C7F4F /* 钟图标@2x.png in Resources */,
 				B4207F491F31C84500829C69 /* kj_issue.png in Resources */,
 				B4207EFE1F30260300829C69 /* tabbar_news_sel.png in Resources */,
 				B4207F021F30260300829C69 /* tabbar_preSurvey@2x.png in Resources */,
 				B49497B11F32CD4F00EF3252 /* expand_up@2x.png in Resources */,
 				B4207EF71F30260300829C69 /* tabbar_lucky@3x.png in Resources */,
+				B4F53DA71F3C054F002C7F4F /* XYNewsZuheFirstCell.xib in Resources */,
 				B4207EFD1F30260300829C69 /* tabbar_news@3x.png in Resources */,
 				B4207EF01F30260300829C69 /* tabbar_curSurvey@2x.png in Resources */,
 				B4207EF31F30260300829C69 /* tabbar_curSurvey_sel@2x.png in Resources */,
 				B4207F001F30260300829C69 /* tabbar_news_sel@3x.png in Resources */,
+				B4F53DAC1F3C366F002C7F4F /* XYNewsHistoryCell.xib in Resources */,
 				B4207F2D1F30731900829C69 /* navigationbar_arrow_up.png in Resources */,
 				B4B071BA1F336512006DD2A2 /* XYPreSurveyCell.xib in Resources */,
 				B4207F0C1F30260300829C69 /* tabbar_profile_sel@3x.png in Resources */,
@@ -1106,12 +1137,15 @@
 			files = (
 				B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */,
 				B4207F6B1F31D3A100829C69 /* MJTypeEncoding.m in Sources */,
+				B4F53DA61F3C054F002C7F4F /* XYNewsZuheFirstCell.m in Sources */,
 				B4B071B91F336512006DD2A2 /* XYPreSurveyCell.m in Sources */,
+				B4F53DB11F3C4F29002C7F4F /* XYProfileHeaderView.m in Sources */,
 				B4207F6E1F31D3A100829C69 /* NSObject+MJMember.m in Sources */,
 				B4207F161F304E6000829C69 /* XYTitleButton.m in Sources */,
 				B4207F511F31D38F00829C69 /* XYRequestParam.m in Sources */,
 				B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */,
 				B4207F661F31D3A100829C69 /* MJArgument.m in Sources */,
+				B4F53DAB1F3C366F002C7F4F /* XYNewsHistoryCell.m in Sources */,
 				B4207F691F31D3A100829C69 /* MJMethod.m in Sources */,
 				B49497B61F32F2D900EF3252 /* XYLotteryData.m in Sources */,
 				B4207F131F30300500829C69 /* BaseViewController.m in Sources */,

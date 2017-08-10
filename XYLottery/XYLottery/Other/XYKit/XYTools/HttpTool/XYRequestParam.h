@@ -20,6 +20,8 @@
 #pragma mark -- token
 @property (nonatomic, copy) NSString *token;    ///< 认证token，令牌
 @property(nonatomic , copy) NSString *key;  ///< 当前时间戳
+#pragma mark -- 测讯的curindex
+@property(nonatomic , assign) NSInteger curindex;  ///< 测讯当前index
 
 
 

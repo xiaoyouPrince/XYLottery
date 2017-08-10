@@ -13,6 +13,8 @@
 
 @interface XYPreSurveyCell : UITableViewCell
 
+@property(nonatomic , assign) BOOL hidIconBtn;
+
 @property(nonatomic , strong) XYSurveyListModel  *model;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;

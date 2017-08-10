@@ -11,7 +11,14 @@
 #import "XYHttpTool.h"
 #import "AFNetworking.h"
 
+@interface XYHttpTool ()
+
+@end
+
 @implementation XYHttpTool
+
+// 自己内部的task
+static NSURLSessionDataTask *task;
 
 + (void)postWithURL:(NSString *)url params:(NSDictionary *)params success:(void(^)(id))success failure:(void(^)(NSError *error))failure
 {
@@ -79,7 +86,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     // 2.发送请求
-    [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    task = [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
 
         if (success) {
@@ -93,6 +100,11 @@
         }
     }];
     
+}
+
++ (void)cancelPreviousRequest
+{
+    [task cancel];
 }
 
 

@@ -29,6 +29,11 @@
 @property(nonatomic , copy) NSString *kjnum;   ///< 开奖号码
 @property(nonatomic , copy) NSString *lastid;  ///< 上次id
 @property(nonatomic , copy) NSString *nextissue; ///< 下期开奖期数
+// 预测第一个cell用的
+@property(nonatomic , copy) NSString *lineone;   ///< 第一行（实际第二行）
+@property(nonatomic , copy) NSString *linetwo;   ///< 第2行（实际第1行
+
+
 
 
 @property(nonatomic , strong) NSArray<XYSurveyListModel*>  *list;
