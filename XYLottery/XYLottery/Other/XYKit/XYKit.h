@@ -13,6 +13,10 @@
 #import "UIImage+XY.h"
 
 #import "XYTools.h"
+#import "XYAccountTool.h"
+#import "XYUser.h"
+#import "XYLoginController.h"
+
 
 
 /// 三方

@@ -61,5 +61,21 @@
     return timeString;
 }
 
+- (NSString *)userid
+{
+    if ([XYAccountTool user].userid) {
+        return [XYAccountTool user].userid;
+    }else
+    {
+        return @"629087";
+    }
+}
+
+- (NSString *)sessionid
+{
+    return @"3ad73c7eb137ccca01cc4245fd2c8710"; //  在现在有账号下可用
+}
+
+
 
 @end

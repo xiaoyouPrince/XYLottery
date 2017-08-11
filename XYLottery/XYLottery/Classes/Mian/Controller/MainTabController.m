@@ -56,4 +56,28 @@
     
 }
 
+
+// 没有用，这个方法时序不对，无奈系统也米有对应的方法，
+//- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+//{
+//    
+//    UITabBarItem *lastItem = tabBar.items.lastObject;
+//    if ([item isEqual:lastItem]) {
+//        // 点击最后一个-- 我
+//        if ([XYAccountTool user]) {
+////            [super tabBar:tabBar didSelectItem:item];
+//        }else
+//        {
+//            XYLoginController *loginVc = [XYLoginController new];
+//            [self presentViewController:loginVc animated:YES completion:nil];
+//            loginVc.loginSuccess = ^(BOOL isSuccess) {
+//                if (isSuccess) {
+//                    // 登录成功，展示对应的子页面
+//                    [self setNeedsFocusUpdate];
+//                }
+//            };
+//        }
+//    }
+//}
+
 @end

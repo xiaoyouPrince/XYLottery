@@ -117,6 +117,10 @@
 		B4F53DAE1F3C37C7002C7F4F /* 钟图标@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F53DAD1F3C37C7002C7F4F /* 钟图标@2x.png */; };
 		B4F53DB11F3C4F29002C7F4F /* XYProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F53DB01F3C4F29002C7F4F /* XYProfileHeaderView.m */; };
 		B4F53DB31F3C4F33002C7F4F /* XYProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F53DB21F3C4F33002C7F4F /* XYProfileHeaderView.xib */; };
+		B4F53DB71F3D4EDB002C7F4F /* XYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F53DB61F3D4EDB002C7F4F /* XYUser.m */; };
+		B4F53DBA1F3D540C002C7F4F /* XYAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F53DB91F3D540C002C7F4F /* XYAccountTool.m */; };
+		B4F53DC21F3DAC03002C7F4F /* XYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F53DC01F3DAC03002C7F4F /* XYLoginController.m */; };
+		B4F53DC31F3DAC03002C7F4F /* XYLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F53DC11F3DAC03002C7F4F /* XYLoginController.xib */; };
 		B4FC97A51F331C2E00E83E03 /* issuenum.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4FC97A41F331C2E00E83E03 /* issuenum.plist */; };
 		B4FC97A81F331D6800E83E03 /* XYIssueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FC97A71F331D6800E83E03 /* XYIssueModel.m */; };
 /* End PBXBuildFile section */
@@ -302,6 +306,13 @@
 		B4F53DAF1F3C4F29002C7F4F /* XYProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYProfileHeaderView.h; sourceTree = "<group>"; };
 		B4F53DB01F3C4F29002C7F4F /* XYProfileHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYProfileHeaderView.m; sourceTree = "<group>"; };
 		B4F53DB21F3C4F33002C7F4F /* XYProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYProfileHeaderView.xib; sourceTree = "<group>"; };
+		B4F53DB51F3D4EDB002C7F4F /* XYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYUser.h; sourceTree = "<group>"; };
+		B4F53DB61F3D4EDB002C7F4F /* XYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYUser.m; sourceTree = "<group>"; };
+		B4F53DB81F3D540C002C7F4F /* XYAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAccountTool.h; sourceTree = "<group>"; };
+		B4F53DB91F3D540C002C7F4F /* XYAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAccountTool.m; sourceTree = "<group>"; };
+		B4F53DBF1F3DAC03002C7F4F /* XYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginController.h; sourceTree = "<group>"; };
+		B4F53DC01F3DAC03002C7F4F /* XYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginController.m; sourceTree = "<group>"; };
+		B4F53DC11F3DAC03002C7F4F /* XYLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLoginController.xib; sourceTree = "<group>"; };
 		B4FC97A41F331C2E00E83E03 /* issuenum.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = issuenum.plist; sourceTree = "<group>"; };
 		B4FC97A61F331D6800E83E03 /* XYIssueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYIssueModel.h; sourceTree = "<group>"; };
 		B4FC97A71F331D6800E83E03 /* XYIssueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYIssueModel.m; sourceTree = "<group>"; };
@@ -833,6 +844,8 @@
 		B48ED4421F2B3B9000F26BC3 /* Mian */ = {
 			isa = PBXGroup;
 			children = (
+				B4F53DBE1F3DABEF002C7F4F /* Login */,
+				B4F53DB41F3D4EBA002C7F4F /* Account */,
 				B4207F361F3162DE00829C69 /* UIPopover */,
 				B48ED4431F2B3B9000F26BC3 /* Controller */,
 				B48ED4441F2B3B9000F26BC3 /* Model */,
@@ -878,6 +891,27 @@
 				B4207F151F304E6000829C69 /* XYTitleButton.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B4F53DB41F3D4EBA002C7F4F /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				B4F53DB51F3D4EDB002C7F4F /* XYUser.h */,
+				B4F53DB61F3D4EDB002C7F4F /* XYUser.m */,
+				B4F53DB81F3D540C002C7F4F /* XYAccountTool.h */,
+				B4F53DB91F3D540C002C7F4F /* XYAccountTool.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		B4F53DBE1F3DABEF002C7F4F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B4F53DBF1F3DAC03002C7F4F /* XYLoginController.h */,
+				B4F53DC01F3DAC03002C7F4F /* XYLoginController.m */,
+				B4F53DC11F3DAC03002C7F4F /* XYLoginController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		CC6C88311AA0EE68D03436B3 /* Pods */ = {
@@ -1050,6 +1084,7 @@
 				B4207F491F31C84500829C69 /* kj_issue.png in Resources */,
 				B4207EFE1F30260300829C69 /* tabbar_news_sel.png in Resources */,
 				B4207F021F30260300829C69 /* tabbar_preSurvey@2x.png in Resources */,
+				B4F53DC31F3DAC03002C7F4F /* XYLoginController.xib in Resources */,
 				B49497B11F32CD4F00EF3252 /* expand_up@2x.png in Resources */,
 				B4207EF71F30260300829C69 /* tabbar_lucky@3x.png in Resources */,
 				B4F53DA71F3C054F002C7F4F /* XYNewsZuheFirstCell.xib in Resources */,
@@ -1145,6 +1180,7 @@
 				B4207F511F31D38F00829C69 /* XYRequestParam.m in Sources */,
 				B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */,
 				B4207F661F31D3A100829C69 /* MJArgument.m in Sources */,
+				B4F53DB71F3D4EDB002C7F4F /* XYUser.m in Sources */,
 				B4F53DAB1F3C366F002C7F4F /* XYNewsHistoryCell.m in Sources */,
 				B4207F691F31D3A100829C69 /* MJMethod.m in Sources */,
 				B49497B61F32F2D900EF3252 /* XYLotteryData.m in Sources */,
@@ -1156,6 +1192,7 @@
 				B4731A061F30160000E0C688 /* NewsViewController.m in Sources */,
 				B4207F3F1F316AF900829C69 /* XYPresentationController.m in Sources */,
 				B4207F3C1F31638900829C69 /* XYPopoverAnimator.m in Sources */,
+				B4F53DBA1F3D540C002C7F4F /* XYAccountTool.m in Sources */,
 				B4CB4D931F3213BF00640D43 /* XYSurveyListModel.m in Sources */,
 				B4207F671F31D3A100829C69 /* MJIvar.m in Sources */,
 				B4207F681F31D3A100829C69 /* MJMember.m in Sources */,
@@ -1174,6 +1211,7 @@
 				B405D4421F3B005E005E2482 /* XYScrollHeaderView.m in Sources */,
 				B4207F6C1F31D3A100829C69 /* NSObject+MJCoding.m in Sources */,
 				B4207F6D1F31D3A100829C69 /* NSObject+MJKeyValue.m in Sources */,
+				B4F53DC21F3DAC03002C7F4F /* XYLoginController.m in Sources */,
 				B4207F391F31630700829C69 /* XYPopoverViewController.m in Sources */,
 				B4207F271F3067E100829C69 /* UIImage+XY.m in Sources */,
 				B4731A031F3015F000E0C688 /* CurSurveyController.m in Sources */,

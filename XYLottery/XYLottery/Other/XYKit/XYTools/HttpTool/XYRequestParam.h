@@ -23,6 +23,8 @@
 #pragma mark -- 测讯的curindex
 @property(nonatomic , assign) NSInteger curindex;  ///< 测讯当前index
 
-
+#pragma mark -- 用户请求主页
+@property (nonatomic, copy) NSString *userid;
+@property (nonatomic, copy) NSString *sessionid;
 
 @end

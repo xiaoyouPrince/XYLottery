@@ -25,5 +25,28 @@
 @implementation XYProfileHeaderView
 
 
+- (void)setUser:(XYUser *)user
+{
+    _user = user;
+    
+    self.loginIdLabel.text = user.userid;
+    self.nameLabel.text = user.username;
+    self.coinLabel.text = [NSString stringWithFormat:@"%zd",user.coin];
+    self.fansLabel.text = [NSString stringWithFormat:@"%zd",user.fans];
+    self.scoreLabel.text = [NSString stringWithFormat:@"%zd",user.score];
+    self.rankLabel.text = [NSString stringWithFormat:@"%d",user.isexpert];
+}
+
+- (IBAction)rechargeBtnClick:(id)sender {
+    if (self.rechargeClick) {
+        self.rechargeClick();
+    }
+}
+- (IBAction)refreshBtnClick:(id)sender {
+    if (self.refreshClick) {
+        self.refreshClick();
+    }
+}
+
 
 @end

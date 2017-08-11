@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^RechargeCallBack)();
+typedef void(^RefreshCallBack)();
+
 @interface XYProfileHeaderView : UIView
+
+@property(nonatomic , strong) XYUser  *user;
+
+@property(nonatomic , copy) RechargeCallBack rechargeClick;
+@property(nonatomic , copy) RefreshCallBack refreshClick;
+
+
+
 
 @end
