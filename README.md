@@ -38,4 +38,4 @@ Here are these links:
 [关于苹果审核被拒PLA1.2,ipv6被拒该如何解决
 http://www.jianshu.com/p/c1f25e1747e2](http://www.jianshu.com/p/c1f25e1747e2)
 
-[金融类APP常见被拒绝原因分析及解决 http://www.woshipm.com/operate/746939.html](http://www.woshipm.com/operate/746939.html)
+[金融类APP常见被拒绝原因分析及解决 : http://www.woshipm.com/operate/746939.html](http://www.woshipm.com/operate/746939.html)
