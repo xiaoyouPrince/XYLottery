@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYLoginController">
             <connections>
+                <outlet property="passTF" destination="foF-EH-imf" id="ZHm-sl-Cxu"/>
+                <outlet property="userNameTF" destination="ufM-BF-yUe" id="oPU-TK-lar"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -77,6 +79,9 @@
                     <state key="normal" title="注册">
                         <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="registerClick:" destination="-1" eventType="touchUpInside" id="Th3-Kl-2d2"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-k5-3mq">
                     <rect key="frame" x="30" y="289" width="315" height="30"/>
@@ -87,6 +92,9 @@
                     <state key="normal" title="    忘记密码？">
                         <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="forgotPassClick:" destination="-1" eventType="touchUpInside" id="ooH-G5-eQj"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

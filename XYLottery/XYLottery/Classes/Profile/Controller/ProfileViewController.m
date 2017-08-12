@@ -50,15 +50,38 @@
         [self showProfileVC];
     }else
     {
-        [self showProfileVC];
+        [self showLoginBtn];
     }
 }
 
 - (void)showLoginBtn
 {
     UIButton *btn = [UIButton new];
+    [btn setTitle:@"登录" forState:0];
+    [self.view addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.left.mas_equalTo(self.view.mas_left).offset(15);
+        make.right.mas_equalTo(self.view.mas_right).offset(-15);
+        make.topMargin.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+        
+    }];
     
+    [btn addTarget:self action:@selector(gotoLonginVC) forControlEvents:UIControlEventTouchUpInside];
 }
+
+- (void)gotoLonginVC
+{
+    XYLoginController *login = [XYLoginController new];
+    [self.navigationController pushViewController:login animated:YES];
+    login.loginSuccess = ^(BOOL isSuccess) {
+        if (isSuccess) {
+            [self showProfileVC];
+        }
+    };
+}
+
 
 - (void)showProfileVC
 {

@@ -10,6 +10,10 @@
 
 @interface XYLoginController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *userNameTF;
+
+@property (weak, nonatomic) IBOutlet UITextField *passTF;
+
 @end
 
 @implementation XYLoginController
@@ -20,18 +24,58 @@
     
 }
 
-- (IBAction)loginClick:(id)sender {
+- (IBAction)loginClick:(UIButton *)sender {
     
-    // 登录请求
+    sender.enabled = NO;
     
-    
-    if (self.loginSuccess) {
-        self.loginSuccess(YES);
+    if (self.userNameTF.text.length && self.passTF.text.length) {
+        
+        // 登录请求
+        // 成功回调，不成功提示失败
+        XYRequestParam *params = [XYRequestParam new];
+        params.userid = self.userNameTF.text;
+        //    params.pass = self.passTF.text;
+        [XYHttpTool postWithURL:@"login" params:params.keyValues success:^(id json) {
+            
+            sender.enabled = YES;
+            
+            if (/* DISABLES CODE */ (YES)) {
+                if (self.loginSuccess) {
+                    self.loginSuccess(YES);
+                }
+            
+                [self.navigationController popViewControllerAnimated:YES];
+                
+            }else
+            {
+                [SVProgressHUD showWithStatus:@"账号密码错误请重试"];
+            }
+            
+        } failure:^(NSError *error) {
+            
+            [SVProgressHUD showErrorWithStatus:@"网络错误，请稍后重试"];
+            sender.enabled = YES;
+        }];
+        
+    }else
+    {
+        [SVProgressHUD showErrorWithStatus:@"账号或密码为空"];
+        sender.enabled = YES;
     }
     
 }
 
 
+- (IBAction)registerClick:(UIButton *)sender {
+    
+    
+}
+
+
+- (IBAction)forgotPassClick:(UIButton *)sender {
+    
+    
+}
 
 
 @end
