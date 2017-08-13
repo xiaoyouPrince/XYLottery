@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号/手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufM-BF-yUe">
-                    <rect key="frame" x="80" y="80" width="275" height="40"/>
+                    <rect key="frame" x="80" y="100" width="275" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="gg4-oU-J04"/>
                     </constraints>
@@ -31,7 +31,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6位数字或字母" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="foF-EH-imf">
-                    <rect key="frame" x="79" y="133" width="276" height="40"/>
+                    <rect key="frame" x="79" y="153" width="276" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="v48-co-yax"/>
                     </constraints>
@@ -40,7 +40,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nK-zS-flz">
-                    <rect key="frame" x="20" y="80.5" width="45" height="40"/>
+                    <rect key="frame" x="20" y="100.5" width="45" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="duZ-AZ-XEs"/>
                     </constraints>
@@ -49,7 +49,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密 码:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21R-hx-AhY">
-                    <rect key="frame" x="20" y="133" width="44" height="40"/>
+                    <rect key="frame" x="20" y="153" width="44" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Tbg-hJ-uP6"/>
                     </constraints>
@@ -58,7 +58,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIx-xY-4zR">
-                    <rect key="frame" x="30" y="213" width="315" height="30"/>
+                    <rect key="frame" x="30" y="233" width="315" height="30"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="YHp-z9-uH0"/>
@@ -71,7 +71,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHR-is-dHI">
-                    <rect key="frame" x="30" y="251" width="315" height="30"/>
+                    <rect key="frame" x="30" y="271" width="315" height="30"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="azS-cB-8mF"/>
@@ -84,7 +84,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-k5-3mq">
-                    <rect key="frame" x="30" y="289" width="315" height="30"/>
+                    <rect key="frame" x="30" y="309" width="315" height="30"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="YKZ-Re-3Lt"/>
@@ -115,7 +115,7 @@
                 <constraint firstItem="ufM-BF-yUe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="jHt-S7-1Yo"/>
                 <constraint firstItem="WIx-xY-4zR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="oPc-qv-jpU"/>
                 <constraint firstAttribute="trailing" secondItem="kHR-is-dHI" secondAttribute="trailing" constant="30" id="ob2-aP-I2Z"/>
-                <constraint firstItem="ufM-BF-yUe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="sKr-Gb-Kla"/>
+                <constraint firstItem="ufM-BF-yUe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="sKr-Gb-Kla"/>
                 <constraint firstItem="7nK-zS-flz" firstAttribute="centerY" secondItem="ufM-BF-yUe" secondAttribute="centerY" id="uPQ-aq-mLV"/>
                 <constraint firstItem="21R-hx-AhY" firstAttribute="centerY" secondItem="foF-EH-imf" secondAttribute="centerY" id="uob-8L-HcE"/>
                 <constraint firstItem="ufM-BF-yUe" firstAttribute="leading" secondItem="7nK-zS-flz" secondAttribute="trailing" constant="15" id="va6-Qh-54e"/>

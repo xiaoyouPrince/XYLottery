@@ -22,6 +22,23 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    
+    
+
+    /**
+     基本模仿，主要有变化
+     
+     正点的时候下红包雨，，，来正经的来展示，，，
+     
+     用户点击判断是不是正确的时间，如果是就直接调接口强，不是就提示原来页面
+
+     @return <#return value description#>
+     */
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

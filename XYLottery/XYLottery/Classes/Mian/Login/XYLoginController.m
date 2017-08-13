@@ -7,6 +7,8 @@
 //
 
 #import "XYLoginController.h"
+#import "XYRegisterController.h"
+#import "XYForgetPassController.h"
 
 @interface XYLoginController ()
 
@@ -68,13 +70,15 @@
 
 - (IBAction)registerClick:(UIButton *)sender {
     
-    
+    XYRegisterController *registVC = [XYRegisterController new];
+    [self.navigationController pushViewController:registVC animated:YES];
 }
 
 
 - (IBAction)forgotPassClick:(UIButton *)sender {
     
-    
+    XYForgetPassController *registVC = [XYForgetPassController new];
+    [self.navigationController pushViewController:registVC animated:YES];
 }
 
 

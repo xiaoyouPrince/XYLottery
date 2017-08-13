@@ -101,6 +101,10 @@
 		B49497B61F32F2D900EF3252 /* XYLotteryData.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497B51F32F2D900EF3252 /* XYLotteryData.m */; };
 		B49497B91F32F34A00EF3252 /* XYLottery.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497B81F32F34A00EF3252 /* XYLottery.m */; };
 		B49497BC1F32FC1D00EF3252 /* XYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B49497BB1F32FC1D00EF3252 /* XYTools.m */; };
+		B4A7595D1F40A1BD000C3DAC /* XYRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A7595B1F40A1BD000C3DAC /* XYRegisterController.m */; };
+		B4A7595E1F40A1BD000C3DAC /* XYRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A7595C1F40A1BD000C3DAC /* XYRegisterController.xib */; };
+		B4A759621F40A270000C3DAC /* XYForgetPassController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A759601F40A270000C3DAC /* XYForgetPassController.m */; };
+		B4A759631F40A270000C3DAC /* XYForgetPassController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A759611F40A270000C3DAC /* XYForgetPassController.xib */; };
 		B4B071B91F336512006DD2A2 /* XYPreSurveyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B071B71F336512006DD2A2 /* XYPreSurveyCell.m */; };
 		B4B071BA1F336512006DD2A2 /* XYPreSurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B071B81F336512006DD2A2 /* XYPreSurveyCell.xib */; };
 		B4B071BE1F337753006DD2A2 /* icon_see@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B071BD1F337753006DD2A2 /* icon_see@2x.png */; };
@@ -282,6 +286,12 @@
 		B49497B81F32F34A00EF3252 /* XYLottery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLottery.m; sourceTree = "<group>"; };
 		B49497BA1F32FC1D00EF3252 /* XYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTools.h; sourceTree = "<group>"; };
 		B49497BB1F32FC1D00EF3252 /* XYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTools.m; sourceTree = "<group>"; };
+		B4A7595A1F40A1BC000C3DAC /* XYRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRegisterController.h; sourceTree = "<group>"; };
+		B4A7595B1F40A1BD000C3DAC /* XYRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRegisterController.m; sourceTree = "<group>"; };
+		B4A7595C1F40A1BD000C3DAC /* XYRegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYRegisterController.xib; sourceTree = "<group>"; };
+		B4A7595F1F40A270000C3DAC /* XYForgetPassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYForgetPassController.h; sourceTree = "<group>"; };
+		B4A759601F40A270000C3DAC /* XYForgetPassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYForgetPassController.m; sourceTree = "<group>"; };
+		B4A759611F40A270000C3DAC /* XYForgetPassController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYForgetPassController.xib; sourceTree = "<group>"; };
 		B4B071B61F336512006DD2A2 /* XYPreSurveyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPreSurveyCell.h; sourceTree = "<group>"; };
 		B4B071B71F336512006DD2A2 /* XYPreSurveyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPreSurveyCell.m; sourceTree = "<group>"; };
 		B4B071B81F336512006DD2A2 /* XYPreSurveyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYPreSurveyCell.xib; sourceTree = "<group>"; };
@@ -910,6 +920,12 @@
 				B4F53DBF1F3DAC03002C7F4F /* XYLoginController.h */,
 				B4F53DC01F3DAC03002C7F4F /* XYLoginController.m */,
 				B4F53DC11F3DAC03002C7F4F /* XYLoginController.xib */,
+				B4A7595A1F40A1BC000C3DAC /* XYRegisterController.h */,
+				B4A7595B1F40A1BD000C3DAC /* XYRegisterController.m */,
+				B4A7595C1F40A1BD000C3DAC /* XYRegisterController.xib */,
+				B4A7595F1F40A270000C3DAC /* XYForgetPassController.h */,
+				B4A759601F40A270000C3DAC /* XYForgetPassController.m */,
+				B4A759611F40A270000C3DAC /* XYForgetPassController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1050,11 +1066,13 @@
 				B4207EF81F30260300829C69 /* tabbar_lucky_sel.png in Resources */,
 				B48ED3E41F2ADFC700F26BC3 /* LaunchScreen.storyboard in Resources */,
 				B4207F071F30260300829C69 /* tabbar_profile.png in Resources */,
+				B4A759631F40A270000C3DAC /* XYForgetPassController.xib in Resources */,
 				B4207F041F30260300829C69 /* tabbar_preSurvey_sel.png in Resources */,
 				B4207F091F30260300829C69 /* tabbar_profile@3x.png in Resources */,
 				B48ED3E11F2ADFC700F26BC3 /* Assets.xcassets in Resources */,
 				B4207F2C1F30731900829C69 /* navigationbar_arrow_down.png in Resources */,
 				B4207EF51F30260300829C69 /* tabbar_lucky.png in Resources */,
+				B4A7595E1F40A1BD000C3DAC /* XYRegisterController.xib in Resources */,
 				B4207EFF1F30260300829C69 /* tabbar_news_sel@2x.png in Resources */,
 				B49497B31F32D56900EF3252 /* lotteryData.plist in Resources */,
 				B4207EFC1F30260300829C69 /* tabbar_news@2x.png in Resources */,
@@ -1171,6 +1189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */,
+				B4A7595D1F40A1BD000C3DAC /* XYRegisterController.m in Sources */,
 				B4207F6B1F31D3A100829C69 /* MJTypeEncoding.m in Sources */,
 				B4F53DA61F3C054F002C7F4F /* XYNewsZuheFirstCell.m in Sources */,
 				B4B071B91F336512006DD2A2 /* XYPreSurveyCell.m in Sources */,
@@ -1187,6 +1206,7 @@
 				B4207F131F30300500829C69 /* BaseViewController.m in Sources */,
 				B49497B91F32F34A00EF3252 /* XYLottery.m in Sources */,
 				B4207F471F31BC2B00829C69 /* XYPreSurveyModel.m in Sources */,
+				B4A759621F40A270000C3DAC /* XYForgetPassController.m in Sources */,
 				B4207F501F31D38F00829C69 /* XYHttpTool.m in Sources */,
 				B48ED4181F2AE1D800F26BC3 /* ViewController.m in Sources */,
 				B4731A061F30160000E0C688 /* NewsViewController.m in Sources */,
