@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +18,48 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="已登记的联系方式" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfC-tL-zg4">
+                    <rect key="frame" x="95.5" y="90" width="264.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="OeW-Ee-yge"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系方式:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceR-gG-IAM">
+                    <rect key="frame" x="15" y="90" width="65.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="p7Z-KZ-hXU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6H-CJ-QRR">
+                    <rect key="frame" x="31" y="145" width="315" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="5F7-lp-cyP"/>
+                    </constraints>
+                    <state key="normal" title="找回密码">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="drs-dk-6Th"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ceR-gG-IAM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="0zX-H7-rXP"/>
+                <constraint firstAttribute="trailing" secondItem="hfC-tL-zg4" secondAttribute="trailing" constant="15" id="EDr-ZZ-B9F"/>
+                <constraint firstItem="W6H-CJ-QRR" firstAttribute="top" secondItem="hfC-tL-zg4" secondAttribute="bottom" constant="15" id="Hud-kh-M0V"/>
+                <constraint firstItem="hfC-tL-zg4" firstAttribute="leading" secondItem="ceR-gG-IAM" secondAttribute="trailing" constant="15" id="KZ1-Nr-0dp"/>
+                <constraint firstItem="ceR-gG-IAM" firstAttribute="centerY" secondItem="hfC-tL-zg4" secondAttribute="centerY" id="bmX-8f-8bS"/>
+                <constraint firstItem="ceR-gG-IAM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="rtk-cT-K0t"/>
+            </constraints>
         </view>
     </objects>
 </document>

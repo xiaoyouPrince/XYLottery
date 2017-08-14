@@ -6,11 +6,11 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYCustomBackButtonViewController.h"
 
 typedef void(^LoginSuccessCallBack)(BOOL isSuccess);
 
-@interface XYLoginController : UIViewController
+@interface XYLoginController : XYCustomBackButtonViewController
 
 @property(nonatomic , copy) LoginSuccessCallBack loginSuccess;
 

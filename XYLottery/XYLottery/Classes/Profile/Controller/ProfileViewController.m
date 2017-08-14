@@ -113,14 +113,24 @@
 
 - (void)loadData
 {
+    /**
+     
+     获取账号信息的这里，只能有两个参数：userid + 对应的 session
+     ...这里的请求参数需要单独写了...
+     
+     */
+    
+    
     XYRequestParam *params = [XYRequestParam new];
-//    params.
+//    params.userid = @"629087";
     NSString *url = @"http://115.29.175.83/cpyc/getaccount.php";
     [XYHttpTool getWithURL:url params:params.keyValues success:^(NSDictionary * json) {
 //        if (json[@"errorcode"] == 0) {
         
             // 请求成功，加载自己数据
-            XYUser *user = [XYUser userWithDict:json];
+//            XYUser *user = [XYUser userWithDict:json];
+        
+            XYUser *user = [XYUser objectWithKeyValues:json];
             [XYAccountTool saveUser:user];
             
             NSString *firstTitle = [self.titlesArray[0] stringByAppendingString:[XYAccountTool user].beatfcheck];

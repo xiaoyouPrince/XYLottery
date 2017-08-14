@@ -6,8 +6,13 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYCustomBackButtonViewController.h"
+
+typedef void(^RegistSuccessCallBack)(BOOL isSuccess);
 
 @interface XYRegisterController : UIViewController
+
+@property(nonatomic , copy) RegistSuccessCallBack registSuccess;
+
 
 @end

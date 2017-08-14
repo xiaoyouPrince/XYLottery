@@ -25,6 +25,37 @@
 
 #pragma mark -- 用户请求主页
 @property (nonatomic, copy) NSString *userid;
+@property(nonatomic , copy) NSString *pass;
 @property (nonatomic, copy) NSString *sessionid;
+
+#pragma mark -- 用户注册
+//pass		： 密码  	123456
+//device	： 设备	1
+//attentcode	：邀请码 （可以不填）
+//mac		：mac地址	21BE3D7F-AFAF-4513-9577-7A005CDE8F77
+//contact	：联系人邮箱	xiaoyouprince@163.com
+//data		：数据？？	82549e24b41e2bd11482dd04f24bcd88
+//breif		：简介 （没有写）
+//username	： 用户名		èŠ±æ»¡æ¥¼
+//channel	：渠道		iosiphone
+//token	：令牌		10241545423773
+@property(nonatomic , strong) NSNumber  *device;
+@property(nonatomic , copy) NSString *attentcode;
+@property(nonatomic , copy) NSString *mac;
+@property(nonatomic , copy) NSString *contact;
+@property(nonatomic , copy) NSString *channel;
+@property(nonatomic , copy) NSString *username;
+@property(nonatomic , copy) NSString *breif;
+@property(nonatomic , copy) NSString *data;
+
+
+
+
+
+
+
+
+
+
 
 @end

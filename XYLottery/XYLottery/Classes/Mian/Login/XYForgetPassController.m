@@ -10,6 +10,8 @@
 
 @interface XYForgetPassController ()
 
+
+
 @end
 
 @implementation XYForgetPassController
@@ -18,6 +20,10 @@
     [super viewDidLoad];
 
 
+}
+- (IBAction)btnClick:(UIButton *)sender {
+    
+    // 按钮点击，进行请求什么的，，，干脆直接提示一下得了
 }
 
 @end

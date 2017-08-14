@@ -6,8 +6,8 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYCustomBackButtonViewController.h"
 
-@interface XYForgetPassController : UIViewController
+@interface XYForgetPassController : XYCustomBackButtonViewController
 
 @end

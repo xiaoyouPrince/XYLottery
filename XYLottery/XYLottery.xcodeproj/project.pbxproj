@@ -127,6 +127,8 @@
 		B4F53DC31F3DAC03002C7F4F /* XYLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F53DC11F3DAC03002C7F4F /* XYLoginController.xib */; };
 		B4FC97A51F331C2E00E83E03 /* issuenum.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4FC97A41F331C2E00E83E03 /* issuenum.plist */; };
 		B4FC97A81F331D6800E83E03 /* XYIssueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FC97A71F331D6800E83E03 /* XYIssueModel.m */; };
+		B4FE02121F413CC000399869 /* XYCustomBackButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FE02111F413CC000399869 /* XYCustomBackButtonViewController.m */; };
+		B4FE02141F413D2A00399869 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FE02131F413D2A00399869 /* icon_back@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -326,6 +328,9 @@
 		B4FC97A41F331C2E00E83E03 /* issuenum.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = issuenum.plist; sourceTree = "<group>"; };
 		B4FC97A61F331D6800E83E03 /* XYIssueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYIssueModel.h; sourceTree = "<group>"; };
 		B4FC97A71F331D6800E83E03 /* XYIssueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYIssueModel.m; sourceTree = "<group>"; };
+		B4FE02101F413CC000399869 /* XYCustomBackButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCustomBackButtonViewController.h; sourceTree = "<group>"; };
+		B4FE02111F413CC000399869 /* XYCustomBackButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCustomBackButtonViewController.m; sourceTree = "<group>"; };
+		B4FE02131F413D2A00399869 /* icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@2x.png"; sourceTree = "<group>"; };
 		DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XYLottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -372,6 +377,7 @@
 		B4207ECF1F30260300829C69 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE02131F413D2A00399869 /* icon_back@2x.png */,
 				B4F53DAD1F3C37C7002C7F4F /* 钟图标@2x.png */,
 				B4B071BD1F337753006DD2A2 /* icon_see@2x.png */,
 				B49497B01F32CD4F00EF3252 /* expand_up@2x.png */,
@@ -873,6 +879,8 @@
 				B47319DB1F2F2AFF00E0C688 /* MainTabController.m */,
 				B4207F111F30300500829C69 /* BaseViewController.h */,
 				B4207F121F30300500829C69 /* BaseViewController.m */,
+				B4FE02101F413CC000399869 /* XYCustomBackButtonViewController.h */,
+				B4FE02111F413CC000399869 /* XYCustomBackButtonViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1077,6 +1085,7 @@
 				B49497B31F32D56900EF3252 /* lotteryData.plist in Resources */,
 				B4207EFC1F30260300829C69 /* tabbar_news@2x.png in Resources */,
 				B4207EEF1F30260300829C69 /* tabbar_curSurvey.png in Resources */,
+				B4FE02141F413D2A00399869 /* icon_back@2x.png in Resources */,
 				B4207F051F30260300829C69 /* tabbar_preSurvey_sel@2x.png in Resources */,
 				B4F53DB31F3C4F33002C7F4F /* XYProfileHeaderView.xib in Resources */,
 				B4207EFA1F30260300829C69 /* tabbar_lucky_sel@3x.png in Resources */,
@@ -1229,6 +1238,7 @@
 				B48ED3D61F2ADFC700F26BC3 /* main.m in Sources */,
 				B4207F421F31B74B00829C69 /* XYPreSurveyTopView.m in Sources */,
 				B405D4421F3B005E005E2482 /* XYScrollHeaderView.m in Sources */,
+				B4FE02121F413CC000399869 /* XYCustomBackButtonViewController.m in Sources */,
 				B4207F6C1F31D3A100829C69 /* NSObject+MJCoding.m in Sources */,
 				B4207F6D1F31D3A100829C69 /* NSObject+MJKeyValue.m in Sources */,
 				B4F53DC21F3DAC03002C7F4F /* XYLoginController.m in Sources */,

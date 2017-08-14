@@ -23,12 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"登录";
+    
     
 }
 
 - (IBAction)loginClick:(UIButton *)sender {
     
     sender.enabled = NO;
+    [SVProgressHUD dismiss];
     
     if (self.userNameTF.text.length && self.passTF.text.length) {
         
@@ -36,21 +39,29 @@
         // 成功回调，不成功提示失败
         XYRequestParam *params = [XYRequestParam new];
         params.userid = self.userNameTF.text;
-        //    params.pass = self.passTF.text;
-        [XYHttpTool postWithURL:@"login" params:params.keyValues success:^(id json) {
+        params.pass = self.passTF.text;
+        
+#define k_loginUrl @"http://115.29.175.83/cpyc/login.php"
+        
+        [XYHttpTool postWithURL:k_loginUrl params:params.keyValues success:^(NSDictionary * json) {
             
             sender.enabled = YES;
             
-            if (/* DISABLES CODE */ (YES)) {
+            DLog(@"%@",json);
+            
+            if ([json[@"errorcode"] integerValue] == 0) {
                 if (self.loginSuccess) {
                     self.loginSuccess(YES);
                 }
             
+                [SVProgressHUD showSuccessWithStatus:json[@"message"]];
                 [self.navigationController popViewControllerAnimated:YES];
                 
             }else
             {
-                [SVProgressHUD showWithStatus:@"账号密码错误请重试"];
+                [SVProgressHUD showErrorWithStatus:json[@"message"]];
+                
+                
             }
             
         } failure:^(NSError *error) {
@@ -69,14 +80,41 @@
 
 
 - (IBAction)registerClick:(UIButton *)sender {
-    
+    [SVProgressHUD dismiss];
+
     XYRegisterController *registVC = [XYRegisterController new];
     [self.navigationController pushViewController:registVC animated:YES];
+    registVC.registSuccess = ^(BOOL isSuccess) {
+        
+        // 实际上这里是假的注册成功，只需要给用户一个反馈，，，
+        // 返回对应的页面去刷新吧，，，，这里登录一个新注册号码
+        
+        XYRequestParam *params = [XYRequestParam new];
+        params.userid = @"633441";
+        params.pass = @"123456";
+        
+#define k_loginUrl @"http://115.29.175.83/cpyc/login.php"
+        
+        [XYHttpTool postWithURL:k_loginUrl params:params.keyValues success:^(NSDictionary * json) {
+            
+            sender.enabled = YES;
+            
+            DLog(@"%@",json);
+            
+            if (self.loginSuccess) {
+                self.loginSuccess(YES);
+            }
+
+        } failure:^(NSError *error) {
+        }];
+
+    };
 }
 
 
 - (IBAction)forgotPassClick:(UIButton *)sender {
-    
+    [SVProgressHUD dismiss];
+
     XYForgetPassController *registVC = [XYForgetPassController new];
     [self.navigationController pushViewController:registVC animated:YES];
 }
