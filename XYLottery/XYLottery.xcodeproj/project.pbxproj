@@ -129,6 +129,8 @@
 		B4FC97A81F331D6800E83E03 /* XYIssueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FC97A71F331D6800E83E03 /* XYIssueModel.m */; };
 		B4FE02121F413CC000399869 /* XYCustomBackButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FE02111F413CC000399869 /* XYCustomBackButtonViewController.m */; };
 		B4FE02141F413D2A00399869 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FE02131F413D2A00399869 /* icon_back@2x.png */; };
+		B4FE02181F41F9EA00399869 /* XYUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FE02161F41F9EA00399869 /* XYUserDetailViewController.m */; };
+		B4FE02191F41F9EA00399869 /* XYUserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FE02171F41F9EA00399869 /* XYUserDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -331,6 +333,9 @@
 		B4FE02101F413CC000399869 /* XYCustomBackButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCustomBackButtonViewController.h; sourceTree = "<group>"; };
 		B4FE02111F413CC000399869 /* XYCustomBackButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCustomBackButtonViewController.m; sourceTree = "<group>"; };
 		B4FE02131F413D2A00399869 /* icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@2x.png"; sourceTree = "<group>"; };
+		B4FE02151F41F9EA00399869 /* XYUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYUserDetailViewController.h; sourceTree = "<group>"; };
+		B4FE02161F41F9EA00399869 /* XYUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYUserDetailViewController.m; sourceTree = "<group>"; };
+		B4FE02171F41F9EA00399869 /* XYUserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYUserDetailViewController.xib; sourceTree = "<group>"; };
 		DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XYLottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -881,6 +886,9 @@
 				B4207F121F30300500829C69 /* BaseViewController.m */,
 				B4FE02101F413CC000399869 /* XYCustomBackButtonViewController.h */,
 				B4FE02111F413CC000399869 /* XYCustomBackButtonViewController.m */,
+				B4FE02151F41F9EA00399869 /* XYUserDetailViewController.h */,
+				B4FE02161F41F9EA00399869 /* XYUserDetailViewController.m */,
+				B4FE02171F41F9EA00399869 /* XYUserDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1087,6 +1095,7 @@
 				B4207EEF1F30260300829C69 /* tabbar_curSurvey.png in Resources */,
 				B4FE02141F413D2A00399869 /* icon_back@2x.png in Resources */,
 				B4207F051F30260300829C69 /* tabbar_preSurvey_sel@2x.png in Resources */,
+				B4FE02191F41F9EA00399869 /* XYUserDetailViewController.xib in Resources */,
 				B4F53DB31F3C4F33002C7F4F /* XYProfileHeaderView.xib in Resources */,
 				B4207EFA1F30260300829C69 /* tabbar_lucky_sel@3x.png in Resources */,
 				B4207F0A1F30260300829C69 /* tabbar_profile_sel.png in Resources */,
@@ -1207,6 +1216,7 @@
 				B4207F161F304E6000829C69 /* XYTitleButton.m in Sources */,
 				B4207F511F31D38F00829C69 /* XYRequestParam.m in Sources */,
 				B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */,
+				B4FE02181F41F9EA00399869 /* XYUserDetailViewController.m in Sources */,
 				B4207F661F31D3A100829C69 /* MJArgument.m in Sources */,
 				B4F53DB71F3D4EDB002C7F4F /* XYUser.m in Sources */,
 				B4F53DAB1F3C366F002C7F4F /* XYNewsHistoryCell.m in Sources */,

@@ -21,7 +21,7 @@
 @property(nonatomic , strong) NSNumber  *regcoin;
 @property(nonatomic , strong) NSNumber  *invitecoin;
 @property(nonatomic , strong) NSNumber  *invitescore;
-@property(nonatomic , strong) NSArray  *list;           // 彩票类型
+@property(nonatomic , strong) NSArray<XYLottery *>  *list;           // 彩票类型
 
 
 

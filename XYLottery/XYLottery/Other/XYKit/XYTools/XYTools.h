@@ -16,7 +16,7 @@
 
 @property(nonatomic , strong) XYLotteryData  *lotteryData;
 
-//+ (XYLotteryData *)lotteryData;
++ (XYLotteryData *)lotteryData;
 + (XYIssueModel *)issueModel;
 + (XYLottery *)lotteryWithName:(NSString *)lotName;
 + (NSString *)issuenumWithName:(NSString *)name;

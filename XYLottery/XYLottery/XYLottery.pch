@@ -22,4 +22,6 @@
 #define k_CurrentPlayType @"currentPlayType"
 #define k_CurrentIssuenum @"CurrentIssuenum"
 
+/// 实际上这里的宏应该是 更近一步直接得到当前类别
+
 #endif /* PrefixHeader_pch */

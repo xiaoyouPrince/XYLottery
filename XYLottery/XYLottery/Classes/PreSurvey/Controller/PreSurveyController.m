@@ -12,6 +12,7 @@
 #import "PreSurveyController.h"
 #import "XYPreSurveyTopView.h"
 #import "XYPreSurveyCell.h"
+#import "XYUserDetailViewController.h"
 
 @interface PreSurveyController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -155,6 +156,13 @@
     cell.model = self.list[indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    XYUserDetailViewController *detail = [XYUserDetailViewController new];
+    detail.desid = self.list[indexPath.row].userid;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 
