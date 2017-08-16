@@ -162,6 +162,7 @@
 {
     XYUserDetailViewController *detail = [XYUserDetailViewController new];
     detail.desid = self.list[indexPath.row].userid;
+    detail.title = self.list[indexPath.row].username;
     [self.navigationController pushViewController:detail animated:YES];
 }
 

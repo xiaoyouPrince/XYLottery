@@ -55,7 +55,6 @@
     // 一次性设置
     ViewBorderRadius(self.isExpertLabel, 3, 0.5, [UIColor clearColor]);
     ViewBorderRadius(self.fellowBtn, 3, 0.5, [UIColor clearColor]);
-
     
     [self loadData];
 }
@@ -207,16 +206,10 @@
     [self checkLottypeBtnisSelected];
     [btn.superview.superview removeFromSuperview]; // 蒙版移除
     
-//#warning 处理对应的几期分类。是什么样的类型  7期 -- 1038 ，，， 回调去外面实现请求
-//    [XYTools setCurrentIssuenum:[NSString stringWithFormat:@"%zd",btn.tag]];
-//    
-//    if (self.issueCallBack) {
-//        self.issueCallBack([NSString stringWithFormat:@"%zd",btn.tag]);
-//    }
-//    
-//    // 请求对应分期排列
-//    // 通过回调来实现。更好
-//    DLog(@"type == %zd",btn.tag);
+//#warning 处理对应的几期，都是展示同样的内容吧。。
+    
+    
+    
 }
 
 
