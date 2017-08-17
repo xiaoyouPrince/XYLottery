@@ -8,12 +8,14 @@
 
 #import "ProfileViewController.h"
 #import "XYProfileHeaderView.h"
+#import "XYProfileVIewModel.h"
 
 @interface ProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,weak) XYProfileHeaderView *header;
 @property(nonatomic,weak) UITableView *tableView;
 @property(nonatomic , strong) NSMutableArray<NSString *>  *titlesArray;
+@property(nonatomic , strong) XYProfileVIewModel  *proVM;
 
 
 @end
@@ -24,6 +26,7 @@
 {
     [super loadView];
     self.view.backgroundColor = kGlobalBg;
+    self.proVM = [XYProfileVIewModel new];
     
     self.titlesArray = [NSMutableArray arrayWithObjects:@"签到获得金币",
                         @"分享短链接获得金币",
@@ -192,6 +195,77 @@
     
     return cell;
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [SVProgressHUD dismiss];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row == 0) {
+        // 拉取 签到信息
+        [self.proVM checkinSuccess:^(BOOL success) {
+            // 签到成功，这里主动刷新
+            [self loadData];
+        }];
+    }
+    
+    if (indexPath.row == 1) {
+        // 分享链接赚钱
+        UIButton *coverBtn = [[UIButton alloc]initWithFrame:self.view.bounds];
+        coverBtn.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
+        [self.view addSubview:coverBtn];
+        [coverBtn addTarget:coverBtn action:@selector(removeFromSuperview) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 150)];
+        bgView.backgroundColor = [UIColor whiteColor];
+        bgView.center = self.view.center;
+        UILabel *label = [UILabel new];
+        label.frame = CGRectMake(10, 10, ScreenW - 20, 100);
+        label.text = [NSString stringWithFormat:@"分享你的专属短连接可以获取金币，具体规则：\n 1.他人每次点击你可以获取1金币。\n 2.每日最多获取10金币 \n 3.重复刷新短连接算1次 \n\n 短连接:%@",[XYAccountTool user].tinyurl];
+        label.font = [UIFont systemFontOfSize:13];
+        label.numberOfLines = 0;
+        label.textColor = [UIColor blackColor];
+        
+        [bgView addSubview:label];
+        [coverBtn addSubview:bgView];
+        
+        for (int i = 0 ; i < 2; i++) {
+            UIButton *btn = [UIButton new];
+            [btn setBackgroundColor:[UIColor greenColor]];
+            btn.frame = CGRectMake(30 + (WIDTH(label) / 2) * i,MaxY(label) + 5 , 100, 30);
+            [bgView addSubview:btn];
+            [btn setTitle:@"复制链接" forState:0];
+            
+            if (i == 1) {
+                [btn setTitle:@"取消" forState:0];
+                btn.frame = CGRectMake(WIDTH(label) +10 - 100 - 20,MaxY(label) + 5 , 100, 30);
+                [btn addTarget:btn.superview.superview action:@selector(removeFromSuperview) forControlEvents:UIControlEventTouchUpInside];
+            }else
+            {
+                [btn addTarget:self action:@selector(coverSureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            }
+            
+        }
+        
+        
+    }
+}
+
+
+/**
+ 确认复制连接的按钮点击
+
+ @param sender btn
+ */
+- (void)coverSureBtnClick:(UIButton *)sender
+{
+    [sender.superview.superview removeFromSuperview];
+    
+    UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"已经赋值到粘贴板" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+    [a show];
+}
+
 
 
 @end
