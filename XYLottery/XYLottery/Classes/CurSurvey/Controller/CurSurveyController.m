@@ -9,6 +9,7 @@
 #import "CurSurveyController.h"
 #import "XYCurSurveyTopView.h"
 #import "XYCurSurveyCell.h"
+#import "XYBoughtCacheTool.h"
 
 #define k_cur_topViewH 80
 
@@ -22,6 +23,8 @@
 @end
 
 @implementation CurSurveyController
+
+static XYSurveyListModel *model; // 要买的那个list 的model。给cache赋值
 
 
 // 这里是重写父类的方法，用于得到修改彩票类型的通知
@@ -165,8 +168,98 @@
     
     cell.cur_model = self.list[indexPath.row];
     
+    cell.buyCallBack = ^(XYSurveyListModel *cur_model){
+
+        // 验证是否登录
+        if ([XYAccountTool user]) {
+
+            // 提示要不要进行购买
+            [self showTipView:cur_model];
+
+        }else
+        {
+            // 去登录
+            XYLoginController *login = [XYLoginController new];
+            [self.navigationController pushViewController:login animated:YES];
+            login.loginSuccess = ^(BOOL isSuccess) {
+
+                // 成功后在提示要不要进行购买。。。
+                [self showTipView:cur_model];
+            };
+        }
+        
+    };
+    
     return cell;
 }
+
+
+
+- (void)showTipView:(XYSurveyListModel *)cur_model
+{
+    
+    model = cur_model;
+    
+    // 分享链接赚钱
+    UIButton *coverBtn = [[UIButton alloc]initWithFrame:self.view.bounds];
+    coverBtn.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
+    [self.view addSubview:coverBtn];
+    [coverBtn addTarget:coverBtn action:@selector(removeFromSuperview) forControlEvents:UIControlEventTouchUpInside];
+
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 150)];
+    bgView.backgroundColor = [UIColor whiteColor];
+    bgView.center = self.view.center;
+    UILabel *label = [UILabel new];
+    label.frame = CGRectMake(10, 10, ScreenW - 20, 100);
+    label.text = [NSString stringWithFormat:@"    专家不保证百分百准确 。本预测需要 %@ 金币才能查看，你确定需要查看此预测吗？",cur_model.priceleve];
+    label.font = [UIFont systemFontOfSize:13];
+    label.numberOfLines = 0;
+    label.textColor = [UIColor blackColor];
+
+    [bgView addSubview:label];
+    [coverBtn addSubview:bgView];
+
+    for (int i = 0 ; i < 2; i++) {
+        UIButton *btn = [UIButton new];
+        [btn setBackgroundColor:[UIColor greenColor]];
+        btn.frame = CGRectMake(30 + (WIDTH(label) / 2) * i,MaxY(label) + 5 , 100, 30);
+        [bgView addSubview:btn];
+        [btn setTitle:@"确定" forState:0];
+
+        if (i == 1) {
+            [btn setTitle:@"取消" forState:0];
+            btn.frame = CGRectMake(WIDTH(label) +10 - 100 - 20,MaxY(label) + 5 , 100, 30);
+            [btn addTarget:btn.superview.superview action:@selector(removeFromSuperview) forControlEvents:UIControlEventTouchUpInside];
+        }else
+        {
+            [btn addTarget:self action:@selector(coverSureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        }
+    
+    }
+    
+}
+
+- (void)coverSureBtnClick:(UIButton *)sender
+{
+    // 保存对应的 surveyCache
+    
+    XYSurveyCache *cache = [XYSurveyCache new];
+    
+    cache.createtime = @"2017 - 8 - 18  9:00";
+    cache.coin = model.priceleve;
+    cache.expertid = @"188322";
+    cache.expertname = @"哈师大打包";
+    cache.playtype = [XYTools currentPlayType];
+    cache.lotname = [XYTools currentLotName];
+    cache.calcdata = @"08,06,09";
+    
+    [XYBoughtCacheTool add:cache];
+
+    DLog(@"---count = %zd",[XYBoughtCacheTool caches].count);
+    
+    [sender.superview.superview removeFromSuperview];
+}
+
 
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 //{

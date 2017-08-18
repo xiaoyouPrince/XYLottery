@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 #import "XYProfileHeaderView.h"
 #import "XYProfileVIewModel.h"
+#import "XYBoughtViewController.h"
 
 @interface ProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -31,7 +32,7 @@
     self.titlesArray = [NSMutableArray arrayWithObjects:@"签到获得金币",
                         @"分享短链接获得金币",
                         @"我的购买",
-                        @"我的预测",
+//                        @"我的预测",
                         @"充值记录",
                         @"我的关注",
                         @"我的资料", nil];
@@ -47,7 +48,6 @@
     self.navigationController.navigationBar.barTintColor = [UIColor grayColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    
     // 根据登录与否展示对应的Page
     if ([XYAccountTool user]) {
         [self showProfileVC];
@@ -55,6 +55,18 @@
     {
         [self showLoginBtn];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    // 根据登录与否展示对应的Page
+//    if ([XYAccountTool user]) {
+//        [self showProfileVC];
+//    }else
+//    {
+//        [self showLoginBtn];
+//    }
 }
 
 - (void)showLoginBtn
@@ -247,8 +259,20 @@
             }
             
         }
+    }
+    
+    
+    if (indexPath.row == 2) {
         
+        XYBoughtViewController *bought = [XYBoughtViewController new];
+        [self.navigationController pushViewController:bought animated:YES];
+    }
+    
+    
+    if (indexPath.row == 5) {
         
+        //我的资料
+        [XYAccountTool deleteUser];
     }
 }
 

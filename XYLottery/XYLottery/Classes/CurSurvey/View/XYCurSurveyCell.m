@@ -56,6 +56,9 @@
 - (IBAction)checkBtnClick:(UIButton *)sender {
     
     DLog(@"点击查看按钮，这里进行判断是否进行过登录，，如果登录过就直接根据用户余额进行请求，否则进入登录页面，让用户先登录");
+    if (self.buyCallBack) {
+        self.buyCallBack(self.cur_model);
+    }
     
 }
 

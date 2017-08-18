@@ -10,9 +10,13 @@
 #import "XYPreSurveyCell.h"
 
 #define k_XYCurSurveyCellID @"XYCurSurveyCell"
+typedef void(^BuyBtnCallBack)(XYSurveyListModel  *cur_model);
+
 
 @interface XYCurSurveyCell : XYPreSurveyCell
 
 @property(nonatomic , strong) XYSurveyListModel  *cur_model;
+@property(nonatomic , copy) BuyBtnCallBack buyCallBack;
+
 
 @end

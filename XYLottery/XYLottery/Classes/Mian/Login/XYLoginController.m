@@ -53,6 +53,8 @@
                 if (self.loginSuccess) {
                     self.loginSuccess(YES);
                 }
+                
+                // 登录成功可能需要单独再请求一下本人的数据，然后保存user
             
                 [SVProgressHUD showSuccessWithStatus:json[@"message"]];
                 [self.navigationController popViewControllerAnimated:YES];
