@@ -19,4 +19,15 @@
 {
     return @{@"coinplays" : [CoinPlay class]};
 }
+
+- (NSString *)playNameWithPlaytype:(NSString *)playType{
+    
+    for (CoinPlay *coinplay in self.coinplays) {
+        if ([coinplay.playtype isEqualToString:playType]) {
+            return coinplay.playname;
+        }
+    }
+    
+    return @"1039";
+}
 @end

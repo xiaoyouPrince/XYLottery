@@ -245,12 +245,21 @@ static XYSurveyListModel *model; // 要买的那个list 的model。给cache赋�
     
     XYSurveyCache *cache = [XYSurveyCache new];
     
-    cache.createtime = @"2017 - 8 - 18  9:00";
+    // 时间的kit
+    NSDate *date = [NSDate date];
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSString *currentDateStr = [fmt stringFromDate:date];
+    
+    cache.createtime = currentDateStr;
     cache.coin = model.priceleve;
-    cache.expertid = @"188322";
-    cache.expertname = @"哈师大打包";
-    cache.playtype = [XYTools currentPlayType];
+    cache.expertid = model.userid;   //@"188322";
+    cache.expertname = model.username;   //@"哈师大打包";
+//    cache.playtype = [XYTools currentPlayType];
     cache.lotname = [XYTools currentLotName];
+    
+    cache.playtype = [[XYTools currentLottery] playNameWithPlaytype:[XYTools currentPlayType]];
+    
     cache.calcdata = @"08,06,09";
     
     [XYBoughtCacheTool add:cache];

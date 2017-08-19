@@ -59,7 +59,7 @@ static FMDatabaseQueue *_queue;
         
         FMResultSet *rs = nil;
         
-        rs = [db executeQuery:@"select * from t_status"];
+        rs = [db executeQuery:@"select * from t_status order by id desc limit 0 ,100"];// 默认最大100个储存值
         
         while (rs.next) {
             NSData *data = [rs dataForColumn:@"status"];

@@ -33,7 +33,7 @@
 
 - (void)setModel:(XYSurveyListModel *)model
 {
-    
+    // 实际上写到这里更好，但是目前写到外面了，先完成再说吧
 }
 
 MJCodingImplementation

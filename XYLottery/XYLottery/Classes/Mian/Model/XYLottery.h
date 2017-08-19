@@ -25,5 +25,6 @@
 @property(nonatomic , copy) NSString *ctname;
 @property(nonatomic , strong) NSArray<CoinPlay *>  *coinplays; // 玩法昵称和code
 
+- (NSString *)playNameWithPlaytype:(NSString *)playType;
 
 @end
