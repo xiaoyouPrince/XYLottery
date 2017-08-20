@@ -11,6 +11,7 @@
 #import "XYNewsZuheFirstCell.h"
 #import "XYPreSurveyCell.h"
 #import "XYNewsHistoryCell.h"
+#import "XYNewsDetailViewController.h"
 
 typedef NS_ENUM(NSUInteger, XYNewsType) {
     XYNewsTypeZuhe = 0,  ///< 大奖专家组合
@@ -162,9 +163,6 @@ typedef NS_ENUM(NSUInteger, XYNewsType) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    XYNewsZuheFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:k_ZuheFirstCellID];
-//    cell.model = self.model;
-//    return cell;
     
     switch (self.newsType) {
         case XYNewsTypeZuhe:
@@ -295,46 +293,52 @@ typedef NS_ENUM(NSUInteger, XYNewsType) {
     }
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    switch (self.newsType) {
-//        case XYNewsTypeZuhe:
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (self.newsType) {
+        case XYNewsTypeZuhe:
+        case XYNewsTypeHistory:
+            break;
+        case XYNewsTypeTrand:
+        {
+            // 开奖走势图，每个子页面有不同的图
+            XYSurveyListModel *model = self.list[indexPath.row];
+            XYNewsDetailViewController *detail = [XYNewsDetailViewController new];
+            NSURL *url = [NSURL URLWithString:model.trendurl];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            detail.request = request;
+            [self.navigationController pushViewController:detail animated:YES];
+        }
+            break;
+        case XYNewsTypeNews:
 //        {
-//            if (indexPath.row == 0) {
-//                
-//                
-//                
-//            }else
-//            {
-//                
-//            }
-//        }
-//            break;
-//        case XYNewsTypeHistory:
-//        {
+//            // 中奖资讯，每个咨询有自己的内容
+//            XYSurveyListModel *model = self.list[indexPath.row];
+//            XYNewsDetailViewController *detail = [XYNewsDetailViewController new];
+//            NSURL *url = [NSURL URLWithString:model.url];
+//            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//            detail.request = request;
+//            [self.navigationController pushViewController:detail animated:YES];
 //            
 //        }
 //            break;
-//        case XYNewsTypeTrand:
-//        {
-//            
-//            
-//        }
-//            break;
-//        case XYNewsTypeNews:
-//        {
-//            // 这和下面的一样，直接走下边
-//        }
-//        case XYNewsTypeMethod:
-//        {
-//            // 同上一种cell
-//        }
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//}
+        case XYNewsTypeMethod:
+        {
+            // 买彩票技巧，有子页面
+            XYSurveyListModel *model = self.list[indexPath.row];
+            XYNewsDetailViewController *detail = [XYNewsDetailViewController new];
+            NSURL *url = [NSURL URLWithString:model.url];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            detail.request = request;
+            [self.navigationController pushViewController:detail animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+
+}
 
 
 
