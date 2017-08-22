@@ -67,6 +67,7 @@
 		B4207F6D1F31D3A100829C69 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F631F31D3A100829C69 /* NSObject+MJKeyValue.m */; };
 		B4207F6E1F31D3A100829C69 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F651F31D3A100829C69 /* NSObject+MJMember.m */; };
 		B421F3AD1F49E281001F3A64 /* XYNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B421F3AC1F49E281001F3A64 /* XYNewsDetailViewController.m */; };
+		B43C96BA1F4C8A45008DB05E /* XYLucky.m in Sources */ = {isa = PBXBuildFile; fileRef = B43C96B91F4C8A45008DB05E /* XYLucky.m */; };
 		B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319D81F2F2ABA00E0C688 /* MainNavController.m */; };
 		B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319DB1F2F2AFF00E0C688 /* MainTabController.m */; };
 		B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319FC1F3015C200E0C688 /* PreSurveyController.m */; };
@@ -251,6 +252,8 @@
 		B4207F651F31D3A100829C69 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		B421F3AB1F49E281001F3A64 /* XYNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNewsDetailViewController.h; sourceTree = "<group>"; };
 		B421F3AC1F49E281001F3A64 /* XYNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNewsDetailViewController.m; sourceTree = "<group>"; };
+		B43C96B81F4C8A45008DB05E /* XYLucky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLucky.h; sourceTree = "<group>"; };
+		B43C96B91F4C8A45008DB05E /* XYLucky.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLucky.m; sourceTree = "<group>"; };
 		B47319D71F2F2ABA00E0C688 /* MainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavController.h; sourceTree = "<group>"; };
 		B47319D81F2F2ABA00E0C688 /* MainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavController.m; sourceTree = "<group>"; };
 		B47319DA1F2F2AFF00E0C688 /* MainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabController.h; sourceTree = "<group>"; };
@@ -642,6 +645,8 @@
 		B47319E31F3014FA00E0C688 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B43C96B81F4C8A45008DB05E /* XYLucky.h */,
+				B43C96B91F4C8A45008DB05E /* XYLucky.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1333,6 +1338,7 @@
 				B4CB4D901F320F0200640D43 /* XYSurveyModel.m in Sources */,
 				B4BE78A11F46CAC100808F16 /* XYBoughtViewController.m in Sources */,
 				B4BE78B61F46D99300808F16 /* FMDatabase.m in Sources */,
+				B43C96BA1F4C8A45008DB05E /* XYLucky.m in Sources */,
 				B4E06CDE1F37F8E000B73542 /* XYCurSurveyTopView.m in Sources */,
 				B421F3AD1F49E281001F3A64 /* XYNewsDetailViewController.m in Sources */,
 				B48ED4171F2AE1D800F26BC3 /* AppDelegate.m in Sources */,

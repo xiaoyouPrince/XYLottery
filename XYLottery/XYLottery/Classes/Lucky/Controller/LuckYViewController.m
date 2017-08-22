@@ -7,12 +7,24 @@
 //
 
 #import "LuckYViewController.h"
+#import "XYLucky.h"
 
 @interface LuckYViewController ()
+
+@property(nonatomic , strong) NSMutableArray <XYLucky *> *luckyList;
+
 
 @end
 
 @implementation LuckYViewController
+
+- (NSMutableArray *)luckyList
+{
+    if (_luckyList == nil) {
+        _luckyList = [NSMutableArray new];
+    }
+    return _luckyList;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,13 +49,29 @@
      @return <#return value description#>
      */
     
-    
-    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)loadLuckData
+{
+    [SVProgressHUD show];
+    
+    NSString *url = @"http://115.29.175.83/cpyc/getredpackets.php";
+    [XYHttpTool getWithURL:url params:nil success:^(NSDictionary * json) {
+        [SVProgressHUD dismiss];
+        
+        // 得到对应的当前获奖list
+        NSMutableArray *array = [NSMutableArray new];
+        int i = 0;
+        for (XYLucky *lucky in json[@"list"]) {
+//            lucky = [XYLucky objectWithKeyValues:json[@"list"][i]];
+            
+        }
+        
+        
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"请检查你的网络,并重试"];
+    }];
 }
 
 #pragma mark - Table view data source
