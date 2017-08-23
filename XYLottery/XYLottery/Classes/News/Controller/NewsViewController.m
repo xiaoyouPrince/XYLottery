@@ -97,6 +97,7 @@ typedef NS_ENUM(NSUInteger, XYNewsType) {
 {
     // 保存自己的newstype
     _newsType = type;
+    [SVProgressHUD show];
     
     switch (type) {
         case XYNewsTypeZuhe:
@@ -149,6 +150,7 @@ typedef NS_ENUM(NSUInteger, XYNewsType) {
         self.list = [XYSurveyListModel objectArrayWithKeyValuesArray:json[@"list"]];
         
         [self reloadPageData];
+        [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
         
     }];
@@ -200,6 +202,7 @@ typedef NS_ENUM(NSUInteger, XYNewsType) {
             
             XYSurveyListModel *model = self.list[indexPath.row];
             cell.textLabel.text = model.trendname;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
         }
             break;
@@ -307,21 +310,23 @@ typedef NS_ENUM(NSUInteger, XYNewsType) {
             NSURL *url = [NSURL URLWithString:model.trendurl];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             detail.request = request;
+            detail.title = @"开奖走势";
             [self.navigationController pushViewController:detail animated:YES];
         }
             break;
         case XYNewsTypeNews:
-//        {
-//            // 中奖资讯，每个咨询有自己的内容
-//            XYSurveyListModel *model = self.list[indexPath.row];
-//            XYNewsDetailViewController *detail = [XYNewsDetailViewController new];
-//            NSURL *url = [NSURL URLWithString:model.url];
-//            NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//            detail.request = request;
-//            [self.navigationController pushViewController:detail animated:YES];
-//            
-//        }
-//            break;
+        {
+            // 中奖资讯，每个咨询有自己的内容
+            XYSurveyListModel *model = self.list[indexPath.row];
+            XYNewsDetailViewController *detail = [XYNewsDetailViewController new];
+            NSURL *url = [NSURL URLWithString:model.url];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            detail.request = request;
+            detail.title = @"中奖咨询";
+            [self.navigationController pushViewController:detail animated:YES];
+            
+        }
+            break;
         case XYNewsTypeMethod:
         {
             // 买彩票技巧，有子页面
@@ -330,6 +335,7 @@ typedef NS_ENUM(NSUInteger, XYNewsType) {
             NSURL *url = [NSURL URLWithString:model.url];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             detail.request = request;
+            detail.title = @"购彩技巧";
             [self.navigationController pushViewController:detail animated:YES];
         }
             break;
