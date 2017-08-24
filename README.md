@@ -33,7 +33,6 @@ However so many times I have been rejected by Apple, I know my app realy has som
 have sellected some blogs that also with these problems.
 Here are these links:
 
-准备第四个页面
 
 [IOS 发布被拒 3.2 f : http://www.cnblogs.com/foreverfendou/p/6867574.html](http://www.cnblogs.com/foreverfendou/p/6867574.html) 
 
