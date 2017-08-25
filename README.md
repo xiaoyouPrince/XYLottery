@@ -24,6 +24,14 @@ The second time was also failed , and there is the image bellow:
 
 what is the hell！
 
+### THIRD TIME : PLA 3.2（f）(2017 - 7 - 27)
+
+The third time was also failed , and there is the image bellow:
+
+![AppStoreRejectInfo](Images/reject_03.png)
+
+what is the hell！
+
 ## Next
 
 tomorrow i will do this again。really。。
@@ -40,3 +48,5 @@ Here are these links:
 http://www.jianshu.com/p/c1f25e1747e2](http://www.jianshu.com/p/c1f25e1747e2)
 
 [金融类APP常见被拒绝原因分析及解决 : http://www.woshipm.com/operate/746939.html](http://www.woshipm.com/operate/746939.html)
+
+
