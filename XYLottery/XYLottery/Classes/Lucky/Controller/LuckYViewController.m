@@ -6,6 +6,12 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
+
+
+//  这几天暂时停网了，所以停一下开发，相信很快就可以继续开始了，哈哈  2017年08月26日23:44:03
+
+
+
 #import "LuckYViewController.h"
 #import "XYLucky.h"
 
