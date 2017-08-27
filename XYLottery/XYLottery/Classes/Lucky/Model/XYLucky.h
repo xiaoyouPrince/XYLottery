@@ -10,4 +10,42 @@
 
 @interface XYLucky : NSObject
 
+@property(nonatomic , copy) NSString *type;
+@property(nonatomic , copy) NSString *username;
+@property(nonatomic , copy) NSString *coin;
+
+//{
+//    "errorcode": 0,
+//    "message": "",
+//    "list": [
+//             {
+//                 "type": "2",
+//                 "username": "user625774",
+//                 "coin": "1"
+//             },
+//             {
+//                 "type": "3",
+//                 "username": "韩甲富",
+//                 "coin": "1"
+//             },
+//             {
+//                 "type": "3",
+//                 "username": "往事如烟",
+//                 "coin": "3"
+//             },
+//             {
+//                 "type": "3",
+//                 "username": "丹宝",
+//                 "coin": "1"
+//             },
+//             {
+//                 "type": "3",
+//                 "username": "行星",
+//                 "coin": "7"
+//             }
+//             ],
+//    "nexttimedes": "下一波金币红包15:00分开抢！",
+//    "timeh": "14:00"
+//}
+
 @end
