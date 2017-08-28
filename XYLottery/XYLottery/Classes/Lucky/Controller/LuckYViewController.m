@@ -6,14 +6,11 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
-
-
-//  这几天暂时停网了，所以停一下开发，相信很快就可以继续开始了，哈哈  2017年08月26日23:44:03
-
-
-
 #import "LuckYViewController.h"
 #import "XYLucky.h"
+#import "XYLuckyCell.h"  // 这个是红包cell。名字取错了
+
+#define k_lastHour @"lastHour"
 
 @interface LuckYViewController ()
 
@@ -35,17 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
     [self loadLuckData];
-    
-    
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"XYLuckyCell" bundle:nil] forCellReuseIdentifier:k_luckCellID];
 
     /**
      基本模仿，主要有变化
@@ -63,7 +51,20 @@
 {
     [super viewWillAppear:animated];
     
-    [self loadLuckData];
+    // 每次记录一个时间段，如果这次在这个时间段之内就不再拉取新的数据，如果不是再重新拉取新的数据
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    int unit = NSCalendarUnitHour;
+    // 1.获得当前时间的小时
+    NSDateComponents *cmps = [calendar components:unit fromDate:[NSDate date]];
+    NSInteger lastHour = [kUserDefaults integerForKey:k_lastHour];
+    
+    if (cmps.hour % 24 != lastHour) {
+        
+        [self loadLuckData];
+        
+        lastHour = cmps.hour % 24;
+        [kUserDefaults setInteger:lastHour forKey:k_lastHour];
+    }
 }
 
 
@@ -82,6 +83,11 @@
             [arrayM addObject:luck];
         }
         self.luckyList = arrayM;
+        // 人为添加两条数据，一个是最上边的时间，一个是财神发红包,最后一个是自定义的查看全部
+        [self.luckyList insertObject:[XYLucky new] atIndex:0];
+        [self.luckyList insertObject:[XYLucky new] atIndex:0];
+        [self.luckyList addObject:[XYLucky new]];
+        
         [self.tableView reloadData];
 
     } failure:^(NSError *error) {
@@ -96,17 +102,65 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *cellID = @"cellID";
-
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
-    cell.textLabel.text = [NSString stringWithFormat:@"---%zd----",indexPath.row];
+    if (indexPath.row == 0) {
+        
+        // time cell
+        NSInteger lastHour = [kUserDefaults integerForKey:k_lastHour];
+        UILabel *timeLable = [UILabel new];
+        timeLable.text = [NSString stringWithFormat:@"上次开奖: %zd:00",lastHour];
+        [timeLable sizeToFit];
+        timeLable.center = cell.contentView.center;
+        [cell.contentView addSubview:timeLable];
+    }
+    
+    if (indexPath.row == 1) {
+        
+        // 财神 cell
+        XYLuckyCell *cell = [tableView dequeueReusableCellWithIdentifier:k_luckCellID];
+        cell.callback = ^{
+            //cell 内部红包被用户点击的回调
+            
+            DLog(@"我被点击了e");
+        };
+        return cell;
+        
+    }
+    
+    if ((indexPath.row > 1) && (indexPath.row < self.luckyList.count - 1)) {
+        
+        static NSString *cellID = @"luckCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        }
+    
+        cell.textLabel.text = [NSString stringWithFormat:@"---%zd----",indexPath.row];
+        
+        return cell;
+    }else
+    {
+        
+    }
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 1) {
+        return 100;
+    }else
+    {
+        return 40;
+    }
 }
 
 

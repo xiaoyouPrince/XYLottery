@@ -68,6 +68,13 @@
 		B4207F6E1F31D3A100829C69 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B4207F651F31D3A100829C69 /* NSObject+MJMember.m */; };
 		B421F3AD1F49E281001F3A64 /* XYNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B421F3AC1F49E281001F3A64 /* XYNewsDetailViewController.m */; };
 		B43C96BA1F4C8A45008DB05E /* XYLucky.m in Sources */ = {isa = PBXBuildFile; fileRef = B43C96B91F4C8A45008DB05E /* XYLucky.m */; };
+		B44EBF0F1F54121200511FAC /* XYLuckyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B44EBF0D1F54121200511FAC /* XYLuckyCell.m */; };
+		B44EBF101F54121200511FAC /* XYLuckyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF0E1F54121200511FAC /* XYLuckyCell.xib */; };
+		B44EBF171F54147F00511FAC /* luckybag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF121F54147F00511FAC /* luckybag@2x.png */; };
+		B44EBF181F54147F00511FAC /* luckybag_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF131F54147F00511FAC /* luckybag_down@2x.png */; };
+		B44EBF191F54147F00511FAC /* luckybag_down_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF141F54147F00511FAC /* luckybag_down_sel@2x.png */; };
+		B44EBF1A1F54147F00511FAC /* luckybag_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF151F54147F00511FAC /* luckybag_top@2x.png */; };
+		B44EBF1B1F54147F00511FAC /* luckyGod@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF161F54147F00511FAC /* luckyGod@2x.png */; };
 		B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319D81F2F2ABA00E0C688 /* MainNavController.m */; };
 		B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319DB1F2F2AFF00E0C688 /* MainTabController.m */; };
 		B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319FC1F3015C200E0C688 /* PreSurveyController.m */; };
@@ -254,6 +261,14 @@
 		B421F3AC1F49E281001F3A64 /* XYNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNewsDetailViewController.m; sourceTree = "<group>"; };
 		B43C96B81F4C8A45008DB05E /* XYLucky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLucky.h; sourceTree = "<group>"; };
 		B43C96B91F4C8A45008DB05E /* XYLucky.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLucky.m; sourceTree = "<group>"; };
+		B44EBF0C1F54121200511FAC /* XYLuckyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLuckyCell.h; sourceTree = "<group>"; };
+		B44EBF0D1F54121200511FAC /* XYLuckyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLuckyCell.m; sourceTree = "<group>"; };
+		B44EBF0E1F54121200511FAC /* XYLuckyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLuckyCell.xib; sourceTree = "<group>"; };
+		B44EBF121F54147F00511FAC /* luckybag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luckybag@2x.png"; sourceTree = "<group>"; };
+		B44EBF131F54147F00511FAC /* luckybag_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luckybag_down@2x.png"; sourceTree = "<group>"; };
+		B44EBF141F54147F00511FAC /* luckybag_down_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luckybag_down_sel@2x.png"; sourceTree = "<group>"; };
+		B44EBF151F54147F00511FAC /* luckybag_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luckybag_top@2x.png"; sourceTree = "<group>"; };
+		B44EBF161F54147F00511FAC /* luckyGod@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luckyGod@2x.png"; sourceTree = "<group>"; };
 		B47319D71F2F2ABA00E0C688 /* MainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavController.h; sourceTree = "<group>"; };
 		B47319D81F2F2ABA00E0C688 /* MainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavController.m; sourceTree = "<group>"; };
 		B47319DA1F2F2AFF00E0C688 /* MainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabController.h; sourceTree = "<group>"; };
@@ -426,6 +441,7 @@
 		B4207ECF1F30260300829C69 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B44EBF111F54147F00511FAC /* othericon */,
 				B4FE02131F413D2A00399869 /* icon_back@2x.png */,
 				B4F53DAD1F3C37C7002C7F4F /* 钟图标@2x.png */,
 				B4B071BD1F337753006DD2A2 /* icon_see@2x.png */,
@@ -584,6 +600,18 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		B44EBF111F54147F00511FAC /* othericon */ = {
+			isa = PBXGroup;
+			children = (
+				B44EBF121F54147F00511FAC /* luckybag@2x.png */,
+				B44EBF131F54147F00511FAC /* luckybag_down@2x.png */,
+				B44EBF141F54147F00511FAC /* luckybag_down_sel@2x.png */,
+				B44EBF151F54147F00511FAC /* luckybag_top@2x.png */,
+				B44EBF161F54147F00511FAC /* luckyGod@2x.png */,
+			);
+			path = othericon;
+			sourceTree = "<group>";
+		};
 		B47319DD1F3014FA00E0C688 /* CurSurvey */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +682,9 @@
 		B47319E41F3014FA00E0C688 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B44EBF0C1F54121200511FAC /* XYLuckyCell.h */,
+				B44EBF0D1F54121200511FAC /* XYLuckyCell.m */,
+				B44EBF0E1F54121200511FAC /* XYLuckyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1165,12 +1196,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4207EF11F30260300829C69 /* tabbar_curSurvey@3x.png in Resources */,
+				B44EBF191F54147F00511FAC /* luckybag_down_sel@2x.png in Resources */,
 				B4207F011F30260300829C69 /* tabbar_preSurvey.png in Resources */,
+				B44EBF101F54121200511FAC /* XYLuckyCell.xib in Resources */,
 				B4207EF41F30260300829C69 /* tabbar_curSurvey_sel@3x.png in Resources */,
 				B4207EF81F30260300829C69 /* tabbar_lucky_sel.png in Resources */,
 				B48ED3E41F2ADFC700F26BC3 /* LaunchScreen.storyboard in Resources */,
 				B4207F071F30260300829C69 /* tabbar_profile.png in Resources */,
+				B44EBF1A1F54147F00511FAC /* luckybag_top@2x.png in Resources */,
 				B4A759631F40A270000C3DAC /* XYForgetPassController.xib in Resources */,
+				B44EBF171F54147F00511FAC /* luckybag@2x.png in Resources */,
 				B4207F041F30260300829C69 /* tabbar_preSurvey_sel.png in Resources */,
 				B4207F091F30260300829C69 /* tabbar_profile@3x.png in Resources */,
 				B48ED3E11F2ADFC700F26BC3 /* Assets.xcassets in Resources */,
@@ -1193,6 +1228,7 @@
 				B4207EF21F30260300829C69 /* tabbar_curSurvey_sel.png in Resources */,
 				B4207F441F31B7AC00829C69 /* XYPreSurveyTopView.xib in Resources */,
 				B4207F331F307EF200829C69 /* grrow_down@3x.png in Resources */,
+				B44EBF181F54147F00511FAC /* luckybag_down@2x.png in Resources */,
 				B4207EF91F30260300829C69 /* tabbar_lucky_sel@2x.png in Resources */,
 				B4B071BE1F337753006DD2A2 /* icon_see@2x.png in Resources */,
 				B4D5DB2E1F3A110900F401E7 /* XYCurSurveyCell.xib in Resources */,
@@ -1217,6 +1253,7 @@
 				B4207EFD1F30260300829C69 /* tabbar_news@3x.png in Resources */,
 				B4207EF01F30260300829C69 /* tabbar_curSurvey@2x.png in Resources */,
 				B4207EF31F30260300829C69 /* tabbar_curSurvey_sel@2x.png in Resources */,
+				B44EBF1B1F54147F00511FAC /* luckyGod@2x.png in Resources */,
 				B4207F001F30260300829C69 /* tabbar_news_sel@3x.png in Resources */,
 				B4F53DAC1F3C366F002C7F4F /* XYNewsHistoryCell.xib in Resources */,
 				B4207F2D1F30731900829C69 /* navigationbar_arrow_up.png in Resources */,
@@ -1357,6 +1394,7 @@
 				B4BE78B81F46D99300808F16 /* FMDatabasePool.m in Sources */,
 				B4207F271F3067E100829C69 /* UIImage+XY.m in Sources */,
 				B4731A031F3015F000E0C688 /* CurSurveyController.m in Sources */,
+				B44EBF0F1F54121200511FAC /* XYLuckyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
