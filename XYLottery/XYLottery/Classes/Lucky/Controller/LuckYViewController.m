@@ -32,8 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self loadLuckData];
+//    [self loadLuckData];
     [self.tableView registerNib:[UINib nibWithNibName:@"XYLuckyCell" bundle:nil] forCellReuseIdentifier:k_luckCellID];
+    self.tableView.tableFooterView = [UIView new];
 
     /**
      基本模仿，主要有变化
@@ -65,6 +66,8 @@
         lastHour = cmps.hour % 24;
         [kUserDefaults setInteger:lastHour forKey:k_lastHour];
     }
+    
+    if (!self.luckyList.count) [self loadLuckData];
 }
 
 
@@ -109,6 +112,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    // 移除内部控件，防止复用一些没有必要的东西
+    [cell.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperview];
+    }];
 
     if (indexPath.row == 0) {
         
@@ -117,8 +124,17 @@
         UILabel *timeLable = [UILabel new];
         timeLable.text = [NSString stringWithFormat:@"上次开奖: %zd:00",lastHour];
         [timeLable sizeToFit];
-        timeLable.center = cell.contentView.center;
-        [cell.contentView addSubview:timeLable];
+        timeLable.frame = CGRectMake(3, 2, timeLable.bounds.size.width ,timeLable.bounds.size.height);
+        
+        // view
+        UIView *content = [UIView new];
+        CGFloat contentW = 130;
+        content.frame = CGRectMake((ScreenW - contentW) / 2, 7, contentW, 25);
+        [content addSubview:timeLable];
+        content.backgroundColor = [UIColor lightGrayColor];
+        ViewBorderRadius(content, 4, 0, [UIColor clearColor]);
+        [cell.contentView addSubview: content];
+        return cell;
     }
     
     if (indexPath.row == 1) {
@@ -131,7 +147,6 @@
             DLog(@"我被点击了e");
         };
         return cell;
-        
     }
     
     if ((indexPath.row > 1) && (indexPath.row < self.luckyList.count - 1)) {
@@ -147,7 +162,8 @@
         return cell;
     }else
     {
-        
+        cell.textLabel.text = @"去你妹的，什么情况啊";
+        return cell;
     }
     
     return cell;

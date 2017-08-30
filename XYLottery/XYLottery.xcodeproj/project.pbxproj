@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		992A164621273D294380FAB1 /* libPods-XYLottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD3876869CB53F7AF22A151 /* libPods-XYLottery.a */; };
 		B405D4421F3B005E005E2482 /* XYScrollHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B405D4411F3B005E005E2482 /* XYScrollHeaderView.m */; };
+		B40DB4C41F56C35A005DD6B4 /* XYLuckyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B40DB4C21F56C35A005DD6B4 /* XYLuckyListCell.m */; };
+		B40DB4C51F56C35A005DD6B4 /* XYLuckyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B40DB4C31F56C35A005DD6B4 /* XYLuckyListCell.xib */; };
 		B4207EEF1F30260300829C69 /* tabbar_curSurvey.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED11F30260300829C69 /* tabbar_curSurvey.png */; };
 		B4207EF01F30260300829C69 /* tabbar_curSurvey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED21F30260300829C69 /* tabbar_curSurvey@2x.png */; };
 		B4207EF11F30260300829C69 /* tabbar_curSurvey@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4207ED31F30260300829C69 /* tabbar_curSurvey@3x.png */; };
@@ -177,6 +179,9 @@
 		B3A3DE33AC756E45BAA21AEB /* Pods-XYLottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-XYLottery/Pods-XYLottery.release.xcconfig"; sourceTree = "<group>"; };
 		B405D4401F3B005E005E2482 /* XYScrollHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYScrollHeaderView.h; sourceTree = "<group>"; };
 		B405D4411F3B005E005E2482 /* XYScrollHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYScrollHeaderView.m; sourceTree = "<group>"; };
+		B40DB4C11F56C35A005DD6B4 /* XYLuckyListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLuckyListCell.h; sourceTree = "<group>"; };
+		B40DB4C21F56C35A005DD6B4 /* XYLuckyListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLuckyListCell.m; sourceTree = "<group>"; };
+		B40DB4C31F56C35A005DD6B4 /* XYLuckyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLuckyListCell.xib; sourceTree = "<group>"; };
 		B4207ED11F30260300829C69 /* tabbar_curSurvey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_curSurvey.png; sourceTree = "<group>"; };
 		B4207ED21F30260300829C69 /* tabbar_curSurvey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_curSurvey@2x.png"; sourceTree = "<group>"; };
 		B4207ED31F30260300829C69 /* tabbar_curSurvey@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_curSurvey@3x.png"; sourceTree = "<group>"; };
@@ -685,6 +690,9 @@
 				B44EBF0C1F54121200511FAC /* XYLuckyCell.h */,
 				B44EBF0D1F54121200511FAC /* XYLuckyCell.m */,
 				B44EBF0E1F54121200511FAC /* XYLuckyCell.xib */,
+				B40DB4C11F56C35A005DD6B4 /* XYLuckyListCell.h */,
+				B40DB4C21F56C35A005DD6B4 /* XYLuckyListCell.m */,
+				B40DB4C31F56C35A005DD6B4 /* XYLuckyListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1214,6 +1222,7 @@
 				B4BE78C11F46E11D00808F16 /* XYBoughtCacheCell.xib in Resources */,
 				B4A7595E1F40A1BD000C3DAC /* XYRegisterController.xib in Resources */,
 				B4207EFF1F30260300829C69 /* tabbar_news_sel@2x.png in Resources */,
+				B40DB4C51F56C35A005DD6B4 /* XYLuckyListCell.xib in Resources */,
 				B4BE78A21F46CAC100808F16 /* XYBoughtViewController.xib in Resources */,
 				B49497B31F32D56900EF3252 /* lotteryData.plist in Resources */,
 				B4207EFC1F30260300829C69 /* tabbar_news@2x.png in Resources */,
@@ -1379,6 +1388,7 @@
 				B4E06CDE1F37F8E000B73542 /* XYCurSurveyTopView.m in Sources */,
 				B421F3AD1F49E281001F3A64 /* XYNewsDetailViewController.m in Sources */,
 				B48ED4171F2AE1D800F26BC3 /* AppDelegate.m in Sources */,
+				B40DB4C41F56C35A005DD6B4 /* XYLuckyListCell.m in Sources */,
 				B4731A091F30161900E0C688 /* LuckYViewController.m in Sources */,
 				B4BE78A51F46CB0400808F16 /* XYSurveyCache.m in Sources */,
 				B48ED3D61F2ADFC700F26BC3 /* main.m in Sources */,
