@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zc9-Iz-YwU">
                         <rect key="frame" x="50" y="2" width="275" height="39.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNC-KO-lSz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="vNC-KO-lSz">
                                 <rect key="frame" x="10" y="3" width="30" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="tRf-d1-6do"/>
@@ -51,7 +51,14 @@
                     <constraint firstAttribute="bottom" secondItem="zc9-Iz-YwU" secondAttribute="bottom" constant="2" id="smU-Cz-49T"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="iconView" destination="vNC-KO-lSz" id="kqe-F9-aOV"/>
+                <outlet property="label" destination="isz-5K-NNI" id="haL-eE-g8y"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="54"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="flash_icon.png" width="38" height="55"/>
+    </resources>
 </document>

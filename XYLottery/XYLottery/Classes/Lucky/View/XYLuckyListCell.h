@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#define k_luckListCellID @"k_luckListCellID"
 
+
+//@interface XYLuckyListModel : NSObject
+//
+//
+//
+//@end
+
+
+@class XYLucky;
 @interface XYLuckyListCell : UITableViewCell
+
+@property(nonatomic , strong) XYLucky  *model;
+
 
 @end

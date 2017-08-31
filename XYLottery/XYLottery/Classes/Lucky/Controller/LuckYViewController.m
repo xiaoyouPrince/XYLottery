@@ -8,7 +8,8 @@
 
 #import "LuckYViewController.h"
 #import "XYLucky.h"
-#import "XYLuckyCell.h"  // 这个是红包cell。名字取错了
+#import "XYLuckyCell.h"  // 这个是红包cell。名字取错了抢红包列表的cell。好像有点错了也
+#import "XYLuckyListCell.h"   // 这个是抢红包的列表cell
 
 #define k_lastHour @"lastHour"
 
@@ -34,6 +35,7 @@
     
 //    [self loadLuckData];
     [self.tableView registerNib:[UINib nibWithNibName:@"XYLuckyCell" bundle:nil] forCellReuseIdentifier:k_luckCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"XYLuckyListCell" bundle:nil] forCellReuseIdentifier:k_luckListCellID];
     self.tableView.tableFooterView = [UIView new];
 
     /**
@@ -151,14 +153,15 @@
     
     if ((indexPath.row > 1) && (indexPath.row < self.luckyList.count - 1)) {
         
-        static NSString *cellID = @"luckCell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        }
-    
-        cell.textLabel.text = [NSString stringWithFormat:@"---%zd----",indexPath.row];
+//        static NSString *cellID = @"luckCell";
+//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//        if (cell == nil) {
+//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+//        }
+//        cell.textLabel.text = [NSString stringWithFormat:@"---%zd----",indexPath.row];
         
+        XYLuckyListCell *cell = [tableView dequeueReusableCellWithIdentifier:k_luckListCellID];
+        cell.model = self.luckyList[indexPath.row];
         return cell;
     }else
     {
