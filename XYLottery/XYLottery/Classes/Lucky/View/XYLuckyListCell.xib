@@ -19,16 +19,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zc9-Iz-YwU">
-                        <rect key="frame" x="50" y="2" width="275" height="39.5"/>
+                        <rect key="frame" x="50" y="5" width="275" height="33.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="vNC-KO-lSz">
-                                <rect key="frame" x="10" y="3" width="30" height="33.5"/>
+                                <rect key="frame" x="10" y="3" width="15" height="27.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="tRf-d1-6do"/>
+                                    <constraint firstAttribute="width" constant="15" id="tRf-d1-6do"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isz-5K-NNI">
-                                <rect key="frame" x="50" y="9" width="42" height="21"/>
+                                <rect key="frame" x="35" y="6" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,6 +38,7 @@
                         <constraints>
                             <constraint firstItem="isz-5K-NNI" firstAttribute="leading" secondItem="vNC-KO-lSz" secondAttribute="trailing" constant="10" id="Lwm-uR-8dn"/>
                             <constraint firstItem="isz-5K-NNI" firstAttribute="centerY" secondItem="vNC-KO-lSz" secondAttribute="centerY" id="Mjw-mf-LLr"/>
+                            <constraint firstAttribute="width" constant="275" id="T25-em-zkT"/>
                             <constraint firstItem="vNC-KO-lSz" firstAttribute="leading" secondItem="zc9-Iz-YwU" secondAttribute="leading" constant="10" id="WbH-MP-S7A"/>
                             <constraint firstAttribute="bottom" secondItem="vNC-KO-lSz" secondAttribute="bottom" constant="3" id="aNJ-xr-Va3"/>
                             <constraint firstItem="vNC-KO-lSz" firstAttribute="top" secondItem="zc9-Iz-YwU" secondAttribute="top" constant="3" id="x6k-Nd-BNM"/>
@@ -45,15 +46,18 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zc9-Iz-YwU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="1nN-rN-c6y"/>
-                    <constraint firstAttribute="trailing" secondItem="zc9-Iz-YwU" secondAttribute="trailing" constant="50" id="l4a-6H-KJv"/>
-                    <constraint firstItem="zc9-Iz-YwU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="m6q-RD-pFL"/>
-                    <constraint firstAttribute="bottom" secondItem="zc9-Iz-YwU" secondAttribute="bottom" constant="2" id="smU-Cz-49T"/>
+                    <constraint firstItem="zc9-Iz-YwU" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="g3c-nQ-1xu"/>
+                    <constraint firstItem="zc9-Iz-YwU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="m6q-RD-pFL"/>
+                    <constraint firstAttribute="bottom" secondItem="zc9-Iz-YwU" secondAttribute="bottom" constant="5" id="smU-Cz-49T"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="iconView" destination="vNC-KO-lSz" id="kqe-F9-aOV"/>
+                <outlet property="icon_width_cons" destination="tRf-d1-6do" id="Yi3-Z3-Qel"/>
                 <outlet property="label" destination="isz-5K-NNI" id="haL-eE-g8y"/>
+                <outlet property="label_left_cons" destination="Lwm-uR-8dn" id="APD-gC-KnP"/>
+                <outlet property="view" destination="zc9-Iz-YwU" id="0sd-Wl-B0t"/>
+                <outlet property="view_width_cons" destination="T25-em-zkT" id="OeU-xA-YR6"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="54"/>
         </tableViewCell>

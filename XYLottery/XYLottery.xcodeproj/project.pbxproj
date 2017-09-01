@@ -77,6 +77,16 @@
 		B44EBF191F54147F00511FAC /* luckybag_down_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF141F54147F00511FAC /* luckybag_down_sel@2x.png */; };
 		B44EBF1A1F54147F00511FAC /* luckybag_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF151F54147F00511FAC /* luckybag_top@2x.png */; };
 		B44EBF1B1F54147F00511FAC /* luckyGod@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44EBF161F54147F00511FAC /* luckyGod@2x.png */; };
+		B4535FA91F59316A00865035 /* open_red_packet_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4535FA61F59316A00865035 /* open_red_packet_sel@2x.png */; };
+		B4535FAA1F59316A00865035 /* open_red_packet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4535FA71F59316A00865035 /* open_red_packet@2x.png */; };
+		B4535FAB1F59316A00865035 /* red_packet_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4535FA81F59316A00865035 /* red_packet_big@2x.png */; };
+		B4535FAE1F59322000865035 /* XYOpenRedPackageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4535FAD1F59322000865035 /* XYOpenRedPackageView.m */; };
+		B4535FB01F59322D00865035 /* XYOpenRedPackageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4535FAF1F59322D00865035 /* XYOpenRedPackageView.xib */; };
+		B4535FB51F5945BE00865035 /* XYRedResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4535FB41F5945BE00865035 /* XYRedResultView.m */; };
+		B4535FB71F5945E500865035 /* XYRedResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4535FB61F5945E500865035 /* XYRedResultView.xib */; };
+		B4535FBB1F5949C400865035 /* close_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4535FB81F5949C400865035 /* close_sel@2x.png */; };
+		B4535FBC1F5949C400865035 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4535FB91F5949C400865035 /* close@2x.png */; };
+		B4535FBD1F5949C400865035 /* open_red_result@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4535FBA1F5949C400865035 /* open_red_result@2x.png */; };
 		B47319D91F2F2ABA00E0C688 /* MainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319D81F2F2ABA00E0C688 /* MainNavController.m */; };
 		B47319DC1F2F2AFF00E0C688 /* MainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319DB1F2F2AFF00E0C688 /* MainTabController.m */; };
 		B47319FD1F3015C200E0C688 /* PreSurveyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B47319FC1F3015C200E0C688 /* PreSurveyController.m */; };
@@ -276,6 +286,18 @@
 		B44EBF141F54147F00511FAC /* luckybag_down_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luckybag_down_sel@2x.png"; sourceTree = "<group>"; };
 		B44EBF151F54147F00511FAC /* luckybag_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luckybag_top@2x.png"; sourceTree = "<group>"; };
 		B44EBF161F54147F00511FAC /* luckyGod@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "luckyGod@2x.png"; sourceTree = "<group>"; };
+		B4535FA61F59316A00865035 /* open_red_packet_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open_red_packet_sel@2x.png"; sourceTree = "<group>"; };
+		B4535FA71F59316A00865035 /* open_red_packet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open_red_packet@2x.png"; sourceTree = "<group>"; };
+		B4535FA81F59316A00865035 /* red_packet_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_packet_big@2x.png"; sourceTree = "<group>"; };
+		B4535FAC1F59322000865035 /* XYOpenRedPackageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYOpenRedPackageView.h; sourceTree = "<group>"; };
+		B4535FAD1F59322000865035 /* XYOpenRedPackageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYOpenRedPackageView.m; sourceTree = "<group>"; };
+		B4535FAF1F59322D00865035 /* XYOpenRedPackageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYOpenRedPackageView.xib; sourceTree = "<group>"; };
+		B4535FB31F5945BE00865035 /* XYRedResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRedResultView.h; sourceTree = "<group>"; };
+		B4535FB41F5945BE00865035 /* XYRedResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRedResultView.m; sourceTree = "<group>"; };
+		B4535FB61F5945E500865035 /* XYRedResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYRedResultView.xib; sourceTree = "<group>"; };
+		B4535FB81F5949C400865035 /* close_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_sel@2x.png"; sourceTree = "<group>"; };
+		B4535FB91F5949C400865035 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		B4535FBA1F5949C400865035 /* open_red_result@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open_red_result@2x.png"; sourceTree = "<group>"; };
 		B47319D71F2F2ABA00E0C688 /* MainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavController.h; sourceTree = "<group>"; };
 		B47319D81F2F2ABA00E0C688 /* MainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavController.m; sourceTree = "<group>"; };
 		B47319DA1F2F2AFF00E0C688 /* MainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabController.h; sourceTree = "<group>"; };
@@ -612,6 +634,12 @@
 		B44EBF111F54147F00511FAC /* othericon */ = {
 			isa = PBXGroup;
 			children = (
+				B4535FB81F5949C400865035 /* close_sel@2x.png */,
+				B4535FB91F5949C400865035 /* close@2x.png */,
+				B4535FBA1F5949C400865035 /* open_red_result@2x.png */,
+				B4535FA61F59316A00865035 /* open_red_packet_sel@2x.png */,
+				B4535FA71F59316A00865035 /* open_red_packet@2x.png */,
+				B4535FA81F59316A00865035 /* red_packet_big@2x.png */,
 				B4B6ABC01F57BC92005FC53B /* flash_icon.png */,
 				B4B6ABC11F57BC92005FC53B /* star_icon.png */,
 				B44EBF121F54147F00511FAC /* luckybag@2x.png */,
@@ -699,6 +727,12 @@
 				B40DB4C11F56C35A005DD6B4 /* XYLuckyListCell.h */,
 				B40DB4C21F56C35A005DD6B4 /* XYLuckyListCell.m */,
 				B40DB4C31F56C35A005DD6B4 /* XYLuckyListCell.xib */,
+				B4535FAC1F59322000865035 /* XYOpenRedPackageView.h */,
+				B4535FAD1F59322000865035 /* XYOpenRedPackageView.m */,
+				B4535FAF1F59322D00865035 /* XYOpenRedPackageView.xib */,
+				B4535FB31F5945BE00865035 /* XYRedResultView.h */,
+				B4535FB41F5945BE00865035 /* XYRedResultView.m */,
+				B4535FB61F5945E500865035 /* XYRedResultView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1212,6 +1246,7 @@
 				B4207EF11F30260300829C69 /* tabbar_curSurvey@3x.png in Resources */,
 				B44EBF191F54147F00511FAC /* luckybag_down_sel@2x.png in Resources */,
 				B4207F011F30260300829C69 /* tabbar_preSurvey.png in Resources */,
+				B4535FB01F59322D00865035 /* XYOpenRedPackageView.xib in Resources */,
 				B44EBF101F54121200511FAC /* XYLuckyCell.xib in Resources */,
 				B4207EF41F30260300829C69 /* tabbar_curSurvey_sel@3x.png in Resources */,
 				B4207EF81F30260300829C69 /* tabbar_lucky_sel.png in Resources */,
@@ -1224,6 +1259,7 @@
 				B4207F091F30260300829C69 /* tabbar_profile@3x.png in Resources */,
 				B48ED3E11F2ADFC700F26BC3 /* Assets.xcassets in Resources */,
 				B4207F2C1F30731900829C69 /* navigationbar_arrow_down.png in Resources */,
+				B4535FA91F59316A00865035 /* open_red_packet_sel@2x.png in Resources */,
 				B4207EF51F30260300829C69 /* tabbar_lucky.png in Resources */,
 				B4BE78C11F46E11D00808F16 /* XYBoughtCacheCell.xib in Resources */,
 				B4A7595E1F40A1BD000C3DAC /* XYRegisterController.xib in Resources */,
@@ -1238,6 +1274,7 @@
 				B4FE02191F41F9EA00399869 /* XYUserDetailViewController.xib in Resources */,
 				B4F53DB31F3C4F33002C7F4F /* XYProfileHeaderView.xib in Resources */,
 				B4207EFA1F30260300829C69 /* tabbar_lucky_sel@3x.png in Resources */,
+				B4535FAA1F59316A00865035 /* open_red_packet@2x.png in Resources */,
 				B4207F0A1F30260300829C69 /* tabbar_profile_sel.png in Resources */,
 				B4207F311F307EF200829C69 /* grrow_down.png in Resources */,
 				B4207EF21F30260300829C69 /* tabbar_curSurvey_sel.png in Resources */,
@@ -1252,9 +1289,13 @@
 				B4207EFB1F30260300829C69 /* tabbar_news.png in Resources */,
 				B4207EF61F30260300829C69 /* tabbar_lucky@2x.png in Resources */,
 				B4207F0B1F30260300829C69 /* tabbar_profile_sel@2x.png in Resources */,
+				B4535FAB1F59316A00865035 /* red_packet_big@2x.png in Resources */,
+				B4535FBC1F5949C400865035 /* close@2x.png in Resources */,
 				B4B6ABC21F57BC92005FC53B /* flash_icon.png in Resources */,
+				B4535FB71F5945E500865035 /* XYRedResultView.xib in Resources */,
 				B4207F321F307EF200829C69 /* grrow_down@2x.png in Resources */,
 				B4E06CE21F3877C900B73542 /* XYCurSurveyTopView.xib in Resources */,
+				B4535FBD1F5949C400865035 /* open_red_result@2x.png in Resources */,
 				B4207F351F30817D00829C69 /* titleBtnBg.png in Resources */,
 				B4207F061F30260300829C69 /* tabbar_preSurvey_sel@3x.png in Resources */,
 				B49497AF1F32CC3000EF3252 /* expand_down@2x.png in Resources */,
@@ -1265,6 +1306,7 @@
 				B4207F021F30260300829C69 /* tabbar_preSurvey@2x.png in Resources */,
 				B4F53DC31F3DAC03002C7F4F /* XYLoginController.xib in Resources */,
 				B49497B11F32CD4F00EF3252 /* expand_up@2x.png in Resources */,
+				B4535FBB1F5949C400865035 /* close_sel@2x.png in Resources */,
 				B4207EF71F30260300829C69 /* tabbar_lucky@3x.png in Resources */,
 				B4F53DA71F3C054F002C7F4F /* XYNewsZuheFirstCell.xib in Resources */,
 				B4207EFD1F30260300829C69 /* tabbar_news@3x.png in Resources */,
@@ -1372,11 +1414,13 @@
 				B49497B91F32F34A00EF3252 /* XYLottery.m in Sources */,
 				B4207F471F31BC2B00829C69 /* XYPreSurveyModel.m in Sources */,
 				B4A759621F40A270000C3DAC /* XYForgetPassController.m in Sources */,
+				B4535FAE1F59322000865035 /* XYOpenRedPackageView.m in Sources */,
 				B4BE78A91F46CB6300808F16 /* XYBoughtCacheTool.m in Sources */,
 				B4207F501F31D38F00829C69 /* XYHttpTool.m in Sources */,
 				B48ED4181F2AE1D800F26BC3 /* ViewController.m in Sources */,
 				B4731A061F30160000E0C688 /* NewsViewController.m in Sources */,
 				B4207F3F1F316AF900829C69 /* XYPresentationController.m in Sources */,
+				B4535FB51F5945BE00865035 /* XYRedResultView.m in Sources */,
 				B4207F3C1F31638900829C69 /* XYPopoverAnimator.m in Sources */,
 				B4F53DBA1F3D540C002C7F4F /* XYAccountTool.m in Sources */,
 				B4CB4D931F3213BF00640D43 /* XYSurveyListModel.m in Sources */,

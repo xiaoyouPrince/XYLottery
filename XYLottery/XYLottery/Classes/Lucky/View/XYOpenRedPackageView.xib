@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XYOpenRedPackageView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_packet_big.png" translatesAutoresizingMaskIntoConstraints="NO" id="o5h-sL-Flc">
+                    <rect key="frame" x="50" y="100" width="275" height="364"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="364" id="uQI-sO-yD6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大财神金币红包" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfR-M0-jCV">
+                    <rect key="frame" x="0.0" y="210" width="375" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="uQk-Yv-C9i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%中奖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKq-Ec-VsB">
+                    <rect key="frame" x="0.0" y="240" width="375" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open_red_packet.png" highlightedImage="open_red_packet_sel.png" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-DU-HqW">
+                    <rect key="frame" x="147.5" y="322" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="3xX-Zh-og0"/>
+                        <constraint firstAttribute="width" constant="80" id="vlJ-3l-K0I"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开红包" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMl-F1-iKX">
+                    <rect key="frame" x="147.5" y="322" width="80" height="80"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BMl-F1-iKX" firstAttribute="top" secondItem="DKM-DU-HqW" secondAttribute="top" id="6KN-NZ-ql1"/>
+                <constraint firstItem="iKq-Ec-VsB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FcW-cF-e7w"/>
+                <constraint firstAttribute="trailing" secondItem="o5h-sL-Flc" secondAttribute="trailing" constant="50" id="K8g-rG-P9z"/>
+                <constraint firstItem="o5h-sL-Flc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="Ra9-DT-yCa"/>
+                <constraint firstItem="BMl-F1-iKX" firstAttribute="height" secondItem="DKM-DU-HqW" secondAttribute="height" id="btq-gq-ph8"/>
+                <constraint firstItem="DKM-DU-HqW" firstAttribute="centerY" secondItem="o5h-sL-Flc" secondAttribute="centerY" constant="80" id="dKu-Fb-CKX"/>
+                <constraint firstAttribute="trailing" secondItem="iKq-Ec-VsB" secondAttribute="trailing" id="fNi-07-dfA"/>
+                <constraint firstItem="XfR-M0-jCV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="210" id="fxs-dg-1WR"/>
+                <constraint firstItem="BMl-F1-iKX" firstAttribute="leading" secondItem="DKM-DU-HqW" secondAttribute="leading" id="hxo-h0-XHo"/>
+                <constraint firstItem="BMl-F1-iKX" firstAttribute="width" secondItem="DKM-DU-HqW" secondAttribute="width" id="itt-wI-ZCY"/>
+                <constraint firstItem="XfR-M0-jCV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="j5V-du-mDV"/>
+                <constraint firstAttribute="trailing" secondItem="XfR-M0-jCV" secondAttribute="trailing" id="nVl-R6-ERh"/>
+                <constraint firstItem="iKq-Ec-VsB" firstAttribute="top" secondItem="XfR-M0-jCV" secondAttribute="bottom" constant="10" id="sbf-Rd-6Mh"/>
+                <constraint firstItem="DKM-DU-HqW" firstAttribute="centerX" secondItem="o5h-sL-Flc" secondAttribute="centerX" id="slm-2k-YUS"/>
+                <constraint firstItem="o5h-sL-Flc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="vHb-UA-6WW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="openBGImage" destination="DKM-DU-HqW" id="7g7-Gw-jey"/>
+                <outlet property="openLabel" destination="BMl-F1-iKX" id="Bxm-gS-Bsn"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="open_red_packet.png" width="171" height="171"/>
+        <image name="open_red_packet_sel.png" width="171" height="171"/>
+        <image name="red_packet_big.png" width="431" height="628"/>
+    </resources>
+</document>
