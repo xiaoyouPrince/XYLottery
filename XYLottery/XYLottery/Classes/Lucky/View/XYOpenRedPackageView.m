@@ -53,16 +53,19 @@
     });
     
 #warning TODO 这里要加一个 HUD 提示正在抢红包，给用户一个真实的感觉，看看有没有接口之类的
+    // 1.每次进来判断时间是不是上个时间，如果是上个时间的话就两次机会，第二次提示下个时间再来，
+    // 2.如果是新的时间，就提示抱歉，你已经抢过了，提示下一次再来。
     
     [XYHttpTool getWithURL:@"http://115.29.175.83/cpyc/grabredpacket.php" params:nil success:^(id json) {
         [SVProgressHUD show];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
             
-            
             // 展示开红包结果图层
             __weak __typeof__(self) weakSelf = self;
             [self addSubview:self.resultView];
+            // 给自己的ResultView赋值是否展示失败页面
+            self.resultView.showFailPage = [self checkResultViewStatus];
             self.resultView.closeCallBack = ^{
                 // 用户点击了close
                 if (weakSelf.callBack) { // 这个CallBack好像就是隐藏用的了，目前是没有其他用途了
@@ -77,9 +80,15 @@
     } failure:^(NSError *error) {
         
     }];
+}
 
-
-
+- (BOOL)checkResultViewStatus
+{
+    
+    DLog(@"%zd",arc4random_uniform(2));
+    
+    
+    return arc4random_uniform(2);
 }
 
 

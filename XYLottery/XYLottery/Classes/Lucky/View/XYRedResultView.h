@@ -12,6 +12,7 @@ typedef void(^ResultViewCallBack)(void);
 
 @interface XYRedResultView : UIView
 
+@property(nonatomic , assign) BOOL showFailPage;  ///< 判断是不是展示第二次的失败页面
 @property(nonatomic , copy) ResultViewCallBack closeCallBack;
 
 @end

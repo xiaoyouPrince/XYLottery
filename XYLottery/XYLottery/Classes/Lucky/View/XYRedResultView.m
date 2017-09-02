@@ -10,8 +10,11 @@
 
 @interface XYRedResultView ()
 
-@property (weak, nonatomic) IBOutlet UILabel *openLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *openBGImage;
+@property (weak, nonatomic) IBOutlet UILabel *openLabel;   ///< 在本页面中是close的“按钮”，由于直接继承，所以名字还是没改
+@property (weak, nonatomic) IBOutlet UIImageView *openBGImage;   ///< close “按钮”点击展示高亮用的，只是展示
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;   ///< “对不起” or “很抱歉”
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;  ///< “来晚了” or “11点你已经抢过了”
+@property (weak, nonatomic) IBOutlet UILabel *tipLabel;     ///< “还剩1次机会” or “等下个时间点来哦”
 
 @end
 
@@ -37,6 +40,22 @@
     // 修改文字，让后提示下一次再来。。。。。
     if (self.closeCallBack) {
         self.closeCallBack();
+    }
+}
+
+- (void)setShowFailPage:(BOOL)showFailPage
+{
+    _showFailPage = showFailPage;
+    
+    if (showFailPage) {
+        self.titleLabel.text = @"很抱歉";
+        self.detailLabel.text = @"11点你已经抢过了";  // 当前时间点
+        self.tipLabel.text = @"等下个时间点来哦";
+    }else
+    {
+        self.titleLabel.text = @"对不起";
+        self.detailLabel.text = @"来晚了";  // 当前时间点
+        self.tipLabel.text = @"还剩1次机会";
     }
 }
 
