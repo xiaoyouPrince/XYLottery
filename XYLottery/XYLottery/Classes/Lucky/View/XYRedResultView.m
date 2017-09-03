@@ -49,7 +49,7 @@
     
     if (showFailPage) {
         self.titleLabel.text = @"很抱歉";
-        self.detailLabel.text = @"11点你已经抢过了";  // 当前时间点
+        self.detailLabel.text = [NSString stringWithFormat:@"%zd点你已经抢过了",[kUserDefaults integerForKey:@"lastHour"]];  // 当前时间点
         self.tipLabel.text = @"等下个时间点来哦";
     }else
     {
@@ -58,6 +58,8 @@
         self.tipLabel.text = @"还剩1次机会";
     }
 }
+
+
 
 
 

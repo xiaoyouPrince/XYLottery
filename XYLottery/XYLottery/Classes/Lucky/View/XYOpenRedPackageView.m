@@ -58,14 +58,16 @@
     
     [XYHttpTool getWithURL:@"http://115.29.175.83/cpyc/grabredpacket.php" params:nil success:^(id json) {
         [SVProgressHUD show];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        CGFloat timeDelay = (CGFloat)((CGFloat)arc4random_uniform(10) / 10) + 0.3;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeDelay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
             
             // 展示开红包结果图层
             __weak __typeof__(self) weakSelf = self;
             [self addSubview:self.resultView];
             // 给自己的ResultView赋值是否展示失败页面
-            self.resultView.showFailPage = [self checkResultViewStatus];
+            self.resultView.showFailPage = ![self checkIfHourChanges];
             self.resultView.closeCallBack = ^{
                 // 用户点击了close
                 if (weakSelf.callBack) { // 这个CallBack好像就是隐藏用的了，目前是没有其他用途了
@@ -82,14 +84,37 @@
     }];
 }
 
-- (BOOL)checkResultViewStatus
+
+/**
+    判断是否为同一小时
+ */
+- (BOOL)checkIfHourChanges
 {
     
-    DLog(@"%zd",arc4random_uniform(2));
+    // 另一种思路：只有时间改了，才会出现第一次抱歉页面。其余都是第二页失败页面。
     
+#define k_lastHour @"lastHour"
+    // 1.获得当前时间的小时和上一次的比较
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    int unit = NSCalendarUnitHour;
+    NSDateComponents *cmps = [calendar components:unit fromDate:[NSDate date]];
+    NSInteger lastHour = [kUserDefaults integerForKey:k_lastHour];
     
-    return arc4random_uniform(2);
+    if (cmps.hour % 24 != lastHour) { // 时间改变了：机会重置为 YES
+        
+        lastHour = cmps.hour % 24;
+        [kUserDefaults setInteger:lastHour forKey:k_lastHour];
+        return YES;
+    }else
+    {
+        return NO;
+    }
+    
+    return NO;
+#undef k_lastHour
+    
 }
+
 
 
 @end

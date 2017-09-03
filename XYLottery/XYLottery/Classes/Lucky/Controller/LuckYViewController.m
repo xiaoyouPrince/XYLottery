@@ -6,6 +6,7 @@
 //  Copyright © 2017年 渠晓友. All rights reserved.
 //
 
+
 #import "LuckYViewController.h"
 #import "XYLucky.h"
 #import "XYLuckyCell.h"  // 这个是红包cell。名字取错了抢红包列表的cell。好像有点错了也
@@ -97,6 +98,22 @@
 {
     [super viewWillAppear:animated];
     
+    if([self checkIfLoadData]) // 每次判断是不是请求数据
+    {
+        [self loadLuckData];
+    }
+    
+    // 下次开奖时间
+    [[UIApplication sharedApplication].keyWindow addSubview:self.tiplabel];
+}
+
+
+/**
+ 检查是否要刷新数据，同一个小时内只刷新一次就行
+ 这里可以用来判断是不是同一个小时内
+ */
+- (BOOL)checkIfLoadData
+{
     // 每次记录一个时间段，如果这次在这个时间段之内就不再拉取新的数据，如果不是再重新拉取新的数据
     NSCalendar *calendar = [NSCalendar currentCalendar];
     int unit = NSCalendarUnitHour;
@@ -106,16 +123,15 @@
     
     if (cmps.hour % 24 != lastHour) {
         
-        [self loadLuckData];
-        
         lastHour = cmps.hour % 24;
         [kUserDefaults setInteger:lastHour forKey:k_lastHour];
+        //[self loadLuckData];
+        return YES;
     }
     
-    if (!self.luckyList.count) [self loadLuckData];
+    if (!self.luckyList.count) /**[self loadLuckData];*/ return YES;
     
-    // 下次开奖时间
-    [[UIApplication sharedApplication].keyWindow addSubview:self.tiplabel];
+    return NO;
 }
 
 
