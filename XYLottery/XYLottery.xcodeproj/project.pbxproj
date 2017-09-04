@@ -126,6 +126,10 @@
 		B4A7595E1F40A1BD000C3DAC /* XYRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A7595C1F40A1BD000C3DAC /* XYRegisterController.xib */; };
 		B4A759621F40A270000C3DAC /* XYForgetPassController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A759601F40A270000C3DAC /* XYForgetPassController.m */; };
 		B4A759631F40A270000C3DAC /* XYForgetPassController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A759611F40A270000C3DAC /* XYForgetPassController.xib */; };
+		B4AC0FF71F5CE85E00D49B76 /* XYLuckyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC0FF51F5CE85E00D49B76 /* XYLuckyListController.m */; };
+		B4AC0FF81F5CE85E00D49B76 /* XYLuckyListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AC0FF61F5CE85E00D49B76 /* XYLuckyListController.xib */; };
+		B4AC0FFC1F5CE98200D49B76 /* XYLuckyListDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AC0FFA1F5CE98200D49B76 /* XYLuckyListDetailCell.m */; };
+		B4AC0FFD1F5CE98200D49B76 /* XYLuckyListDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AC0FFB1F5CE98200D49B76 /* XYLuckyListDetailCell.xib */; };
 		B4B071B91F336512006DD2A2 /* XYPreSurveyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B071B71F336512006DD2A2 /* XYPreSurveyCell.m */; };
 		B4B071BA1F336512006DD2A2 /* XYPreSurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B071B81F336512006DD2A2 /* XYPreSurveyCell.xib */; };
 		B4B071BE1F337753006DD2A2 /* icon_see@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B071BD1F337753006DD2A2 /* icon_see@2x.png */; };
@@ -359,6 +363,12 @@
 		B4A7595F1F40A270000C3DAC /* XYForgetPassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYForgetPassController.h; sourceTree = "<group>"; };
 		B4A759601F40A270000C3DAC /* XYForgetPassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYForgetPassController.m; sourceTree = "<group>"; };
 		B4A759611F40A270000C3DAC /* XYForgetPassController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYForgetPassController.xib; sourceTree = "<group>"; };
+		B4AC0FF41F5CE85E00D49B76 /* XYLuckyListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLuckyListController.h; sourceTree = "<group>"; };
+		B4AC0FF51F5CE85E00D49B76 /* XYLuckyListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLuckyListController.m; sourceTree = "<group>"; };
+		B4AC0FF61F5CE85E00D49B76 /* XYLuckyListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLuckyListController.xib; sourceTree = "<group>"; };
+		B4AC0FF91F5CE98200D49B76 /* XYLuckyListDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLuckyListDetailCell.h; sourceTree = "<group>"; };
+		B4AC0FFA1F5CE98200D49B76 /* XYLuckyListDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLuckyListDetailCell.m; sourceTree = "<group>"; };
+		B4AC0FFB1F5CE98200D49B76 /* XYLuckyListDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLuckyListDetailCell.xib; sourceTree = "<group>"; };
 		B4B071B61F336512006DD2A2 /* XYPreSurveyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPreSurveyCell.h; sourceTree = "<group>"; };
 		B4B071B71F336512006DD2A2 /* XYPreSurveyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPreSurveyCell.m; sourceTree = "<group>"; };
 		B4B071B81F336512006DD2A2 /* XYPreSurveyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYPreSurveyCell.xib; sourceTree = "<group>"; };
@@ -705,6 +715,9 @@
 			children = (
 				B4731A071F30161900E0C688 /* LuckYViewController.h */,
 				B4731A081F30161900E0C688 /* LuckYViewController.m */,
+				B4AC0FF41F5CE85E00D49B76 /* XYLuckyListController.h */,
+				B4AC0FF51F5CE85E00D49B76 /* XYLuckyListController.m */,
+				B4AC0FF61F5CE85E00D49B76 /* XYLuckyListController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -733,6 +746,9 @@
 				B4535FB31F5945BE00865035 /* XYRedResultView.h */,
 				B4535FB41F5945BE00865035 /* XYRedResultView.m */,
 				B4535FB61F5945E500865035 /* XYRedResultView.xib */,
+				B4AC0FF91F5CE98200D49B76 /* XYLuckyListDetailCell.h */,
+				B4AC0FFA1F5CE98200D49B76 /* XYLuckyListDetailCell.m */,
+				B4AC0FFB1F5CE98200D49B76 /* XYLuckyListDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1316,10 +1332,12 @@
 				B4207F001F30260300829C69 /* tabbar_news_sel@3x.png in Resources */,
 				B4F53DAC1F3C366F002C7F4F /* XYNewsHistoryCell.xib in Resources */,
 				B4207F2D1F30731900829C69 /* navigationbar_arrow_up.png in Resources */,
+				B4AC0FF81F5CE85E00D49B76 /* XYLuckyListController.xib in Resources */,
 				B4B071BA1F336512006DD2A2 /* XYPreSurveyCell.xib in Resources */,
 				B4207F0C1F30260300829C69 /* tabbar_profile_sel@3x.png in Resources */,
 				B48ED3DF1F2ADFC700F26BC3 /* Main.storyboard in Resources */,
 				B4207F081F30260300829C69 /* tabbar_profile@2x.png in Resources */,
+				B4AC0FFD1F5CE98200D49B76 /* XYLuckyListDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1418,6 +1436,7 @@
 				B4BE78A91F46CB6300808F16 /* XYBoughtCacheTool.m in Sources */,
 				B4207F501F31D38F00829C69 /* XYHttpTool.m in Sources */,
 				B48ED4181F2AE1D800F26BC3 /* ViewController.m in Sources */,
+				B4AC0FFC1F5CE98200D49B76 /* XYLuckyListDetailCell.m in Sources */,
 				B4731A061F30160000E0C688 /* NewsViewController.m in Sources */,
 				B4207F3F1F316AF900829C69 /* XYPresentationController.m in Sources */,
 				B4535FB51F5945BE00865035 /* XYRedResultView.m in Sources */,
@@ -1429,6 +1448,7 @@
 				B4207F681F31D3A100829C69 /* MJMember.m in Sources */,
 				B4731A0C1F30162700E0C688 /* ProfileViewController.m in Sources */,
 				B4FC97A81F331D6800E83E03 /* XYIssueModel.m in Sources */,
+				B4AC0FF71F5CE85E00D49B76 /* XYLuckyListController.m in Sources */,
 				B4D5DB2D1F3A110900F401E7 /* XYCurSurveyCell.m in Sources */,
 				B4207F6A1F31D3A100829C69 /* MJType.m in Sources */,
 				B49497BC1F32FC1D00EF3252 /* XYTools.m in Sources */,

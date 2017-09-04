@@ -12,6 +12,7 @@
 #import "XYLuckyCell.h"  // 这个是红包cell。名字取错了抢红包列表的cell。好像有点错了也
 #import "XYLuckyListCell.h"   // 这个是抢红包的列表cell
 #import "XYOpenRedPackageView.h"
+#import "XYLuckyListController.h"
 
 #define k_lastHour @"lastHour"
 
@@ -46,6 +47,7 @@
 
 - (UILabel *)tiplabel
 {
+    
     if (_tiplabel == nil) {
         UILabel *tipLabel = [UILabel new];
         tipLabel.backgroundColor = XYColor(219, 72, 106);
@@ -55,15 +57,20 @@
         tipLabel.font = [UIFont systemFontOfSize:14];
         
         // 每次记录一个时间段，如果这次在这个时间段之内就不再拉取新的数据，如果不是再重新拉取新的数据
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        int unit = NSCalendarUnitHour;
-        // 1.获得当前时间的小时
-        NSDateComponents *cmps = [calendar components:unit fromDate:[NSDate date]];
-        NSInteger nowHour = cmps.hour % 24;
-        tipLabel.text = [NSString stringWithFormat:@"下一波金币抢红包 %zd:00 开始",nowHour + 1];
         _tiplabel = tipLabel;
     }
+    NSInteger nowHour = [self nowHour];
+    _tiplabel.text = [NSString stringWithFormat:@"下一波金币抢红包 %zd:00 开始",nowHour + 1];
     return _tiplabel;
+}
+
+- (NSInteger)nowHour
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    int unit = NSCalendarUnitHour;
+    NSDateComponents *cmps = [calendar components:unit fromDate:[NSDate date]];
+    NSInteger nowHour = cmps.hour % 24;
+    return nowHour;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -161,6 +168,7 @@
         [SVProgressHUD showErrorWithStatus:@"请检查你的网络,并重试"];
     }];
 }
+
 
 #pragma mark - Table view data source
 
@@ -266,8 +274,9 @@
     DLog(@"去你妹的，什么情况啊");
     
     /// 进入对应的列表页面
-    
-    
+    XYLuckyListController *listVC = [XYLuckyListController new];
+    [self.navigationController pushViewController:listVC animated:YES];
+
 }
 
 

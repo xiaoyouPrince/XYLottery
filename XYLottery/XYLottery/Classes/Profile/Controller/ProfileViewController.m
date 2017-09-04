@@ -60,7 +60,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    // 根据登录与否展示对应的Page
+//    // 根据登录与否展示对应的Page,不能每次都添加
 //    if ([XYAccountTool user]) {
 //        [self showProfileVC];
 //    }else
@@ -273,6 +273,12 @@
         
         //我的资料
         [XYAccountTool deleteUser];
+        
+        // 移除所有View 并展示loginBtn
+        [self.view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj removeFromSuperview];
+        }];
+        [self showLoginBtn];
     }
 }
 

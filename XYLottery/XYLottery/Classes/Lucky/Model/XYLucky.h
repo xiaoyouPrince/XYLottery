@@ -13,6 +13,8 @@
 @property(nonatomic , copy) NSString *type;
 @property(nonatomic , copy) NSString *username;
 @property(nonatomic , copy) NSString *coin;
+@property(nonatomic , copy) NSString *createtime;  // 创建时间
+
 
 //{
 //    "errorcode": 0,
@@ -47,5 +49,13 @@
 //    "nexttimedes": "下一波金币红包15:00分开抢！",
 //    "timeh": "14:00"
 //}
+
+/// 这个是详情中的，多了一个时间字段
+//{
+//    "type": "2",
+//    "username": "忠",
+//    "coin": "6",
+//    "createtime": "2017-09-04 10:00:03"
+//},
 
 @end
