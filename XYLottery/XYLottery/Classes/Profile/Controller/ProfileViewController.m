@@ -23,6 +23,8 @@
 
 @implementation ProfileViewController
 
+// 由于支付宝没有办法申请资质，所以无法使用，充值这块要如何做呢？
+
 - (void)loadView
 {
     [super loadView];
