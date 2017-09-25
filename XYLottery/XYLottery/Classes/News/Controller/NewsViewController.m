@@ -90,7 +90,6 @@ typedef NS_ENUM(NSUInteger, XYNewsType) {
     [self.tableView registerNib:[UINib nibWithNibName:@"XYPreSurveyCell" bundle:nil] forCellReuseIdentifier:k_PreSurveyCelID];
     [self.tableView registerNib:[UINib nibWithNibName:@"XYNewsHistoryCell" bundle:nil] forCellReuseIdentifier:k_newsHistoryCellID];
     
-    
 }
 
 - (void)loadNewsWithNewsType:(XYNewsType)type

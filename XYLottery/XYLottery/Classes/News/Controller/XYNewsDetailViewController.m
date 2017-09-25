@@ -20,11 +20,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     
     UIWebView *web = [UIWebView new];
     web.delegate = self;
-    web.frame = self.view.bounds;
+//    web.frame = self.view.bounds;
+    web.frame = CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.height);
     [self.view addSubview:web];
     self.web = web;
     [web loadRequest:self.request];
