@@ -36,6 +36,8 @@ what is the hell！
 
 tomorrow i will do this again。really。。
 
+明天继续
+
 
 However so many times I have been rejected by Apple, I know my app realy has some questions, I am not angry with it.  I
 have sellected some blogs that also with these problems.
