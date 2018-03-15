@@ -36,7 +36,7 @@ what is the hell！
 
 tomorrow i will do this again。really。。
 
-明天继续
+明天继续<有点打脸了，好久没有写了，也确实上不了线，失败了>
 
 
 However so many times I have been rejected by Apple, I know my app realy has some questions, I am not angry with it.  I
